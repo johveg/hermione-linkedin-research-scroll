@@ -207,7 +207,8 @@ def render_card(record: dict[str, object], index: int) -> str:
 
 def build_page(records: list[dict[str, object]]) -> str:
     cards = "\n".join(render_card(record, i + 1) for i, record in enumerate(records))
-    generated = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
+    latest_filing = max((str(record["filed_at"]) for record in records), default="")
+    latest_label = format_date(latest_filing)
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -233,7 +234,7 @@ def build_page(records: list[dict[str, object]]) -> str:
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
   {cards}
-  <footer>Generated {generated} from the sanitized LinkedIn intake archive. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
+  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: {latest_label}. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
 </main>
 </body>
 </html>'''

@@ -18,4 +18,14 @@ On the Hermes host, rebuild from the intake archive:
 python3 scripts/build_site.py
 ```
 
-The generator writes `index.html`, `manifest.json`, and selected images under `assets/posts/`. Commit and push those generated static files to update GitHub Pages.
+The generator writes `index.html`, `manifest.json`, and selected images under `assets/posts/`.
+
+## Intake publication
+
+After a Telegram intake has written `metadata.json`, `post.txt`, and `intake-summary.md`, publish it by canonical activity ID:
+
+```bash
+python3 scripts/publish_from_linkedin_intake.py --activity-id <activity-id>
+```
+
+The publisher fails closed for incomplete archives or apparent secrets/private capture markers. For eligible intakes it rebuilds the page, stages only public generated artifacts, checks the staged diff, commits, pushes, and verifies `origin/main`. Re-running it is idempotent: it does not create a commit when the generated page is unchanged.
