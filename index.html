@@ -26,11 +26,23 @@
   <div class="entry-number">01</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 21 Jul 2026 · Published 20 Jul 2026</p>
-    <h2>Agent harnesses that learn from experience!</h2>
+    <h2>LinkedIn intake — MemoHarness: Agent Harnesses That Learn from Experience</h2>
     <p class="byline">By <a href="https://in.linkedin.com/in/sumanth077" rel="noopener noreferrer">Sumanth P</a> <a class="original-link" href="https://www.linkedin.com/posts/sumanth077_agent-harnesses-that-learn-from-experience-activity-7484972678072778752-lY9n" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
     <p class="headline">Agent harnesses that learn from experience!</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7484972678072778752/image-1.jpg" alt="Archived LinkedIn media for Agent harnesses that learn from experience!"></div>
-    <section class="research"><p>Research summary is pending for this archive.</p></section>
+    <div class="media"><img loading="lazy" src="assets/posts/7484972678072778752/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — MemoHarness: Agent Harnesses That Learn from Experience"></div>
+    <section class="research"><h3>What the post claims</h3>
+<p>The post introduces MemoHarness, a framework intended to make an agent harness adaptive rather than static. It defines a harness as the surrounding control layer for context, tools, orchestration, memory, decoding, and output handling. It claims six editable control dimensions, a dual-layer experience bank holding per-run diagnoses and distilled global patterns, case-specific adaptation without test-time labels/feedback/search, competitive added-context cost when retrieval is cacheable, and gains on shell-agent, code-generation, and analytical-reasoning benchmarks.</p>
+<h3>Evidence assessment</h3>
+<ul>
+<li><strong>Primary paper corroborated:</strong> the author linked the paper in a visible comment. arXiv <code>2607.14159v1</code>, <em>MemoHarness: Agent Harnesses That Learn from Experience</em>, was submitted on 2026-07-14 in <code>cs.AI</code>/<code>cs.CL</code>; it is a preprint under review, not peer-reviewed evidence.</li>
+<li><strong>Repository corroborated:</strong> <code>HowieHwong/MemoHarness</code> at commit <code>0d1bba9ee48d860eefc17b6cdf169a9878f16770</code> contains an installable Python package, a six-dimension harness model, a dual-layer bank, configs, and a Harbor/Daytona/OpenAI-oriented runtime path. No SPDX license was declared in the reviewed repository metadata.</li>
+<li><strong>Important limits stated by the paper:</strong> the primary Terminal-Bench held-out split has 18 tasks; it reports point estimates without confidence intervals/significance tests; component ablations are incomplete; cache economics depend on observed cacheability; and controller/diagnostic operators use practical heuristics. The authors say these are evidence under a fixed evaluation protocol, not a full statistical characterization.</li>
+</ul>
+<h3>Book relevance</h3>
+<p><strong>Candidate chapters:</strong> agent harnesses and control planes; adaptive memory and learning from operations; evaluation/reproducibility; bounded autonomy and change governance.</p>
+<p><strong>Durable lesson:</strong> execution history can improve an agent&#x27;s control layer, but an adaptive harness is also self-modifying operational infrastructure. It needs provenance for each lesson, generalization checks, versioned proposed changes, held-out evaluation, cost/latency measurement, rollback, and explicit approval before changing safety or tool-policy boundaries.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance. Hermione already separates durable facts, skills, scheduled workflow state, and evidence archives. The valuable pattern is two levels of learning: case-level failure evidence and cautiously distilled reusable rules. The safety boundary is equally important: do not automatically rewrite system instructions, tool permissions, skill procedures, or approval policy from recent incidents. Propose changes as reviewable/versioned artifacts, evaluate against representative held-out tasks, and retain rollback plus an audit trail.</p></section>
     <details><summary>Archived LinkedIn post text</summary><div class="post-text">Agent harnesses that learn from experience!
 
 MemoHarness is a new framework that makes agent harnesses adaptive rather than static.
