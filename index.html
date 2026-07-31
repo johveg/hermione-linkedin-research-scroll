@@ -19,11 +19,84 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>69 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>70 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7488704837627359234">
+  <article class="entry" id="post-7488817631496683520">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 31 Jul 2026 · Published 31 Jul 2026</p>
+    <h2>LinkedIn intake summary</h2>
+    <p class="byline">By <a href="https://www.linkedin.com/in/qi-deng-5a9547b1" rel="noopener noreferrer">Qi Deng</a> <a class="original-link" href="https://www.linkedin.com/posts/qi-deng-5a9547b1_aiagents-cybersecurity-penetrationtesting-activity-7488817631496683520-O1pa" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">A 20 GB model running on my MacBook found RCE, SQL injection, and XXE — at zero API cost.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7488817631496683520/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake summary"></div>
+    <section class="research"><h3>What the post claims</h3>
+<p>The post reports an author-run comparison of eight open-weight local models in a custom agent harness, on a MacBook Pro M5 Max with 64 GB unified memory and Ollama 0.32. It says Laguna XS 2.1, a 33B-parameter MoE model described as 3B active parameters per token and about 20 GB at Q4, found 16 findings on an unnamed production application and 9 on OWASP Juice Shop. It further compares the claimed result with a prior 15-model cloud benchmark.</p>
+<p>The image repeats the benchmark framing and lists model, size, target, findings, tool calls, and elapsed time. It also says a 65 GB GPT-OSS model swapped to disk on 64 GB RAM and fell to about 0.5 tokens per second. These are author-provided benchmark claims, not independently reproduced results.</p>
+<h3>Book relevance</h3>
+<p>This is high-value discovery material for chapters on agent security, dual-use automation, local inference, and evaluation governance. The durable lesson is not that a local model has proven autonomous pentesting capability. It is that a credible security-agent evaluation needs an explicit authorization boundary, target scope, reproducible harness, finding-validation protocol, model/runtime settings, and independent review. The local-inference angle is that total model size, active MoE parameters, quantization, unified memory, and disk swapping can materially alter what an agent can do and how long it takes.</p>
+<p>Suggested placement: an example or counterexample in a chapter on governed security agents, paired with a subsection on local-model operational trade-offs.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance. Hermione must never infer that local/open-weight deployment removes the need for safeguards. Any security-oriented capability should require explicit written authorization, target allowlisting, scoped credentials, approval gates for risky actions, externally enforceable network/tool policy, and auditable logs. For non-security work, the item is a reminder to measure local-model latency, memory, and reliability before treating a compact quantized model as an interactive production substitute.</p>
+<h3>Evidence assessment and next action</h3>
+<p>Evidence strength: discovery-only.</p>
+<p>Primary-source checks confirmed that Poolside publicly presents Laguna XS 2.1 as a 33B open-weight agentic coding model and that the <code>poolside/Laguna-XS-2.1</code> Hugging Face model exists publicly. They do not validate this author&#x27;s benchmark, the reported vulnerabilities, the cloud-model comparison, the unnamed production target&#x27;s authorization, the harness safeguards, or the claimed cost/performance figures.</p>
+<p>Next action: retain as candidate chapter evidence only after corroboration. Do not run the linked artifact, agent harness, scanners, or any offensive workflow during intake.</p>
+<h3>Limitations</h3>
+<ul>
+<li>LinkedIn is social/discovery evidence; its claims have not been independently replicated.</li>
+<li>No benchmark source code, full command traces, finding validation, target authorization record, or complete model/runtime configuration was available in the captured post.</li>
+<li>The visible authenticated text included unrelated LinkedIn interface and messaging regions; those local-only regions were excluded from this summary and from publication.</li>
+<li>The screenshot and authenticated-state files remain local-only and are not staged for version control.</li>
+</ul></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">A 20 GB model running on my MacBook found RCE, SQL injection, and XXE — at zero API cost.
+
+Part 3 of my AI pentesting agent research. This time: what happens when you skip the cloud entirely and run open-weight models locally?
+
+Setup
+- MacBook Pro M5 Max, 64 GB unified memory
+- Ollama 0.32 as the runtime
+- Custom agent harness with sandboxed tools (curl, code search, DNS, file read)
+- Two targets: a production web application (black-box) and OWASP Juice Shop (grey-box)
+- 8 open-weight models tested, ranging from 5.5 GB to 65 GB
+
+The standout: Laguna XS 2.1 by Poolside
+
+Released July 2. A 33B Mixture-of-Experts model with only 3B parameters activated per token — designed specifically for agentic tool use. At Q4 quantization it&#x27;s just 20 GB.
+
+Results:
+- Production site: 16 findings in 18.6 minutes
+- Juice Shop: 9 findings in 11.8 minutes
+- Found RCE (chained .git exposure → source reconstruction → system() sink analysis), SQL injection (auth bypass + union extraction), XXE, default admin credentials, YAML deserialization
+
+For context, this places it between Claude Opus 4.8 and Claude Sonnet 5 in our 15-model cloud benchmark. At $0 per scan.
+
+The full local model ranking:
+
+1. Laguna XS 2.1 (20 GB) — 16 findings, 18.6 min
+2. Qwen 3.6 35B (23 GB) — 12 findings, 48 min
+3. GPT-OSS 120B (65 GB) — 8 findings, 192 min (swapping to disk)
+4. Qwen3.5 8B (6.6 GB) — 2 findings, 8 min
+5. Gemma 4 (9.6 GB) — 1 finding, 5 min
+6. Qwen3-Coder-Next (51 GB) — 0 findings, 514 tool calls (explored but never reported)
+7. GLM4 (5.5 GB) — 0 findings (too small for agent work)
+
+Surprise: bigger ≠ better. Qwen3-Coder-Next at 51 GB made 514 tool calls but reported zero findings . MoE with small active parameters (Laguna&#x27;s 3B) turned out to be the sweet spot: fast inference, low memory, and strong enough reasoning to chain multi-step attacks.
+
+Why this matters for defenders
+
+- On-prem, air-gapped, zero data leakage. Every scan runs entirely on your machine. For SOC 2 / FedRAMP / ITAR environments, this isn&#x27;t a nice-to-have — it&#x27;s a requirement.
+- No safety guardrails blocking legitimate work. We&#x27;ve documented GPT-5.6&#x27;s three-layer content filter killing scans mid-run, Gemini hard-refusing security testing, and Fable 5 declining all offensive tasks. Local models follow instructions.
+- Custom RL fine-tuning. With open weights, you can train on your own tech stack, your vulnerability patterns, your remediation playbooks. A model tuned to your environment will outperform any general-purpose cloud model on your targets.
+- Laguna XS 2.1 is the smallest in the family. Laguna S 2.1 (118B, 8B active, 59 GB at INT4) fits on a 64 GB machine and has 1M context — our next benchmark target.
+
+Open question for the community: are there other open-weight models optimized for agentic tool use that we should test? If you&#x27;ve run local models for security work, I&#x27;d love to hear your results.
+
+#AIAgents #CyberSecurity #PenetrationTesting #LocalLLM #OpenSource #Laguna #SecurityResearch #Aurascape</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7488704837627359234">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 30 Jul 2026</p>
     <h2>TurboOCR: local GPU document parsing with explicit quality boundaries</h2>
@@ -58,7 +131,7 @@
   </div>
 </article>
 <article class="entry" id="post-7488443013254410241">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 30 Jul 2026</p>
     <h2>Codex Security: coverage-aware AI-assisted security scanning</h2>
@@ -119,7 +192,7 @@ docs: https://lnkd.in/dsZaxw2C</div></details>
   </div>
 </article>
 <article class="entry" id="post-7488378978442047488">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 29 Jul 2026</p>
     <h2>Building typed agent workflows with Swiftide</h2>
@@ -153,7 +226,7 @@ docs: https://lnkd.in/dsZaxw2C</div></details>
   </div>
 </article>
 <article class="entry" id="post-7488294849872535553">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 29 Jul 2026</p>
     <h2>LinkedIn intake: Kimi K3 local GGUF claims</h2>
@@ -202,7 +275,7 @@ P.S. also check out The Ultimate Guide to Kimi K3 🤖: https://lnkd.in/dTjiNm6v
   </div>
 </article>
 <article class="entry" id="post-7487975154883575808">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 28 Jul 2026</p>
     <h2>LinkedIn intake — Graft code-graph context</h2>
@@ -228,7 +301,7 @@ P.S. also check out The Ultimate Guide to Kimi K3 🤖: https://lnkd.in/dTjiNm6v
   </div>
 </article>
 <article class="entry" id="post-7487225129257635840">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 26 Jul 2026</p>
     <h2>LinkedIn intake summary — llmfit hardware-aware local-model selection</h2>
@@ -264,7 +337,7 @@ If interested in daily free AI trainings, I send AI workflows and resources like
   </div>
 </article>
 <article class="entry" id="post-7487876216457408512">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 28 Jul 2026</p>
     <h2>LinkedIn intake — Kimi K3: open-weight multimodal MoE model</h2>
@@ -325,7 +398,7 @@ _____
   </div>
 </article>
 <article class="entry" id="post-7486971764460355584">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Jul 2026 · Published 26 Jul 2026</p>
     <h2>LinkedIn intake — OpenWorker: action-governed local desktop coworker</h2>
@@ -381,7 +454,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487839819851751425">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Jul 2026 · Published 28 Jul 2026</p>
     <h2>jcode: memory footprint is only one multi-agent scaling constraint</h2>
@@ -414,7 +487,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487776628211716096">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Jul 2026 · Published 28 Jul 2026</p>
     <h2>Adrian: runtime agent-scope governance</h2>
@@ -445,7 +518,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487127925511675905">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Jul 2026 · Published 26 Jul 2026</p>
     <h2>PinchTab: local-first browser control and indirect-prompt-injection boundaries</h2>
@@ -478,7 +551,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487221193822097409">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Jul 2026 · Published 26 Jul 2026</p>
     <h2>Fence: bounded CI egress and runner lockdown for coding agents</h2>
@@ -509,7 +582,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487503256609288193">
-  <div class="entry-number">13</div>
+  <div class="entry-number">14</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Jul 2026 · Published 27 Jul 2026</p>
     <h2>LMCache multiprocess cache management for LLM serving</h2>
@@ -577,7 +650,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7487613062598922240">
-  <div class="entry-number">14</div>
+  <div class="entry-number">15</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 27 Jul 2026</p>
     <h2>ShadowBroker: an agent-connected OSINT aggregation platform</h2>
@@ -612,7 +685,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7487119534902935552">
-  <div class="entry-number">15</div>
+  <div class="entry-number">16</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 26 Jul 2026</p>
     <h2>Graph engineering makes workflow and governance topology explicit</h2>
@@ -658,7 +731,7 @@ Credit to Movez</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487499530368614401">
-  <div class="entry-number">16</div>
+  <div class="entry-number">17</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 27 Jul 2026</p>
     <h2>LLM model substitution needs task-level evidence, not headline savings</h2>
@@ -708,7 +781,7 @@ Here are some tricks for anyone out there dabbling with the same kind of stuff:
   </div>
 </article>
 <article class="entry" id="post-7487485791695163392">
-  <div class="entry-number">17</div>
+  <div class="entry-number">18</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 27 Jul 2026</p>
     <h2>Alook: an email-native control plane for a personal AI company</h2>
@@ -767,7 +840,7 @@ I&#x27;ve shared the Github Repo in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7487175685040476160">
-  <div class="entry-number">18</div>
+  <div class="entry-number">19</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 26 Jul 2026</p>
     <h2>LinkedIn intake — Memoria: versioned agent-memory changes</h2>
@@ -788,7 +861,7 @@ I&#x27;ve shared the Github Repo in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7485123226470158336">
-  <div class="entry-number">19</div>
+  <div class="entry-number">20</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 21 Jul 2026</p>
     <h2>LinkedIn intake — Agent Flow: visible execution traces for coding agents</h2>
@@ -837,7 +910,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7486842810722242560">
-  <div class="entry-number">20</div>
+  <div class="entry-number">21</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Jul 2026 · Published 25 Jul 2026</p>
     <h2>LinkedIn book-intake summary: PageIndex / vectorless RAG</h2>
@@ -885,7 +958,7 @@ Instead of chopping your docs and stuffing them into Pinecone, it builds a tree 
   </div>
 </article>
 <article class="entry" id="post-7486374672033316864">
-  <div class="entry-number">21</div>
+  <div class="entry-number">22</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Jul 2026 · Published 24 Jul 2026</p>
     <h2>LinkedIn intake — Writing with AI without erasing authorial voice</h2>
@@ -996,7 +1069,7 @@ Upload once to Claude. Done.
   </div>
 </article>
 <article class="entry" id="post-7486532279058538496">
-  <div class="entry-number">22</div>
+  <div class="entry-number">23</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Jul 2026 · Published 24 Jul 2026</p>
     <h2>LinkedIn intake — Gigatoken: fast CPU tokenization for corpus preparation</h2>
@@ -1027,7 +1100,7 @@ Upload once to Claude. Done.
   </div>
 </article>
 <article class="entry" id="post-7486347771738927105">
-  <div class="entry-number">23</div>
+  <div class="entry-number">24</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Jul 2026 · Published 24 Jul 2026</p>
     <h2>LinkedIn intake — Production AI System Architecture</h2>
@@ -1098,7 +1171,7 @@ Meet sponsor-friendly employers, top attorneys, VCs, creators, and O1 / EB1A / E
   </div>
 </article>
 <article class="entry" id="post-7486067924860923905">
-  <div class="entry-number">24</div>
+  <div class="entry-number">25</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Jul 2026 · Published 23 Jul 2026</p>
     <h2>LinkedIn intake — Tau: a Python coding-agent harness</h2>
@@ -1128,7 +1201,7 @@ Meet sponsor-friendly employers, top attorneys, VCs, creators, and O1 / EB1A / E
   </div>
 </article>
 <article class="entry" id="post-7486099155321245696">
-  <div class="entry-number">25</div>
+  <div class="entry-number">26</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Jul 2026 · Published 23 Jul 2026</p>
     <h2>LinkedIn intake — OpenWorker: local-first, model-independent desktop agent</h2>
@@ -1166,7 +1239,7 @@ Source code: LinkedIn shortlink captured in local-only raw evidence; its destina
   </div>
 </article>
 <article class="entry" id="post-7485755077249609728">
-  <div class="entry-number">26</div>
+  <div class="entry-number">27</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Jul 2026 · Published 22 Jul 2026</p>
     <h2>LinkedIn intake — NetClaw runtime choice and federation boundaries</h2>
@@ -1216,7 +1289,7 @@ Join the Vibe Ops Forum today; deploy your first Risk of NetClaws, using OpenCla
   </div>
 </article>
 <article class="entry" id="post-7485742075779559426">
-  <div class="entry-number">27</div>
+  <div class="entry-number">28</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 22 Jul 2026 · Published 22 Jul 2026</p>
     <h2>LinkedIn intake — Fractal: bounded, worktree-based coding-agent loops</h2>
@@ -1246,7 +1319,7 @@ Join the Vibe Ops Forum today; deploy your first Risk of NetClaws, using OpenCla
   </div>
 </article>
 <article class="entry" id="post-7485431964343148545">
-  <div class="entry-number">28</div>
+  <div class="entry-number">29</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 22 Jul 2026 · Published 21 Jul 2026</p>
     <h2>LinkedIn intake — Cisco Antares: compact models for vulnerability localization</h2>
@@ -1283,7 +1356,7 @@ It&#x27;s also part of a bigger pattern from Cisco. Foundry Security Spec, CodeG
   </div>
 </article>
 <article class="entry" id="post-7485179844935241728">
-  <div class="entry-number">29</div>
+  <div class="entry-number">30</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 22 Jul 2026 · Published 21 Jul 2026</p>
     <h2>LinkedIn intake — Juice Shop Model Benchmark: LLM-led vulnerability discovery</h2>
@@ -1342,7 +1415,7 @@ Full benchmark data in the attached image.
   </div>
 </article>
 <article class="entry" id="post-7484972678072778752">
-  <div class="entry-number">30</div>
+  <div class="entry-number">31</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 21 Jul 2026 · Published 20 Jul 2026</p>
     <h2>LinkedIn intake — MemoHarness: Agent Harnesses That Learn from Experience</h2>
@@ -1386,7 +1459,7 @@ I&#x27;ve shared the link to the paper in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7485003541288243201">
-  <div class="entry-number">31</div>
+  <div class="entry-number">32</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 21 Jul 2026 · Published 20 Jul 2026</p>
     <h2>LinkedIn intake — The NetClaw-to-NetClaw Federation Protocol (NCFED)</h2>
@@ -1457,7 +1530,7 @@ https://lnkd.in/gEPM2uph
   </div>
 </article>
 <article class="entry" id="post-7484963355959582720">
-  <div class="entry-number">32</div>
+  <div class="entry-number">33</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 21 Jul 2026 · Published 20 Jul 2026</p>
     <h2>LinkedIn intake — Netdata MCP for incident investigation</h2>
@@ -1470,7 +1543,7 @@ https://lnkd.in/gEPM2uph
   </div>
 </article>
 <article class="entry" id="post-7484855921978929152">
-  <div class="entry-number">33</div>
+  <div class="entry-number">34</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Jul 2026 · Published 20 Jul 2026</p>
     <h2>LinkedIn intake — ADHD: parallel divergent ideation for coding agents</h2>
@@ -1508,7 +1581,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7484693336654630913">
-  <div class="entry-number">34</div>
+  <div class="entry-number">35</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Jul 2026 · Published 19 Jul 2026</p>
     <h2>LinkedIn intake — NetClaw cross-operator RAG federation</h2>
@@ -1576,7 +1649,7 @@ On top of the Internet.
   </div>
 </article>
 <article class="entry" id="post-7483953733446397952">
-  <div class="entry-number">35</div>
+  <div class="entry-number">36</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Jul 2026 · Published 17 Jul 2026</p>
     <h2>LinkedIn intake — CodeBurn local coding-agent cost telemetry</h2>
@@ -1598,7 +1671,7 @@ https://lnkd.in/eMmW2Fjt
   </div>
 </article>
 <article class="entry" id="post-7482670766950383616">
-  <div class="entry-number">36</div>
+  <div class="entry-number">37</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Jul 2026 · Published 14 Jul 2026</p>
     <h2>LinkedIn intake — Copilot code-review workflow beats tool swapping</h2>
@@ -1622,7 +1695,7 @@ More details: https://msft.it/6042v0FLq
   </div>
 </article>
 <article class="entry" id="post-7484336435072937984">
-  <div class="entry-number">37</div>
+  <div class="entry-number">38</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Jul 2026 · Published 18 Jul 2026</p>
     <h2>LinkedIn intake — Code as Agent Harness</h2>
@@ -1656,7 +1729,7 @@ This is where prompt engineering dies, and systems engineering takes over.</div>
   </div>
 </article>
 <article class="entry" id="post-7482025715320750080">
-  <div class="entry-number">38</div>
+  <div class="entry-number">39</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Jul 2026 · Published 12 Jul 2026</p>
     <h2>LinkedIn intake — multi-source agentic RAG</h2>
@@ -1694,7 +1767,7 @@ Repo (MIT licensed): https://lnkd.in/eGJazPwD
   </div>
 </article>
 <article class="entry" id="post-7484243477040467968">
-  <div class="entry-number">39</div>
+  <div class="entry-number">40</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Jul 2026 · Published 18 Jul 2026</p>
     <h2>LinkedIn intake — Shepherd reversible agent execution traces</h2>
@@ -1727,7 +1800,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7483824355802697728">
-  <div class="entry-number">40</div>
+  <div class="entry-number">41</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Jul 2026 · Published 17 Jul 2026</p>
     <h2>LinkedIn intake — LightMem agent-memory cost and offline consolidation</h2>
@@ -1754,7 +1827,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7482794683744538624">
-  <div class="entry-number">41</div>
+  <div class="entry-number">42</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Jul 2026 · Published 14 Jul 2026</p>
     <h2>LinkedIn intake — GCF output support in Chrome DevTools MCP</h2>
@@ -1812,7 +1885,7 @@ https://gcformat.com</div></details>
   </div>
 </article>
 <article class="entry" id="post-7483225915116662785">
-  <div class="entry-number">42</div>
+  <div class="entry-number">43</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Jul 2026 · Published 15 Jul 2026</p>
     <h2>LinkedIn intake summary — building a CrewAI coding harness</h2>
@@ -1865,7 +1938,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7483849981418954752">
-  <div class="entry-number">43</div>
+  <div class="entry-number">44</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Jul 2026 · Published 17 Jul 2026</p>
     <h2>LinkedIn intake — Superlinked Inference Engine (SIE)</h2>
@@ -1932,7 +2005,7 @@ Find me → Avi Chawla. Every day, I share tutorials and insights on DS, ML, LLM
   </div>
 </article>
 <article class="entry" id="post-7483945850189119488">
-  <div class="entry-number">44</div>
+  <div class="entry-number">45</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Jul 2026 · Published 17 Jul 2026</p>
     <h2>LinkedIn intake — WrenAI semantic context for Text-to-SQL</h2>
@@ -1966,7 +2039,7 @@ Find me → Avi Chawla. Every day, I share tutorials and insights on DS, ML, LLM
   </div>
 </article>
 <article class="entry" id="post-7483886887531773952">
-  <div class="entry-number">45</div>
+  <div class="entry-number">46</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Jul 2026 · Published 17 Jul 2026</p>
     <h2>LinkedIn intake — Loop Engineering</h2>
@@ -2021,7 +2094,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7482730946153099264">
-  <div class="entry-number">46</div>
+  <div class="entry-number">47</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 14 Jul 2026 · Published 14 Jul 2026</p>
     <h2>LinkedIn intake — OpenConnector agent credential gateway</h2>
@@ -2049,7 +2122,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7482027440169496576">
-  <div class="entry-number">47</div>
+  <div class="entry-number">48</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 13 Jul 2026 · Published 12 Jul 2026</p>
     <h2>LinkedIn intake — Mesh LLM distributed inference</h2>
@@ -2076,7 +2149,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7481985562275454976">
-  <div class="entry-number">48</div>
+  <div class="entry-number">49</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 12 Jul 2026 · Published 12 Jul 2026</p>
     <h2>LinkedIn intake — OpenCut / CapCut alternative</h2>
@@ -2136,7 +2209,7 @@ Don&#x27;t forget to drop a ⭐️!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7481672610683154432">
-  <div class="entry-number">49</div>
+  <div class="entry-number">50</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 11 Jul 2026 · Published 11 Jul 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -2192,7 +2265,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7481436912893800448">
-  <div class="entry-number">50</div>
+  <div class="entry-number">51</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 11 Jul 2026 · Published 10 Jul 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -2243,7 +2316,7 @@ This makes me less worried about the slopware we might be producing now, better 
   </div>
 </article>
 <article class="entry" id="post-7481240042246533120">
-  <div class="entry-number">51</div>
+  <div class="entry-number">52</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 11 Jul 2026 · Published 10 Jul 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -2283,7 +2356,7 @@ When your agent answers wrong, do you know which file to fix, or is that knowled
   </div>
 </article>
 <article class="entry" id="post-7481465079994040320">
-  <div class="entry-number">52</div>
+  <div class="entry-number">53</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 10 Jul 2026 · Published 10 Jul 2026</p>
     <h2>LinkedIn intake summary — colibri / GLM-5.2 744B MoE on 25GB RAM</h2>
@@ -2309,7 +2382,7 @@ When your agent answers wrong, do you know which file to fix, or is that knowled
   </div>
 </article>
 <article class="entry" id="post-7480336695922475009">
-  <div class="entry-number">53</div>
+  <div class="entry-number">54</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 10 Jul 2026 · Published 07 Jul 2026</p>
     <h2>LinkedIn intake summary — LMCache / 14x faster and 90% cheaper LLM inference claim</h2>
@@ -2357,7 +2430,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7480692699537412096">
-  <div class="entry-number">54</div>
+  <div class="entry-number">55</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 10 Jul 2026 · Published 08 Jul 2026</p>
     <h2>LinkedIn intake summary — LMCache / reusable KV cache for vLLM workloads</h2>
@@ -2382,7 +2455,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7481172111835680768">
-  <div class="entry-number">55</div>
+  <div class="entry-number">56</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 10 Jul 2026 · Published 10 Jul 2026</p>
     <h2>LinkedIn intake summary — Advisor/Orchestrator/Worker Meta LOOP agent skill</h2>
@@ -2431,7 +2504,7 @@ ____
   </div>
 </article>
 <article class="entry" id="post-7480992753246638081">
-  <div class="entry-number">56</div>
+  <div class="entry-number">57</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 10 Jul 2026 · Published 09 Jul 2026</p>
     <h2>LinkedIn intake summary — CodeFlow codebase map for coding agents</h2>
@@ -2456,7 +2529,7 @@ ____
   </div>
 </article>
 <article class="entry" id="post-7480962704967516160">
-  <div class="entry-number">57</div>
+  <div class="entry-number">58</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 09 Jul 2026 · Published 09 Jul 2026</p>
     <h2>LinkedIn intake summary — T3MP3ST local/offline offensive-security agent</h2>
@@ -2501,7 +2574,7 @@ Don&#x27;t forget to drop a ⭐️</div></details>
   </div>
 </article>
 <article class="entry" id="post-7480311097145765889">
-  <div class="entry-number">58</div>
+  <div class="entry-number">59</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 09 Jul 2026 · Published 07 Jul 2026</p>
     <h2>LinkedIn intake summary — Omnigent guardrails/meta-harness</h2>
@@ -2526,7 +2599,7 @@ Don&#x27;t forget to drop a ⭐️</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479963758728048640">
-  <div class="entry-number">59</div>
+  <div class="entry-number">60</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 08 Jul 2026 · Published 06 Jul 2026</p>
     <h2>LinkedIn intake summary — Claude Code AI job-search framework</h2>
@@ -2571,7 +2644,7 @@ Don&#x27;t forget to drop a ⭐️!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7480602213350998016">
-  <div class="entry-number">60</div>
+  <div class="entry-number">61</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 08 Jul 2026 · Published 08 Jul 2026</p>
     <h2>LinkedIn intake summary — GitHub Copilot prompt-cache observability</h2>
@@ -2613,7 +2686,7 @@ Full write-up + open-source repo 👇</div></details>
   </div>
 </article>
 <article class="entry" id="post-7480355705217085443">
-  <div class="entry-number">61</div>
+  <div class="entry-number">62</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 08 Jul 2026 · Published 07 Jul 2026</p>
     <h2>LinkedIn intake summary — T3MP3ST autonomous red-teaming meta-harness</h2>
@@ -2644,7 +2717,7 @@ Full write-up + open-source repo 👇</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479205266148704258">
-  <div class="entry-number">62</div>
+  <div class="entry-number">63</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 07 Jul 2026 · Published 04 Jul 2026</p>
     <h2>LinkedIn intake summary — Agentic code isolation architectures</h2>
@@ -2706,7 +2779,7 @@ Layer 1 isolation (the sandbox) is just the start. You still need Layer 2 guardr
   </div>
 </article>
 <article class="entry" id="post-7479889211899314176">
-  <div class="entry-number">63</div>
+  <div class="entry-number">64</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 07 Jul 2026 · Published 06 Jul 2026</p>
     <h2>LinkedIn intake summary — Omnigent / meta-harness for AI coding agents</h2>
@@ -2771,7 +2844,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479999202165518336">
-  <div class="entry-number">64</div>
+  <div class="entry-number">65</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 07 Jul 2026 · Published 06 Jul 2026</p>
     <h2>LinkedIn intake summary — OpenWiki / coding-agent context engineering</h2>
@@ -2801,7 +2874,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479902695924097024">
-  <div class="entry-number">65</div>
+  <div class="entry-number">66</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 06 Jul 2026 · Published 06 Jul 2026</p>
     <h2>LinkedIn intake summary: Kyutai Pocket TTS / local CPU text-to-speech</h2>
@@ -2879,7 +2952,7 @@ Don&#x27;t forget to drop a ⭐️!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479911884058472449">
-  <div class="entry-number">66</div>
+  <div class="entry-number">67</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 06 Jul 2026 · Published 06 Jul 2026</p>
     <h2>LinkedIn intake summary: CubeSandbox / AI-agent runtime security</h2>
@@ -2934,7 +3007,7 @@ Don&#x27;t forget to drop a ⭐️!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479375365107310592">
-  <div class="entry-number">67</div>
+  <div class="entry-number">68</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 06 Jul 2026 · Published 05 Jul 2026</p>
     <h2>LinkedIn intake summary — Ollama-OCR / local vision OCR</h2>
@@ -2991,7 +3064,7 @@ Follow Ved Prakash Meena for more AI resources.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7474165886149656576">
-  <div class="entry-number">68</div>
+  <div class="entry-number">69</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 06 Jul 2026 · Published 20 Jun 2026</p>
     <h2>LinkedIn intake summary — PixelRAG / screenshots for RAG</h2>
@@ -3038,7 +3111,7 @@ Check it out → https://lnkd.in/erdrYzBW</div></details>
   </div>
 </article>
 <article class="entry" id="post-7479157155611475968">
-  <div class="entry-number">69</div>
+  <div class="entry-number">70</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 05 Jul 2026 · Published 04 Jul 2026</p>
     <h2>The entire RAG industry is about to get cooked.</h2>
