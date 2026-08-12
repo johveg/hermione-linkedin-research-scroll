@@ -19,11 +19,77 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>1 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>2 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7493039691160506369">
+  <article class="entry" id="post-7493328493963890689">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 12 Aug 2026 · Published 12 Aug 2026</p>
+    <h2>LinkedIn intake — Antares-1B in a local, tool-using CWE workflow</h2>
+    <p class="byline">By <a href="https://ca.linkedin.com/in/john-capobianco-644a1515" rel="noopener noreferrer">John Capobianco</a> <a class="original-link" href="https://www.linkedin.com/posts/john-capobianco-644a1515_at-itential-i-am-empowered-to-explore-and-activity-7493328493963890689-ENRT" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">At Itential I am empowered to explore and adopt and integrate and stay on the very leading edge of Agentic Infrastructure.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7493328493963890689/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Antares-1B in a local, tool-using CWE workflow"></div>
+    <section class="research"><h3>What the post claims</h3>
+<p>The author reports connecting Cisco Antares-1B, a domain-specific security model, to a local Ollama deployment through Itential Gateway/Model Registry and invoking it from a FlowAI agent against an intentionally seeded CWE in a small repository. The author reports a local, private, tool-using workflow and a roughly ten-second result; a future remediation agent chain is proposed. These are author-reported demo claims, not independently reproduced results.</p>
+<h3>Primary-source quick pass</h3>
+<p>The post&#x27;s three visible shortlinks were resolved by ordinary network fetches, not through LinkedIn. They exposed Cisco&#x27;s Antares blog, Cisco&#x27;s newsroom article, and the author&#x27;s local-run guide. Cisco&#x27;s blog documents Antares-350M and Antares-1B as open-weight security SLMs for vulnerable-file localization, links the Hugging Face collection, and says the models are intended to augment rather than replace application-security controls. The public Hugging Face model page for <code>fdtn-ai/antares-1b</code> identifies Apache-2.0 metadata, IBM Granite 4.0-1B as a base model, security/vulnerability-detection and terminal-agent tags, and an automatically gated model record. Its model card reports vendor evaluation results and a CLI with a read-only repository snapshot, but those are project-authored claims; no access request, model download, CLI, code, benchmark, or security scan was run.</p>
+<h3>Book relevance</h3>
+<p>High relevance for chapters on agentic security, local/private AI infrastructure, model capability boundaries, and governance for tool-using systems.</p>
+<p>Candidate example: specialized models can narrow a well-defined, reviewable task such as vulnerability localization, but the useful unit is the whole governed workflow—not a model alone. It requires authorized repository scope, read-only/default-safe tools, external policy enforcement, reproducible evaluation, provenance, budgets, and human analyst review before remediation or deployment.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance. Hermione should treat security-analysis models as bounded, authorized tools rather than autonomous security authorities. Any future use should require explicit repository/target authorization, a sandboxed read-only analysis path, network and credential controls, logged tool calls, bounded time/tokens, independently validated findings, and a human-approved remediation step. A local model can reduce code egress but does not itself establish correctness, safety, or permission.</p>
+<h3>Evidence strength and limitations</h3>
+<p>Evidence strength: <strong>moderate for the existence and declared characteristics of the Cisco model family, model record, and benchmark; discovery-only for the author’s integration result, local throughput, cost, privacy, model effectiveness on arbitrary repositories, and proposed remediation chain.</strong></p>
+<ul>
+<li>LinkedIn remains social/discovery evidence. The attached image is a self-reported demo screenshot, not an independent test.</li>
+<li>Cisco and the model card are vendor/project-authored sources. No independent replication, code audit, benchmark rerun, or deployment review was performed.</li>
+<li>The model record is automatically gated; no approval request or access attempt beyond public page inspection was made.</li>
+<li>A 500-task benchmark and model-card File F1 are documented by the project, but their methodology and results should be independently reviewed before being used as a general performance conclusion.</li>
+<li>The post&#x27;s ten-second result used a deliberately small, seeded test repository. It does not demonstrate safety, completeness, or performance on production codebases.</li>
+<li>The observed comments are only the guest-visible set plus an initial authenticated viewport; replies and truncated comment text remain partial.</li>
+</ul></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">At Itential I am empowered to explore and adopt and integrate and stay on the very leading edge of Agentic Infrastructure. It&#x27;s why I&#x27;m thriving.
+
+Cisco released Antares-1B - if you haven&#x27;t heard about this I am here to help you understand why this is a major milestone in our industry. Chris Wade helped sharpen my focus on this and he had predicted this outcome - which I will talk about a bit more - a few months ago. He told me to be ready for it.
+
+First - some resources I think you should pause here and go read -
+
+https://lnkd.in/gTuZBxXW
+
+https://lnkd.in/gJ-W7AvE
+
+Ok all up to speed?
+
+This is the first vendor released hyper-focused domain specific open weight model that I know of. Further it&#x27;s free and open source on HuggingFace.
+
+Second, its for Common Weakness Enumeration (CWE). (Ok networking nerds think CVE but for software). This model is also one of the first times we as developers are being armed with a focused small language model (1B parameters; roughly 2.5GB; 100/tps on a Macbook). We can use AI to *identify weaknesses in our software before an adversarial AI does*.
+
+Ok so how does this relate to Itential?
+
+Joksan Flores and I have an upcoming webinar showing Itential&#x27;s Model Registry and how you can literally bring your own provider (BYOP) and bring your own model (BYOM) into the Itential Gateway. From the frontier or foundational models in the cloud to locally hosted open weight models with Ollama.
+
+At the end of the discussion this idea actually came to me - what if host Antares on the Mac via Ollama and our Gateway - present the Antares model to FlowAI agents as a provider - and make a FlowAI CWE Agent?
+
+What you see in the screenshot is exactly that. I planted a CWE in a Git repo of my own and used the FlowAI Agent, powered by nothing more than the Antares model (linked in our Model Registry; to my local Ollama; via the Gateway).
+
+Zero cost. Totally local and private. Fast. Working. With tool calling.
+
+Totally dynamic purpose built CWE Agent available for any code base we want to point it at. Now the sample repo was small and fit inside 1 context window (32k for Antares) but there are chunking and looping mechanisms available as tools for larger code bases. This one took *10* seconds.
+
+In 10 seconds it found a CWE and a pretty serious one.
+
+Now to be clear this isn&#x27;t a chatbot - it actually *won&#x27;t* work as a chat bot. &quot;What are you capabilites?&quot; doesn&#x27;t work.
+
+If you want to setup your Ollama with this model I wrote up a blog about the process -
+
+https://lnkd.in/gZaBzNaY
+
+My next step is to, again, using the model registry, load up a remediation agent chained with the CWE agent; find issues with 1; resolve them with another; in a workflow. But that is for another day.</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7493039691160506369">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 12 Aug 2026 · Published 11 Aug 2026</p>
     <h2>LinkedIn intake — Cisco Antares-1B local security-model guide</h2>
