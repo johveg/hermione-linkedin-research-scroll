@@ -19,11 +19,61 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>3 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>4 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7493669063685042177">
+  <article class="entry" id="post-7493891843320020992">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 14 Aug 2026 · Published 14 Aug 2026</p>
+    <h2>LinkedIn intake — Xberg document intelligence</h2>
+    <p class="byline">By <a href="https://in.linkedin.com/in/progressivethinker" rel="noopener noreferrer">Pallavi Ahuja</a> <a class="original-link" href="https://www.linkedin.com/posts/progressivethinker_the-fast-precise-document-intelligence-engine-activity-7493891843320020992-6wy2" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">The fast, precise document-intelligence engine!</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7493891843320020992/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Xberg document intelligence"></div>
+    <section class="research"><h3>What the post claims</h3>
+<p>The post presents Xberg as a Rust-core document-intelligence engine intended to consolidate document parsing, OCR, layout/table reconstruction, audio transcription, and source-code extraction. It claims 100+ formats, multiple OCR backends with fallbacks and confidence scores, Whisper ONNX transcription, 371 code languages, 15 language bindings, library/CLI/REST/MCP deployment, coding-agent integrations, and MIT licensing. These are author and project claims until corroborated.</p>
+<h3>Primary-source quick pass</h3>
+<p>The post&#x27;s visible <code>lnkd.in</code> repository link was resolved by ordinary network fetch to <code>https://github.com/xberg-io/xberg</code>; it was not clicked in LinkedIn. At inspected default-branch commit <code>07203d6ff1d471bca4d9dfecb27fe770e2c8b867</code>, the public repository has a Rust workspace, MIT license metadata, a published <code>v1.0.14</code> release, source modules for OCR and an MCP server, and MCP integration tests. The README and source document library/CLI/REST/MCP interfaces, multi-backend OCR configuration and fallback thresholds, and a stdio MCP mode; the CLI code makes HTTP MCP transport conditional on an <code>mcp-http</code> build feature and describes loopback-default host protection with an explicit allowlist extension.</p>
+<p>These findings substantiate that the project and documented interfaces exist. They do not independently establish the headline claims of being the fastest or most precise, uniform quality across formats/backends, the 371-language capability under real workloads, security of agent integration, or production readiness. No package installation, binary execution, model download, benchmark run, source build, or independent accuracy/performance replication was attempted.</p>
+<h3>Book relevance</h3>
+<p>High relevance for chapters on document ingestion as infrastructure, multimodal research pipelines, and agent tool boundaries.</p>
+<p>Candidate claim/example: a unified extraction layer can reduce glue code across formats, but broad format coverage is not a quality guarantee. Reliable research systems still need source/page provenance, schema validation, confidence and failure handling, sampled QA, access/egress controls, and documented fallback behavior.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance as a candidate pattern, not an adoption recommendation. Hermione already relies on heterogeneous sources and should retain an adapter boundary around any document-intelligence engine. Before adding a tool such as Xberg, she should benchmark representative PDFs, scans, tables, audio, code, and multilingual files; record provenance and confidence; constrain MCP/server permissions and URL fetching; and keep stronger fallback paths for difficult documents.</p>
+<h3>Evidence strength and limitations</h3>
+<p>Evidence strength: <strong>moderate for public repository existence, MIT repository license metadata, published release, Rust workspace/source modules, documented interfaces, and source-level MCP/OCR configuration; discovery-only for comparative speed/precision, end-to-end extraction quality, current package reliability, benchmark claims, all advertised integrations, and operational security.</strong></p>
+<ul>
+<li>LinkedIn and the post image are social/project-authored evidence, not independent tests.</li>
+<li>The source review was read-only at one commit; no build, test execution, binary inspection, package verification, or security audit was performed.</li>
+<li>MCP extraction supports local paths and remote URLs by design; deployment needs explicit file-access, URL/egress, content-size, timeout, model-download, cache, and credential controls.</li>
+<li>OCR confidence and fallback thresholds are implementation features, not proof of calibrated accuracy or correct table/layout reconstruction.</li>
+<li>Guest-visible comments are partial; authenticated comments/replies and media beyond the initial viewport were not expanded.</li>
+</ul></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">The fast, precise document-intelligence engine!
+
+It&#x27;s called Xberg, and it replaces the five different libraries you&#x27;re probably stitching together right now, one for PDFs, one for OCR, one for tables, one for audio, one for code parsing.
+
+One Rust-core engine. Every file type. One output format.
+
+→ 100+ document formats - PDFs, Office files, images, HTML, email, e-books, structured data
+→ OCR through Tesseract, PaddleOCR, Candle, or VLM backends, with fallback chains and confidence scores
+→ Layout and table reconstruction via PP-DocLayout-V3, RT-DETR, TATR, and SLANet
+→ Audio transcription (MP3, WAV, MP4, and more) via Whisper ONNX, tiny through large-v3
+→ Code intelligence across 371 programming languages - functions, classes, imports, docstrings, chunked for RAG pipelines
+
+15 language bindings - Rust, Python, Node.js, Go, Java, C#, Ruby, PHP, Elixir, and more. Runs as a library, CLI, REST API, or MCP server.
+
+It also plugs straight into AI coding agents - Claude Code, Cursor, Codex CLI, Gemini CLI, GitHub Copilot CLI, so an agent can pull clean, structured data out of any file without you building an ingestion pipeline first.
+
+Xberg is the next iteration of Kreuzberg, same document-intelligence engine, rebuilt and rebranded under a fresh v1 line.
+
+100% open source. MIT licensed.
+
+Here&#x27;s the GitHub Repo: https://lnkd.in/dTkBv4TD</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7493669063685042177">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 13 Aug 2026 · Published 13 Aug 2026</p>
     <h2>LinkedIn intake — BigMoeOnEdge disk-streamed MoE inference</h2>
@@ -55,7 +105,7 @@
   </div>
 </article>
 <article class="entry" id="post-7493328493963890689">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 12 Aug 2026 · Published 12 Aug 2026</p>
     <h2>LinkedIn intake — Antares-1B in a local, tool-using CWE workflow</h2>
@@ -121,7 +171,7 @@ My next step is to, again, using the model registry, load up a remediation agent
   </div>
 </article>
 <article class="entry" id="post-7493039691160506369">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 12 Aug 2026 · Published 11 Aug 2026</p>
     <h2>LinkedIn intake — Cisco Antares-1B local security-model guide</h2>
@@ -158,7 +208,7 @@ Have fun!
 https://lnkd.in/gZaBzNaY</div></details>
   </div>
 </article>
-  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: 13 Aug 2026. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
+  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: 14 Aug 2026. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
 </main>
 </body>
 </html>
