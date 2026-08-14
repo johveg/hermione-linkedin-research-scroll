@@ -19,11 +19,42 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>4 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>5 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7493891843320020992">
+  <article class="entry" id="post-7493780422322204673">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 14 Aug 2026 · Published 13 Aug 2026</p>
+    <h2>LinkedIn intake — docTR confidence-aware local OCR</h2>
+    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_documentai-ocr-rag-activity-7493780422322204673--RGL" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">Half a batch of scans comes out clean, a few come out garbage, and the text never says which is which.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7493780422322204673/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — docTR confidence-aware local OCR"></div>
+    <section class="research"><h3>What the post claims</h3>
+<p>The post presents docTR (Document Text Recognition) as a local, deep-learning OCR library. It claims a detection-and-recognition workflow that returns each word with a box and confidence score, hOCR, Markdown, or JSON output, and a human-review path for low-scoring pages before indexing. It also describes the project as Apache-2.0 licensed and cites roughly 6.2k GitHub stars. These are author/project claims until corroborated.</p>
+<h3>Primary-source quick pass</h3>
+<p>The repository URL exposed in the author comment was fetched directly by ordinary network request, not clicked in LinkedIn: https://github.com/mindee/doctr. At the observed default branch on 2026-08-14, the public repository identifies docTR as PyTorch-based OCR, states that maintenance has moved from Mindee to t2k GmbH, carries Apache-2.0 license metadata, and documents PDF/image inputs, two-stage text detection and recognition, selectable model architectures, layout detection, rotated-box options, nested page/block/line/word output, and JSON export.</p>
+<p>This supports the project&#x27;s existence, documented architecture, local deployment possibility, Apache-2.0 repository license, JSON export, and page/word geometry/confidence-related data structures. It does not independently substantiate the post&#x27;s hOCR or Markdown-output wording, star count beyond the observation time, calibrated confidence, page-level human-routing outcomes, accuracy on complex layouts, or production suitability. No package installation, model download, source build, benchmark, or independent evaluation was attempted.</p>
+<h3>Book relevance</h3>
+<p>High relevance for chapters on document ingestion as infrastructure, private/local AI systems, and trustworthy agent pipelines.</p>
+<p>Candidate claim/example: confidence-aware OCR is more useful than a binary extraction claim when it preserves geometry and uncertainty and sends low-confidence material to a review lane. The important system design is not merely local OCR: it is provenance, page-level quality signals, layout-aware validation, routing rules, sampled QA, and a fallback path for difficult documents.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance as a design pattern rather than an immediate adoption recommendation. Hermione can use local OCR behind a narrow adapter for sensitive or cost-constrained document intake, but should retain original-page provenance, inspect word/layout confidence rather than treating it as calibrated truth, validate schemas/tables, route ambiguous pages for review, and fall back to a stronger extractor where needed.</p>
+<h3>Evidence strength and limitations</h3>
+<p>Evidence strength: <strong>moderate for the public repository, Apache-2.0 repository license, documented PyTorch-based detection/recognition architecture, PDF/image inputs, layout support, word/page structure, and JSON export; discovery-only for the LinkedIn post&#x27;s hOCR/Markdown wording, exact popularity at later times, quality, confidence calibration, human-review benefits, complex-layout handling, and production performance.</strong></p>
+<ul>
+<li>LinkedIn, visible comments, and attached media are social/project-authored evidence rather than independent validation.</li>
+<li>The source review was read-only; no installation, model download, build, test, benchmark, package verification, or accuracy replication was performed.</li>
+<li>A visible practitioner comment specifically cautions that multi-block page ordering can require custom rules.</li>
+<li>Confidence scores need empirical calibration and page/layout-level validation; they are not by themselves evidence of correct reading order, table reconstruction, or factual accuracy.</li>
+<li>Visible comments are limited to the captured set; replies and any later comments were not expanded.</li>
+</ul></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Half a batch of scans comes out clean, a few come out garbage, and the text never says which is which. docTR runs detection and recognition on your own hardware and returns every word with its box and a confidence score, as hOCR, Markdown or JSON. Low-scoring pages go to a human, the rest go straight to your index. 6.2k stars, Apache 2.0.
+#DocumentAI #OCR #RAG #AIAgents #AIEngineering</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7493891843320020992">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 14 Aug 2026 · Published 14 Aug 2026</p>
     <h2>LinkedIn intake — Xberg document intelligence</h2>
@@ -73,7 +104,7 @@ Here&#x27;s the GitHub Repo: https://lnkd.in/dTkBv4TD</div></details>
   </div>
 </article>
 <article class="entry" id="post-7493669063685042177">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 13 Aug 2026 · Published 13 Aug 2026</p>
     <h2>LinkedIn intake — BigMoeOnEdge disk-streamed MoE inference</h2>
@@ -105,7 +136,7 @@ Here&#x27;s the GitHub Repo: https://lnkd.in/dTkBv4TD</div></details>
   </div>
 </article>
 <article class="entry" id="post-7493328493963890689">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 12 Aug 2026 · Published 12 Aug 2026</p>
     <h2>LinkedIn intake — Antares-1B in a local, tool-using CWE workflow</h2>
@@ -171,7 +202,7 @@ My next step is to, again, using the model registry, load up a remediation agent
   </div>
 </article>
 <article class="entry" id="post-7493039691160506369">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 12 Aug 2026 · Published 11 Aug 2026</p>
     <h2>LinkedIn intake — Cisco Antares-1B local security-model guide</h2>
