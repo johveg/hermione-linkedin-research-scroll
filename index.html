@@ -19,361 +19,91 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>8 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>1 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7494327098761736192">
+  <article class="entry" id="post-7493275341625663489">
   <div class="entry-number">01</div>
   <div class="entry-body">
-    <p class="eyebrow">Filed 15 Aug 2026 · Published 15 Aug 2026</p>
-    <h2>LinkedIn intake — Personal Claude Code harness for mobile and scheduled work</h2>
-    <p class="byline">By <a href="https://no.linkedin.com/in/christianraae" rel="noopener noreferrer">Christian Raae</a> <a class="original-link" href="https://no.linkedin.com/posts/christianraae_dette-er-min-harness-rundt-claude-code-activity-7494327098761736192-wFEb" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">Dette er min harness rundt Claude Code.</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7494327098761736192/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Personal Claude Code harness for mobile and scheduled work"></div>
+    <p class="eyebrow">Filed 16 Aug 2026 · Published 12 Aug 2026</p>
+    <h2>LinkedIn intake — Cost-aware subagents for codebase exploration</h2>
+    <p class="byline">By <a href="https://il.linkedin.com/in/yonathan-cohen" rel="noopener noreferrer">Yonathan Cohen</a> <a class="original-link" href="https://www.linkedin.com/posts/yonathan-cohen_i-paid-claude-234-for-a-031-answer-activity-7493275341625663489-PjcZ" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">I paid Claude $2.34 for a $0.31 answer.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7493275341625663489/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Cost-aware subagents for codebase exploration"></div>
     <section class="research"><h3>What the post claims</h3>
-<p>The author describes a personally built Claude Code-centered harness that connects to existing Google, Slack, Trello, Fireflies.ai, Spond, Brønnøysund Register, and GitHub systems. The post says project-level <code>CLAUDE.md</code> files provide contextual switching, auto-memory persists across sessions, and launchd agents run continuously. Examples include a mobile Slack request that synchronizes customer and lead information, scheduled Analytics reviews whose suggested website changes require author approval, and a design preference for existing OAuth seats, MCP servers, local scripts, and low variable API cost.</p>
-<p>The author estimates a 10–15-hour weekly saving and says a comparable system could be built with OpenClaw or Hermes. These are personal, social claims; this intake did not inspect the implementation, integrations, permissions, logs, cost records, schedules, or outcomes.</p>
+<p>The author reports a one-question, 20-file, 107,000-token experiment in Claude Code. In the author’s comparison, having Opus read everything directly produced 204,000 Opus cache-write tokens and a $2.34 session cost; assigning the reading to a Haiku subagent and passing a summary to Opus produced 22,700 Opus cache-write tokens and a $0.31 session cost. The accompanying image displays total-cost snapshots of $2.34 before and $0.3095 after.</p>
+<p>The post attributes the difference to direct file reads accumulating in the main context and being carried through prompt caching. It also says Claude Code’s built-in Explore agent changed in version 2.1.198 from always using Haiku to inheriting the session model, and proposes a custom Explore subagent with <code>model: haiku</code> for lower-cost exploration.</p>
 <h3>Primary-source quick pass</h3>
-<p>The author’s claim names Claude Code but does not identify a public harness repository or reproducible implementation. Official Anthropic documentation was fetched directly by ordinary network request, not clicked through LinkedIn: the MCP documentation describes connecting Claude Code to tools through MCP servers; the memory documentation describes project instructions in <code>CLAUDE.md</code> and auto memory; and the programmatic-use documentation describes non-interactive <code>claude -p</code> use for scripts and CI/CD. These sources establish documented product capabilities, not the author’s specific Gmail, Slack, OAuth, launchd, mobile, approval, or productivity implementation.</p>
-<p>No installation, account connection, source-code inspection, automation execution, benchmark, cost analysis, security review, or independent productivity replication was performed.</p>
+<p>Anthropic’s official Claude Code documentation was fetched directly by ordinary network request, not through LinkedIn. It documents that the built-in Explore subagent is read-only, used for codebase exploration, and—since version 2.1.198—inherits the main conversation model rather than always running on Haiku. The same documentation says a user or project subagent named Explore can override the built-in and retain an explicit <code>model: haiku</code> setting.</p>
+<p>These official docs corroborate the product behavior and configuration option, not the author’s particular workload, token measurements, cache accounting, answer equivalence, cost calculation, or the claim that summaries improve answer quality. No instructions from the post’s linked form were opened, copied, installed, or run.</p>
 <h3>Book relevance</h3>
-<p>High relevance for chapters on agent harnesses, context engineering, mobile-to-agent operating loops, and governed autonomy.</p>
-<p>Candidate claim/example: a useful personal agent harness couples project-scoped context, tool integrations, scheduled monitoring, durable state, and a visible approval boundary. The durable value is not simply issuing one large command: it is the operating design that separates observation, recommendation, decision, execution, and review while retaining replaceable models and tools.</p>
+<p>High relevance for chapters on agent-harness economics, context engineering, model routing, and bounded delegation.</p>
+<p>Candidate claim/example: reliable cost control is not only a model-selection problem. It is also an information-flow design problem: give a scoped, read-only exploration task to a lower-cost worker, retain a stronger model for synthesis or judgment, and measure both outcome quality and total cost.</p>
+<p>The counterexample matters as much as the saving: delegation can become lossy. A summary may omit architectural, security, debugging, or provenance details that the final model needs. Routing should be evaluated on a representative task suite with quality and safety checks, not inferred from one successful answer.</p>
 <h3>Hermione relevance</h3>
-<p>High relevance. Hermione already coordinates worker profiles, browser sessions, tools, queues, schedules, and approval-aware actions. This post reinforces the need to treat mobile instructions, tool access, state ownership, recurring jobs, and execution approvals as separate operational controls. Hermione should preserve canonical source references and scoped credentials, keep model/provider choice replaceable where practical, distinguish proposed from approved changes, log actions and failures, apply least privilege to email/calendar/file access, and measure real task outcomes rather than accepting time-saved claims.</p>
+<p>High relevance. Hermione already uses specialized worker profiles and delegated work. The useful operational lesson is to make task scope, model choice, tool permissions, source references, result format, and verification requirements explicit per worker rather than treating delegation as a generic cost-saving switch.</p>
+<p>A practical improvement is to reserve low-cost/read-only workers for discovery or bounded extraction, preserve links and evidence needed for audit, route ambiguity or high-impact conclusions to a stronger reviewer, and record both task success and total inference/tool cost. Avoid using summary-only delegation where source-level inspection is required for security, code changes, or decisions with irreversible effects.</p>
 <h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for Claude Code’s documented MCP, project-instruction/auto-memory, and programmatic-use capabilities; discovery-only for the author’s complete harness, all named integrations, OAuth scope, launchd operation, approval behavior, cost design, 10–15-hour saving estimate, and parity with OpenClaw or Hermes.</strong></p>
+<p>Evidence strength: <strong>moderate for the documented Claude Code Explore model-inheritance behavior and custom-Explore configuration; discovery-only for the author’s exact 87% saving, 20-file experiment, answer equivalence, cache explanation in that workload, and general answer-quality claims.</strong></p>
 <ul>
-<li>LinkedIn, visible comments, and the terminal-style image are social or self-authored evidence, not an independent validation.</li>
-<li>The reviewed official documentation covers generic product features, not this person’s implementation or governance quality.</li>
-<li>The screenshot is illustrative and does not prove data provenance, successful execution, rollback safety, authorization, or verification of the listed recommendations.</li>
-<li>Visible comments are partial; replies, later comments, and any collapsed text were not expanded.</li>
-<li>No third-party links, company profiles, or products named in the post/comments were clicked or evaluated through LinkedIn.</li>
+<li>The post, its image, and visible comments are social/self-authored evidence, not an independent benchmark.</li>
+<li>The author’s cost figures are a single shown session; model pricing, caching, model behavior, context state, tool actions, and workload composition can all change the result.</li>
+<li>Guest HTML exposed only ten of 148 reported comments; no comments, replies, collapsed text, or links were expanded in LinkedIn.</li>
+<li>One post image was archived. It shows two Claude Code usage snapshots; it does not provide a reproducible trace, prompt, files, independent measurement, or quality evaluation.</li>
+<li>No third-party form, profile, product, or external link named by the post or comments was clicked or evaluated through LinkedIn.</li>
 </ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Dette er min harness rundt Claude Code.
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">I paid Claude $2.34 for a $0.31 answer.
 
-Det siste året har jeg gradvis bygget ut min egen harness for å gjøre arbeidshverdagen enklere og mer effektiv. Jeg er ikke utvikler av bakgrunn, men bruker Claude Code som ingeniør for å bygge det jeg trenger.
-Grovt regnet sparer det meg 10-15 timer i uka.
+One prompt fixes it:
 
-Kort teknisk: Claude Code som orkestrator, integrert mot mine egne systemer, for eksempel Google  Gmail (OAuth, SMTP, IMAP), Drive, Calendar, Analytics, Slack ,
-Trello, Fireflies.ai , Spond , Brreg, GitHub , m.fl.
-Per-prosjekt CLAUDE.md-filer gir kontekst-switch bare ved å nevne prosjektet, auto-memory på tvers av sesjoner, launchd-agenter som kjører døgnet rundt.
+Here&#x27;s the test. 20 files, 107,000 tokens, one question, same correct answer both times:
 
-Et par ting jeg spesielt liker:
+Opus reading everything itself
+→ 204k Opus cache-write tokens, $2.34
 
-🤖 Slack som mobil hub
-Fra mobilen kan jeg si &quot;synk alle kundene og leadsene mine&quot; på vei til et møte, og agenten går gjennom Trello-kort, søker Gmail siste 365 dager per kunde, leser nødvendige filer og vedlegg, syntetiserer status og flagger det som krever beslutning. Tre minutter senere har jeg et board oppdatert basert på faktisk aktivitet, ikke hukommelse.
+With a Haiku reader agent
+→ 22.7k Opus cache-write tokens, $0.31
 
-🤖 Autonome cron-jobber.
-Jeg får for eksempel jevnlige rapporter fra Analytics med konkrete forslag til hva som bør endres på nettsiden - jeg godkjenner, agenten implementerer.
+When Claude reads a file directly, that file lands in your main conversation and gets resent on later turns through prompt caching, until something clears it or compacts it. Your bill grows. Your answers get vaguer. And you don&#x27;t notice either one until you open the usage screen.
 
-🤖 Whispera AI i combo med Slack på mobil.
-Hands off og prate er ofte enklere enn å skrive, det oppleves som en assistent på øret.
+━━━━━━━
 
-🤖 Ikke ha variable API-kostnader er blitt en designprinsipp.
-OAuth mot eksisterende seats, MCP-servere, lokale skripts. Mer eller mindre kun Claude-abonnementet betaler jeg aktivt for.
+☑ 𝗧𝗵𝗲 𝘀𝘂𝗯𝗮𝗴𝗲𝗻𝘁
 
-Kunne bygget det samme med feks OpenClaw  eller Hermes, og forskjellen er ikke lenger så stor. Claude Code er verktøyet jeg allerede bruker daglig, autonomi-egenskapene blir bedre for hver oppdatering, og MCP-økosystemet vokser raskt.
+→ a second Claude with its own window.
 
-Nysgjerrig på hva andre driver med, hør gjerne fra dere om noen bygger / har bygget noe lignende 🤓 🤖</div></details>
+→ it reads all 107,000 tokens, then hands you back a paragraph. 9x less lands in your conversation.
+
+━━━━━━━
+
+☑ 𝗧𝗵𝗲 𝗰𝗵𝗲𝗮𝗽 𝘁𝗿𝗶𝗰𝗸
+
+→ a subagent can run on its own model. Put the reading on Haiku.
+
+→ Opus never sees the files. It reads the summary and makes the call. That&#x27;s the 87%.
+
+━━━━━━━
+
+☑ 𝗧𝗵𝗲 𝗱𝗲𝗳𝗮𝘂𝗹𝘁 𝘁𝗵𝗮𝘁 𝗰𝗵𝗮𝗻𝗴𝗲𝗱
+
+→ Claude Code&#x27;s built-in Explore agent used to run on Haiku. Since v2.1.198 it inherits your session model instead.
+
+→ better exploration, bigger bill. If you work in Opus, searches delegated to Explore now run on Opus. A custom Explore file puts them back on Haiku.
+
+━━━━━━━
+
+☑ 𝗧𝗵𝗲 𝘀𝗲𝘁𝘂𝗽
+
+→ one prompt. Claude writes both files itself.
+
+→ approve the write, restart, done. 2 minutes.
+
+━━━━━━━
+
+Copy-paste the prompt into your Claude Code and you&#x27;re set. It&#x27;s here: https://tally.so/r/ODZpLp</div></details>
   </div>
 </article>
-<article class="entry" id="post-7494393087805378561">
-  <div class="entry-number">02</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 15 Aug 2026 · Published 15 Aug 2026</p>
-    <h2>LinkedIn intake — DeepSeek Harness plugin-first agent architecture</h2>
-    <p class="byline">By <a href="https://fr.linkedin.com/in/charlywargnier" rel="noopener noreferrer">Charly Wargnier</a> <a class="original-link" href="https://www.linkedin.com/posts/charlywargnier_10k-github-stars-in-just-2-days-deepseek-activity-7494393087805378561-TXmt" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">10K GITHUB STARS IN JUST 2 DAYS 🤯</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7494393087805378561/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — DeepSeek Harness plugin-first agent architecture"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The post says DeepSeek Harness became the fastest-rising open-source GitHub project, surpassed an OpenClaw record, and obtained 10,000 GitHub stars in two days. It frames the main technical idea as a fully MIT-licensed agent ecosystem where models, tools, and the agent loop are plugins, arguing that the center of gravity is the harness scaffolding rather than the model alone. These popularity and historical-record statements are social claims, not independently validated here.</p>
-<h3>Primary-source quick pass</h3>
-<p>The repository identity was taken from the guest-visible image and fetched directly by ordinary network and read-only Git request, not clicked through LinkedIn: https://github.com/deepseek-ai/deepseek-harness. On 2026-08-15, GitHub reported it as a public, active MIT-licensed repository with default branch <code>master</code>; the inspected commit was <code>47f943859bef60e4160492346772ded9b24f765a</code>. The repository README identifies DeepSeek Harness (<code>dsh</code>) as a developer preview, warns that compatibility-breaking changes will occur, documents a plugin-first architecture, and shows an npm-based Web UI entry point. The inspected source tree contains separately packaged areas for agent loops, tools, models, credentials, MCP, local and E2B-related sandboxing, approval/permission interaction, session telemetry, shell access, and multiple subagent modes. The root package is version <code>0.1.0-rc.5</code>; GitHub listed no releases in the inspected API response.</p>
-<p>This supports the repository&#x27;s existence, MIT license, developer-preview status, documented plugin architecture, and the presence of source modules for those capability areas. It does not establish that every plugin or adapter works, that any listed sandbox gives adequate isolation, that approval and credential boundaries cannot be bypassed, that star-growth history is accurate, or that the harness is production ready. No package installation, build, test, execution, security audit, benchmark, or independent replication was performed.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on agent harness architecture, extension systems, and operational governance.</p>
-<p>Candidate claim/example: when models, tools, workflows, and UI capabilities are composable plugins, the durable engineering problem becomes maintaining coherent contracts, policy semantics, state, observability, and safety boundaries across that ecosystem. A plugin-first harness can increase adaptability, but it also multiplies compatibility, dependency, and authority-boundary risks.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance as an architecture and evaluation pattern. Hermione already coordinates worker profiles, tools, browser sessions, schedules, and policy-gated operations; this item reinforces that safe autonomy depends on explicit capability boundaries and evidence-backed operational state, not merely model selection. Before adopting a comparable extension surface, Hermione should require a narrow plugin contract, least-privilege credentials, externally enforceable sandbox and egress controls, approval/audit semantics, compatibility tests, rollback, and an evaluation on representative long-running tasks.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for the public repository, MIT license, developer-preview warning, documented plugin-first design, and source-tree capability boundaries; discovery-only for the LinkedIn popularity/record claims, production reliability, adapter coverage, security isolation, approval enforcement, credential handling, and user outcomes.</strong></p>
-<ul>
-<li>LinkedIn, visible comments, and attached media are social/project-authored evidence rather than independent validation.</li>
-<li>GitHub counts are volatile observations and cannot establish the claimed record or organic growth.</li>
-<li>The source review was read-only; no installation, model download, build, test, benchmark, or security audit was performed.</li>
-<li>The repository explicitly describes itself as a developer preview with compatibility-breaking changes expected.</li>
-<li>The screenshot&#x27;s surrounding authenticated LinkedIn UI is local-only and was not used as research evidence.</li>
-<li>Visible comments are limited to the captured set; replies and any later comments were not expanded.</li>
-</ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">10K GITHUB STARS IN JUST 2 DAYS 🤯
-
-DeepSeek Harness has officially become the fastest-rising open source project in GitHub history.
-
-OpenClaw used to hold this record, but DeepSeek just shattered it!!
-
-The momentum is insane, but most people are missing the real breakthrough.
-
-→ Everything is a plugin (the model, the tools, the agent loop)
-→ It is fully MIT licensed and free
-→ The center of gravity is now the scaffolding, not just the model
-
-They are not just open sourcing intel. They are giving away the entire agent ecosystem.
-
-- repo: https://lnkd.in/eS4xFTrM
-- website: https://lnkd.in/ehDGPWBi
-- docs: https://lnkd.in/ez_svXk5</div></details>
-  </div>
-</article>
-<article class="entry" id="post-7494124288627830784">
-  <div class="entry-number">03</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 15 Aug 2026 · Published 14 Aug 2026</p>
-    <h2>LinkedIn intake — Docling Graph provenance-aware document knowledge graphs</h2>
-    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_knowledgegraphs-ontologies-documentai-activity-7494124288627830784-Mx-Q" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">Docling Graph builds a typed knowledge graph from PDFs, scans and Office files.</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7494124288627830784/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Docling Graph provenance-aware document knowledge graphs"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The post presents Docling Graph as a tool that turns PDFs, scans, and Office files into typed knowledge graphs. It says users can supply Pydantic templates or derive them from OWL ontologies; run extraction with a local VLM or a LiteLLM-supported model; preserve page and box origins on nodes; merge across documents deterministically; and export Cypher reproducibly. It also describes the project as MIT licensed and reports 195 GitHub stars. These are author/project claims until corroborated.</p>
-<h3>Primary-source quick pass</h3>
-<p>The repository URL exposed in the author&#x27;s captured comment was fetched directly by ordinary network request, not clicked in LinkedIn: https://github.com/docling-project/docling-graph. On 2026-08-15, GitHub reported the public repository as active, MIT licensed, with default branch <code>main</code>; its observed commit was <code>19815e3147503f78a06e263255667e237830bab9</code>. The README documents transformation into validated Pydantic objects and directed NetworkX graphs, local-VLM and LiteLLM-routed extraction paths, graph export formats, deterministic no-LLM graph fusion, and provenance metadata including bounding-box geometry. The observed GitHub star count was 260, a volatile popularity observation rather than evidence of correctness.</p>
-<p>This supports the repository&#x27;s existence, documented architecture, MIT repository license, supported model-routing options, graph/provenance design, exports, and deterministic merge claim as project-documented behavior. It does not independently demonstrate extraction accuracy, ontology/template quality, entity resolution, cross-document merge correctness, benchmark superiority over vector RAG, data security, cost, latency, or production readiness. No package installation, model download, build, test, benchmark, or independent evaluation was attempted.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on document ingestion as infrastructure, graph-structured context for agents, and trustworthy research pipelines.</p>
-<p>Candidate claim/example: graph-based document extraction can be valuable where an agent must follow typed relationships and trace a claim to page geometry rather than retrieve approximate text alone. The durable lesson is not that a knowledge graph replaces RAG: it is that schema design, provenance, entity disambiguation, uncertainty, domain adaptation, validation, and freshness determine whether a graph is trustworthy agent context.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance as an evaluation and architecture pattern, not an immediate adoption recommendation. Hermione should treat any generated graph as a navigational index rather than ground truth; preserve source-page and bounding-box provenance, expose extraction confidence and merge/identity decisions, restrict model and document egress, validate schemas on representative corpora, and retain direct-source inspection plus a fallback/review path for ambiguous nodes or relations.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for the public repository, MIT license metadata, documented Pydantic/NetworkX graph architecture, provenance metadata, exports, local and remote model-routing options, and project-documented deterministic graph fusion; discovery-only for the LinkedIn post&#x27;s effectiveness, exact popularity beyond the observation time, extraction or entity-resolution accuracy, ontology quality, graph-versus-vector-RAG advantage, cost, privacy, and production outcomes.</strong></p>
-<ul>
-<li>LinkedIn, visible comments, and attached media are social/project-authored evidence rather than independent validation.</li>
-<li>The source review was read-only; no installation, model download, build, test, benchmark, or security audit was performed.</li>
-<li>The project documents both local VLM and LiteLLM-routed options; local extraction should not be generalized to every configuration or data-flow path.</li>
-<li>Ontology choice, domain adaptation, entity disambiguation, and graph freshness remain explicit operational concerns in the visible discussion.</li>
-<li>Visible comments are limited to the captured set; replies and any later comments were not expanded.</li>
-</ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Docling Graph builds a typed knowledge graph from PDFs, scans and Office files. You give it the shape as a Pydantic template, or generate that template from an OWL ontology. Extraction runs on a local VLM or any LiteLLM model. Nodes carry the page and box they came from, merging across documents is deterministic, and the Cypher export re-runs safely. 195 stars, MIT.
-#KnowledgeGraphs #Ontologies #DocumentAI #RAG #AIEngineering</div></details>
-  </div>
-</article>
-<article class="entry" id="post-7493780422322204673">
-  <div class="entry-number">04</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 14 Aug 2026 · Published 13 Aug 2026</p>
-    <h2>LinkedIn intake — docTR confidence-aware local OCR</h2>
-    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_documentai-ocr-rag-activity-7493780422322204673--RGL" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">Half a batch of scans comes out clean, a few come out garbage, and the text never says which is which.</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7493780422322204673/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — docTR confidence-aware local OCR"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The post presents docTR (Document Text Recognition) as a local, deep-learning OCR library. It claims a detection-and-recognition workflow that returns each word with a box and confidence score, hOCR, Markdown, or JSON output, and a human-review path for low-scoring pages before indexing. It also describes the project as Apache-2.0 licensed and cites roughly 6.2k GitHub stars. These are author/project claims until corroborated.</p>
-<h3>Primary-source quick pass</h3>
-<p>The repository URL exposed in the author comment was fetched directly by ordinary network request, not clicked in LinkedIn: https://github.com/mindee/doctr. At the observed default branch on 2026-08-14, the public repository identifies docTR as PyTorch-based OCR, states that maintenance has moved from Mindee to t2k GmbH, carries Apache-2.0 license metadata, and documents PDF/image inputs, two-stage text detection and recognition, selectable model architectures, layout detection, rotated-box options, nested page/block/line/word output, and JSON export.</p>
-<p>This supports the project&#x27;s existence, documented architecture, local deployment possibility, Apache-2.0 repository license, JSON export, and page/word geometry/confidence-related data structures. It does not independently substantiate the post&#x27;s hOCR or Markdown-output wording, star count beyond the observation time, calibrated confidence, page-level human-routing outcomes, accuracy on complex layouts, or production suitability. No package installation, model download, source build, benchmark, or independent evaluation was attempted.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on document ingestion as infrastructure, private/local AI systems, and trustworthy agent pipelines.</p>
-<p>Candidate claim/example: confidence-aware OCR is more useful than a binary extraction claim when it preserves geometry and uncertainty and sends low-confidence material to a review lane. The important system design is not merely local OCR: it is provenance, page-level quality signals, layout-aware validation, routing rules, sampled QA, and a fallback path for difficult documents.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance as a design pattern rather than an immediate adoption recommendation. Hermione can use local OCR behind a narrow adapter for sensitive or cost-constrained document intake, but should retain original-page provenance, inspect word/layout confidence rather than treating it as calibrated truth, validate schemas/tables, route ambiguous pages for review, and fall back to a stronger extractor where needed.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for the public repository, Apache-2.0 repository license, documented PyTorch-based detection/recognition architecture, PDF/image inputs, layout support, word/page structure, and JSON export; discovery-only for the LinkedIn post&#x27;s hOCR/Markdown wording, exact popularity at later times, quality, confidence calibration, human-review benefits, complex-layout handling, and production performance.</strong></p>
-<ul>
-<li>LinkedIn, visible comments, and attached media are social/project-authored evidence rather than independent validation.</li>
-<li>The source review was read-only; no installation, model download, build, test, benchmark, package verification, or accuracy replication was performed.</li>
-<li>A visible practitioner comment specifically cautions that multi-block page ordering can require custom rules.</li>
-<li>Confidence scores need empirical calibration and page/layout-level validation; they are not by themselves evidence of correct reading order, table reconstruction, or factual accuracy.</li>
-<li>Visible comments are limited to the captured set; replies and any later comments were not expanded.</li>
-</ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Half a batch of scans comes out clean, a few come out garbage, and the text never says which is which. docTR runs detection and recognition on your own hardware and returns every word with its box and a confidence score, as hOCR, Markdown or JSON. Low-scoring pages go to a human, the rest go straight to your index. 6.2k stars, Apache 2.0.
-#DocumentAI #OCR #RAG #AIAgents #AIEngineering</div></details>
-  </div>
-</article>
-<article class="entry" id="post-7493891843320020992">
-  <div class="entry-number">05</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 14 Aug 2026 · Published 14 Aug 2026</p>
-    <h2>LinkedIn intake — Xberg document intelligence</h2>
-    <p class="byline">By <a href="https://in.linkedin.com/in/progressivethinker" rel="noopener noreferrer">Pallavi Ahuja</a> <a class="original-link" href="https://www.linkedin.com/posts/progressivethinker_the-fast-precise-document-intelligence-engine-activity-7493891843320020992-6wy2" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">The fast, precise document-intelligence engine!</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7493891843320020992/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Xberg document intelligence"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The post presents Xberg as a Rust-core document-intelligence engine intended to consolidate document parsing, OCR, layout/table reconstruction, audio transcription, and source-code extraction. It claims 100+ formats, multiple OCR backends with fallbacks and confidence scores, Whisper ONNX transcription, 371 code languages, 15 language bindings, library/CLI/REST/MCP deployment, coding-agent integrations, and MIT licensing. These are author and project claims until corroborated.</p>
-<h3>Primary-source quick pass</h3>
-<p>The post&#x27;s visible <code>lnkd.in</code> repository link was resolved by ordinary network fetch to <code>https://github.com/xberg-io/xberg</code>; it was not clicked in LinkedIn. At inspected default-branch commit <code>07203d6ff1d471bca4d9dfecb27fe770e2c8b867</code>, the public repository has a Rust workspace, MIT license metadata, a published <code>v1.0.14</code> release, source modules for OCR and an MCP server, and MCP integration tests. The README and source document library/CLI/REST/MCP interfaces, multi-backend OCR configuration and fallback thresholds, and a stdio MCP mode; the CLI code makes HTTP MCP transport conditional on an <code>mcp-http</code> build feature and describes loopback-default host protection with an explicit allowlist extension.</p>
-<p>These findings substantiate that the project and documented interfaces exist. They do not independently establish the headline claims of being the fastest or most precise, uniform quality across formats/backends, the 371-language capability under real workloads, security of agent integration, or production readiness. No package installation, binary execution, model download, benchmark run, source build, or independent accuracy/performance replication was attempted.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on document ingestion as infrastructure, multimodal research pipelines, and agent tool boundaries.</p>
-<p>Candidate claim/example: a unified extraction layer can reduce glue code across formats, but broad format coverage is not a quality guarantee. Reliable research systems still need source/page provenance, schema validation, confidence and failure handling, sampled QA, access/egress controls, and documented fallback behavior.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance as a candidate pattern, not an adoption recommendation. Hermione already relies on heterogeneous sources and should retain an adapter boundary around any document-intelligence engine. Before adding a tool such as Xberg, she should benchmark representative PDFs, scans, tables, audio, code, and multilingual files; record provenance and confidence; constrain MCP/server permissions and URL fetching; and keep stronger fallback paths for difficult documents.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for public repository existence, MIT repository license metadata, published release, Rust workspace/source modules, documented interfaces, and source-level MCP/OCR configuration; discovery-only for comparative speed/precision, end-to-end extraction quality, current package reliability, benchmark claims, all advertised integrations, and operational security.</strong></p>
-<ul>
-<li>LinkedIn and the post image are social/project-authored evidence, not independent tests.</li>
-<li>The source review was read-only at one commit; no build, test execution, binary inspection, package verification, or security audit was performed.</li>
-<li>MCP extraction supports local paths and remote URLs by design; deployment needs explicit file-access, URL/egress, content-size, timeout, model-download, cache, and credential controls.</li>
-<li>OCR confidence and fallback thresholds are implementation features, not proof of calibrated accuracy or correct table/layout reconstruction.</li>
-<li>Guest-visible comments are partial; authenticated comments/replies and media beyond the initial viewport were not expanded.</li>
-</ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">The fast, precise document-intelligence engine!
-
-It&#x27;s called Xberg, and it replaces the five different libraries you&#x27;re probably stitching together right now, one for PDFs, one for OCR, one for tables, one for audio, one for code parsing.
-
-One Rust-core engine. Every file type. One output format.
-
-→ 100+ document formats - PDFs, Office files, images, HTML, email, e-books, structured data
-→ OCR through Tesseract, PaddleOCR, Candle, or VLM backends, with fallback chains and confidence scores
-→ Layout and table reconstruction via PP-DocLayout-V3, RT-DETR, TATR, and SLANet
-→ Audio transcription (MP3, WAV, MP4, and more) via Whisper ONNX, tiny through large-v3
-→ Code intelligence across 371 programming languages - functions, classes, imports, docstrings, chunked for RAG pipelines
-
-15 language bindings - Rust, Python, Node.js, Go, Java, C#, Ruby, PHP, Elixir, and more. Runs as a library, CLI, REST API, or MCP server.
-
-It also plugs straight into AI coding agents - Claude Code, Cursor, Codex CLI, Gemini CLI, GitHub Copilot CLI, so an agent can pull clean, structured data out of any file without you building an ingestion pipeline first.
-
-Xberg is the next iteration of Kreuzberg, same document-intelligence engine, rebuilt and rebranded under a fresh v1 line.
-
-100% open source. MIT licensed.
-
-Here&#x27;s the GitHub Repo: https://lnkd.in/dTkBv4TD</div></details>
-  </div>
-</article>
-<article class="entry" id="post-7493669063685042177">
-  <div class="entry-number">06</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 13 Aug 2026 · Published 13 Aug 2026</p>
-    <h2>LinkedIn intake — BigMoeOnEdge disk-streamed MoE inference</h2>
-    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_localllm-edgeai-inference-activity-7493669063685042177-HjHu" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">A 284-billion-parameter model generating text on a 12GB phone, CPU only, with output byte-identical to running it fully resident.</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7493669063685042177/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — BigMoeOnEdge disk-streamed MoE inference"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The post presents BigMoeOnEdge as a CPU-only, llama.cpp-public-API approach for running a 284-billion-parameter mixture-of-experts model on a phone with 12 GB RAM. It says the engine reads only the experts selected for each token directly from flash storage and produces byte-identical output to a fully resident run. It also claims Apache-2.0 licensing and 272 GitHub stars at posting time. These are LinkedIn/author claims until corroborated.</p>
-<h3>Primary-source quick pass</h3>
-<p>The GitHub repository was fetched directly after its URL was identified in captured guest-visible metadata; no LinkedIn link was clicked. At inspected main commit <code>8c8c8f1840a45a2728ff8e4f81cf4cf7f5d628b6</code> (2026-08-04), the public repository describes BigMoeOnEdge as a modular, llama.cpp-native implementation of expert-selective flash streaming. It has an Apache-2.0 repository license and a public <code>v0.19.0</code> release dated 2026-08-02.</p>
-<p>The README documents the same extreme configuration as project-authored measurement: DeepSeek V4 Flash 0731 (284B, roughly 91 GB at 2-bit expert quantization) on one 12 GB phone at roughly 0.94 tok/s. It describes flash I/O, caching, and optional overlap of I/O and compute. The project&#x27;s limitations document narrows the claim: streaming is single-token decode only and incompatible with batching/speculative decoding; streamed experts are CPU-computed; dense/shared layers remain resident; streaming does not help models that fit in RAM; and one optional cold-expert setting is non-reproducible. No weights, model download, benchmark execution, mobile application, code build, or independent performance reproduction was attempted.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on local/private AI infrastructure, memory hierarchy, capability boundaries, and operational evaluation.</p>
-<p>Candidate claim/example: MoE sparsity and disk/OS-page-cache streaming can decouple total parameter count from RAM requirements, but the tradeoff is I/O-bound latency, large storage requirements, context/KV-cache pressure, and proof-of-concept maturity rather than ordinary interactive usability. Treat memory hierarchy as an AI-infrastructure design choice rather than equating model size with deployability.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance for private/offline or slow background inference research, but not as a drop-in interactive assistant backend. Hermione should require measured target-hardware token latency, storage footprint, cache/context behavior, model/weight licensing, reliability under real workloads, and an explicit service-level fit before adopting a disk-streamed MoE. Local execution can reduce data egress, but it does not establish responsiveness, robustness, or operational safety.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for the repository&#x27;s existence, Apache-2.0 repository license, public release, documented design, and project-authored limitations; discovery-only for the post&#x27;s exact phone result, byte-identical behavior under all configurations, the 0.94 tok/s measurement, broad llama.cpp compatibility, current popularity, model availability/licensing, and production suitability.</strong></p>
-<ul>
-<li>LinkedIn is social/discovery evidence; the media and comments are not independent tests.</li>
-<li>The project reports its own measurements on one device. No independent replication or code audit was performed.</li>
-<li>The 284B configuration still reports about 91 GB on disk; storage, download practicality, flash/SSD behavior, and wear need deployment-specific review.</li>
-<li>0.94 tok/s may be useful for a slow demonstration or background workload, not necessarily for interactive chat.</li>
-<li>The project&#x27;s own limitations exclude batching/speculative decoding, keep some layers resident, and identify non-reproducibility for an optional setting.</li>
-<li>Guest-visible comments are a partial LinkedIn subset; authenticated comments/replies were not expanded.</li>
-</ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">A 284-billion-parameter model generating text on a 12GB phone, CPU only, with output byte-identical to running it fully resident. BigMoeOnEdge does it by reading only the experts each token routes to, straight from flash, as each layer runs. It rides llama·cpp&#x27;s public API, so every quant and tokenizer already works, and a new MoE architecture is one registry row. 272 stars, Apache-2.0.
-#LocalLLM #EdgeAI #Inference #LLM #AIEngineering</div></details>
-  </div>
-</article>
-<article class="entry" id="post-7493328493963890689">
-  <div class="entry-number">07</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 12 Aug 2026 · Published 12 Aug 2026</p>
-    <h2>LinkedIn intake — Antares-1B in a local, tool-using CWE workflow</h2>
-    <p class="byline">By <a href="https://ca.linkedin.com/in/john-capobianco-644a1515" rel="noopener noreferrer">John Capobianco</a> <a class="original-link" href="https://www.linkedin.com/posts/john-capobianco-644a1515_at-itential-i-am-empowered-to-explore-and-activity-7493328493963890689-ENRT" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">At Itential I am empowered to explore and adopt and integrate and stay on the very leading edge of Agentic Infrastructure.</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7493328493963890689/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Antares-1B in a local, tool-using CWE workflow"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The author reports connecting Cisco Antares-1B, a domain-specific security model, to a local Ollama deployment through Itential Gateway/Model Registry and invoking it from a FlowAI agent against an intentionally seeded CWE in a small repository. The author reports a local, private, tool-using workflow and a roughly ten-second result; a future remediation agent chain is proposed. These are author-reported demo claims, not independently reproduced results.</p>
-<h3>Primary-source quick pass</h3>
-<p>The post&#x27;s three visible shortlinks were resolved by ordinary network fetches, not through LinkedIn. They exposed Cisco&#x27;s Antares blog, Cisco&#x27;s newsroom article, and the author&#x27;s local-run guide. Cisco&#x27;s blog documents Antares-350M and Antares-1B as open-weight security SLMs for vulnerable-file localization, links the Hugging Face collection, and says the models are intended to augment rather than replace application-security controls. The public Hugging Face model page for <code>fdtn-ai/antares-1b</code> identifies Apache-2.0 metadata, IBM Granite 4.0-1B as a base model, security/vulnerability-detection and terminal-agent tags, and an automatically gated model record. Its model card reports vendor evaluation results and a CLI with a read-only repository snapshot, but those are project-authored claims; no access request, model download, CLI, code, benchmark, or security scan was run.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on agentic security, local/private AI infrastructure, model capability boundaries, and governance for tool-using systems.</p>
-<p>Candidate example: specialized models can narrow a well-defined, reviewable task such as vulnerability localization, but the useful unit is the whole governed workflow—not a model alone. It requires authorized repository scope, read-only/default-safe tools, external policy enforcement, reproducible evaluation, provenance, budgets, and human analyst review before remediation or deployment.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance. Hermione should treat security-analysis models as bounded, authorized tools rather than autonomous security authorities. Any future use should require explicit repository/target authorization, a sandboxed read-only analysis path, network and credential controls, logged tool calls, bounded time/tokens, independently validated findings, and a human-approved remediation step. A local model can reduce code egress but does not itself establish correctness, safety, or permission.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for the existence and declared characteristics of the Cisco model family, model record, and benchmark; discovery-only for the author’s integration result, local throughput, cost, privacy, model effectiveness on arbitrary repositories, and proposed remediation chain.</strong></p>
-<ul>
-<li>LinkedIn remains social/discovery evidence. The attached image is a self-reported demo screenshot, not an independent test.</li>
-<li>Cisco and the model card are vendor/project-authored sources. No independent replication, code audit, benchmark rerun, or deployment review was performed.</li>
-<li>The model record is automatically gated; no approval request or access attempt beyond public page inspection was made.</li>
-<li>A 500-task benchmark and model-card File F1 are documented by the project, but their methodology and results should be independently reviewed before being used as a general performance conclusion.</li>
-<li>The post&#x27;s ten-second result used a deliberately small, seeded test repository. It does not demonstrate safety, completeness, or performance on production codebases.</li>
-<li>The observed comments are only the guest-visible set plus an initial authenticated viewport; replies and truncated comment text remain partial.</li>
-</ul></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">At Itential I am empowered to explore and adopt and integrate and stay on the very leading edge of Agentic Infrastructure. It&#x27;s why I&#x27;m thriving.
-
-Cisco released Antares-1B - if you haven&#x27;t heard about this I am here to help you understand why this is a major milestone in our industry. Chris Wade helped sharpen my focus on this and he had predicted this outcome - which I will talk about a bit more - a few months ago. He told me to be ready for it.
-
-First - some resources I think you should pause here and go read -
-
-https://lnkd.in/gTuZBxXW
-
-https://lnkd.in/gJ-W7AvE
-
-Ok all up to speed?
-
-This is the first vendor released hyper-focused domain specific open weight model that I know of. Further it&#x27;s free and open source on HuggingFace.
-
-Second, its for Common Weakness Enumeration (CWE). (Ok networking nerds think CVE but for software). This model is also one of the first times we as developers are being armed with a focused small language model (1B parameters; roughly 2.5GB; 100/tps on a Macbook). We can use AI to *identify weaknesses in our software before an adversarial AI does*.
-
-Ok so how does this relate to Itential?
-
-Joksan Flores and I have an upcoming webinar showing Itential&#x27;s Model Registry and how you can literally bring your own provider (BYOP) and bring your own model (BYOM) into the Itential Gateway. From the frontier or foundational models in the cloud to locally hosted open weight models with Ollama.
-
-At the end of the discussion this idea actually came to me - what if host Antares on the Mac via Ollama and our Gateway - present the Antares model to FlowAI agents as a provider - and make a FlowAI CWE Agent?
-
-What you see in the screenshot is exactly that. I planted a CWE in a Git repo of my own and used the FlowAI Agent, powered by nothing more than the Antares model (linked in our Model Registry; to my local Ollama; via the Gateway).
-
-Zero cost. Totally local and private. Fast. Working. With tool calling.
-
-Totally dynamic purpose built CWE Agent available for any code base we want to point it at. Now the sample repo was small and fit inside 1 context window (32k for Antares) but there are chunking and looping mechanisms available as tools for larger code bases. This one took *10* seconds.
-
-In 10 seconds it found a CWE and a pretty serious one.
-
-Now to be clear this isn&#x27;t a chatbot - it actually *won&#x27;t* work as a chat bot. &quot;What are you capabilites?&quot; doesn&#x27;t work.
-
-If you want to setup your Ollama with this model I wrote up a blog about the process -
-
-https://lnkd.in/gZaBzNaY
-
-My next step is to, again, using the model registry, load up a remediation agent chained with the CWE agent; find issues with 1; resolve them with another; in a workflow. But that is for another day.</div></details>
-  </div>
-</article>
-<article class="entry" id="post-7493039691160506369">
-  <div class="entry-number">08</div>
-  <div class="entry-body">
-    <p class="eyebrow">Filed 12 Aug 2026 · Published 11 Aug 2026</p>
-    <h2>LinkedIn intake — Cisco Antares-1B local security-model guide</h2>
-    <p class="byline">By <a href="https://ca.linkedin.com/in/john-capobianco-644a1515" rel="noopener noreferrer">John Capobianco</a> <a class="original-link" href="https://www.linkedin.com/posts/john-capobianco-644a1515_running-cisco-antares-1b-locally-macos-activity-7493039691160506369-T39h" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
-    <p class="headline">Want to try Cisco latest open weight open source small language model for security - Antares-1B?</p>
-    <div class="media"><img loading="lazy" src="assets/posts/7493039691160506369/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — Cisco Antares-1B local security-model guide"></div>
-    <section class="research"><h3>What the post claims</h3>
-<p>The post points readers to a guide for running Cisco Antares-1B locally on macOS/Apple Silicon with Ollama. The linked guide describes Antares-1B as an open-weight, security-focused model for vulnerability localization and gives a local conversion/import recipe. It also makes performance, benchmark, tool-use, model-behavior, and configuration claims that are not established by the LinkedIn post alone.</p>
-<h3>Primary-source quick pass</h3>
-<p>The linked Automate Your Network article was inspected directly by network fetch after its URL was identified in captured LinkedIn metadata; no LinkedIn link was clicked. It is an author guide, not an independent benchmark or official Cisco deployment document.</p>
-<p>The public Hugging Face model API for <code>fdtn-ai/antares-1b</code> was inspected directly. It lists a public model record at revision <code>10417eb35641b32e7141157db19c76eb545193b6</code>, automatic gating, Apache-2.0 metadata, text-generation, security/vulnerability-detection and terminal-agent tags, and <code>ibm-granite/granite-4.0-1b</code> as the base model. The model-card README returned HTTP 401 without approved access, so its detailed usage contract, benchmark methodology, weights, and evaluation material were not reviewed.</p>
-<h3>Book relevance</h3>
-<p>High relevance for chapters on local/private AI infrastructure, model capability boundaries, agent tool authority, and evaluation discipline.</p>
-<p>Candidate claim/example: a small, specialized model can be valuable in a bounded security workflow when the model, tool loop, access controls, repository scope, stop conditions, and independent evaluation are explicit. “Local” and “open-weight” do not turn an agentic vulnerability model into a safe autonomous scanner or prove operational performance.</p>
-<h3>Hermione relevance</h3>
-<p>High relevance. Hermione should treat a terminal-capable security model as a scoped tool, never as a free-running authority: require authorized repositories/targets, read-only or otherwise approved command policies, isolated execution, logged tool calls, bounded turns/budgets, deterministic result validation, and human review before any consequential follow-up. The model’s gated access also reinforces that credentialed model downloads must remain out of research captures and public artifacts.</p>
-<h3>Evidence strength and limitations</h3>
-<p>Evidence strength: <strong>moderate for the existence, public model metadata, Apache-2.0 model-record metadata, base-model metadata, and gated status; discovery-only for local setup reliability, model quality, benchmark scores, throughput, tool-loop behavior, and vulnerability-finding effectiveness.</strong></p>
-<ul>
-<li>LinkedIn is social/discovery evidence; the linked tutorial is author guidance rather than an independent evaluation.</li>
-<li>The Hugging Face model record is automatically gated and the detailed README was unavailable without approved access; no access request, model download, token use, code execution, or benchmark was attempted.</li>
-<li>The claimed Apple-Silicon speed, disk requirements, quantization/conversion procedure, 15-call loop, benchmark score, and security effectiveness were not reproduced or independently validated.</li>
-<li>The guest archive exposed no comment text; the authenticated viewport showed a comment composer but no expanded comment thread. Comments/replies are therefore incomplete.</li>
-<li>The guest asset is a generic “Posted on LinkedIn” graphic rather than substantive post media; no video was visible.</li>
-</ul>
-<h3>Media summary</h3>
-<p>One guest-visible image was saved locally. Visual inspection identifies it as a generic LinkedIn “Posted on LinkedIn” graphic, not a model screenshot, benchmark, or substantive post illustration. No video was visible.</p></section>
-    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Want to try Cisco latest open weight open source small language model for security - Antares-1B?
-
-Here is a guide on how to get it working with Ollama
-
-Have fun!
-
-https://lnkd.in/gZaBzNaY</div></details>
-  </div>
-</article>
-  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: 15 Aug 2026. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
+  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: 16 Aug 2026. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
 </main>
 </body>
 </html>
