@@ -19,11 +19,62 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>2 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>3 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7495204471862620160">
+  <article class="entry" id="post-7495204188520448000">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
+    <h2>Graft: a regenerable code-context layer for coding agents</h2>
+    <p class="byline">By <a href="https://www.linkedin.com/in/alvaro-cintas" rel="noopener noreferrer">Dr. Alvaro Cintas</a> <a class="original-link" href="https://www.linkedin.com/posts/alvaro-cintas_the-biggest-problem-with-claude-code-has-activity-7495204188520448000-xlko" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">The biggest problem with Claude Code has just been solved.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7495204188520448000/image-1.jpg" alt="Archived LinkedIn media for Graft: a regenerable code-context layer for coding agents"></div>
+    <section class="research"><h3>What the post claims</h3>
+<p>The post presents Graft as an open-source, MIT-licensed local context layer for coding agents. It claims to create a Markdown repo map, update with code changes, and reduce repeated exploration across agent sessions. The graphic names Claude Code, Cursor, Codex, and Gemini and presents project-authored performance claims of up to 4× lower cost, 3× lower latency, 46% fewer tool calls, 42% fewer tokens, and a 12-point SWE-bench-Verified correctness increase.</p>
+<h3>Primary-source quick pass</h3>
+<p>The public <code>NanoNets/Graft</code> repository existed at observed default-branch commit <code>6f871a98beec83482edc32c258dd42151457e1ff</code>. GitHub metadata observed during intake reported an MIT license, 3,388 stars, 298 forks, and 56 open issues; these counts are volatile and are not quality evidence.</p>
+<p>The README documents a Node/TypeScript CLI, deterministic Tree-sitter structural graph building, and optional model-backed summaries. It describes Graft&#x27;s generated <code>graft/</code> directory as a local, regenerable and gitignored cache, not a team-shared artifact. It says the small wiring written into <code>.claude/</code>, <code>AGENTS.md</code>, and MCP configuration may be committed, while each teammate builds a local graph. This is an important correction to the social-post simplification that the complete map is simply shared through Git.</p>
+<p>The project describes automatic freshness checks against the working tree and a benchmark methodology. The public SWE-bench repository corroborates that SWE-bench Verified is a real, containerized evaluation framework. It does not independently validate Graft&#x27;s reported 50-instance result, its comparison configuration, or its claimed generalization to other codebases. No Graft package, CLI, hooks, model integration, or benchmark was installed, run, or granted repository access during intake.</p>
+<h3>Book relevance</h3>
+<p>High relevance for chapters on coding agents, maintained context, repository memory, and trustworthy context engineering.</p>
+<p>Candidate claim/example: Coding agents need maintained, task-routed context rather than ever-larger prompts. A regenerable code map can reduce rediscovery, but its outputs must identify structural versus model-generated material, remain fresh, and be reviewed as context rather than treated as ground truth.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance. Hermione uses repository instructions, skills, worker profiles, queue checkpoints, and source files as durable context. The useful operational pattern is to keep critical context versioned and compact, regenerate derived views safely, record provenance/freshness, and require direct code reads or tests before acting on generated-map conclusions.</p>
+<p>Suggested change: evaluate a small, isolated repository before adoption. Confirm generated-file and secret exclusions, model/provider and telemetry data flow, hook write scope, cache/rebuild behavior, edge provenance, and whether the tool reduces verified task failures rather than merely tool calls or tokens.</p>
+<h3>Evidence and limitations</h3>
+<p>Evidence strength: <strong>moderate for repository existence, MIT metadata, documented architecture, and the existence of a SWE-bench evaluation framework; discovery-only for Graft&#x27;s claimed cost, latency, correctness, and team-onboarding outcomes</strong>. LinkedIn and the project repository are author/vendor-controlled evidence. The result numbers need reproducible configuration, task selection, raw outputs, and independent reruns.</p>
+<p>A visible comment usefully challenges the framing: a well-maintained <code>CLAUDE.md</code> or equivalent versioned instruction may deliver much of the shared-context benefit for smaller repositories. Another comment calls for direct testing with local models. The central trade-off is maintained context versus context bloat, stale generated documentation, opaque model summaries, and write-capable hooks.</p>
+<p>Raw guest HTML and authenticated browser artifacts remain local-only and unstaged. The image and visible comments are partial social evidence; no LinkedIn interaction, installation, or project execution occurred.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">The biggest problem with Claude Code has just been solved.
+
+Everything your agent learns from your code gets wiped out when you close the session.
+
+And tomorrow it learns it all over again. And your teammate learns it from scratch again with their own agent. And again. And again.
+
+Nobody on your team is saving that work anywhere.
+
+This turns it into files:
+
+→ Generates a repo map in markdown
+→ Saves to your project
+→ Updates only when the code changes
+→ You share it via git and it benefits the whole team
+→ Runs locally, no accounts or keys needed
+
+A new hire reads the docs once. Your agent hasn&#x27;t read anything in months.
+
+It&#x27;s called Graft. Open source, MIT license.
+
+Link: https://lnkd.in/eNhr5f7z
+
+No embeddings. No vector DB. Runs locally.
+
+OpenSource, 100% free</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7495204471862620160">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -52,7 +103,7 @@
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
