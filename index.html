@@ -19,11 +19,55 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>12 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>13 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7497402326907838464">
+  <article class="entry" id="post-7497664143525789696">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
+    <h2>LinkedIn intake summary</h2>
+    <p class="byline">By <a href="https://fr.linkedin.com/in/charlywargnier" rel="noopener noreferrer">Charly Wargnier</a> <a class="original-link" href="https://www.linkedin.com/posts/charlywargnier_university-of-california-berkeley-just-activity-7497664143525789696-ffPY" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">🚨 University of California, Berkeley JUST OPEN-SOURCED FREETOKEN, AND THE RESULTS ARE WILD</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7497664143525789696/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake summary"></div>
+    <section class="research"><p>Research summary is pending for this archive.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">🚨 University of California, Berkeley JUST OPEN-SOURCED FREETOKEN, AND THE RESULTS ARE WILD
+
+It is a new local inference engine running 2-4x faster than @ollama by exploiting Mixture-of-Experts architectures.
+
+The initial benchmarks point to a massive shift for local capabilities:
+→ Qwen3.6-35B on an 8GB GPU at 39.3 tokens/s
+→ DeepSeek-V4-Flash 284B on a 32GB GPU at 22 tokens/s
+→ GLM-5.2 753B on a 96GB GPU at 14.9 tokens/s
+
+A 35B model normally requires 70GB for weights.
+
+FreeToken serves it on an 8GB GPU because compute is no longer the bottleneck.
+
+Instead of loading the full model:
+&gt; it targets the MoE router.
+&gt; it measures your machine&#x27;s bandwidth to dynamically split memory misses between the CPU and PCIe.
+
+This architecture is also a massive win for agents.
+
+Coding agents constantly rewrite history, forcing thousands of tokens through prefill.
+
+FreeToken saves checkpoints exactly at agent framework boundaries, dropping first-token latency from 232 seconds (llama.cpp) to under 44 seconds.
+
+Apache 2.0. OpenAI and Anthropic API compatible.
+
+100% free and open-source.
+
+Repo: https://lnkd.in/ec88AU3E
+Paper: https://lnkd.in/ey9PURfd
+
+Shoutout to University of California, Berkeley for building this and making it open-source for the community 🤗
+
+Don&#x27;t forget to drop a ★!</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7497402326907838464">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -60,7 +104,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496914876552929280">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Browser agents need capability and privacy boundaries</h2>
@@ -91,7 +135,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496754793592393728">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Sovereign Agent Mesh: connectivity is not authorization</h2>
@@ -145,7 +189,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496985706615980032">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>MegaMemory: durable context needs reviewable freshness and governance</h2>
@@ -176,7 +220,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496048232511361024">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 20 Aug 2026</p>
     <h2>LinkedIn intake — Train LLM From Scratch, from learning project to alignment pipeline</h2>
@@ -218,7 +262,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495609870918897664">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 18 Aug 2026</p>
     <h2>LinkedIn intake — EverOS local-first Markdown agent memory</h2>
@@ -246,7 +290,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495667626698784768">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Aug 2026 · Published 19 Aug 2026</p>
     <h2>Soup: layer-streamed local LoRA fine-tuning</h2>
@@ -284,7 +328,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495059757100142593">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Zeron: durable local coding-agent sessions with optional sync</h2>
@@ -311,7 +355,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495399009801523201">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 18 Aug 2026</p>
     <h2>Superlog: observability telemetry as an agent investigation surface</h2>
@@ -339,7 +383,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204188520448000">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Graft: a regenerable code-context layer for coding agents</h2>
@@ -390,7 +434,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204471862620160">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -419,7 +463,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
