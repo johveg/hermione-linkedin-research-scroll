@@ -19,11 +19,54 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>14 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>15 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7497629461228728320">
+  <article class="entry" id="post-7497695668275183616">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
+    <h2>Cisco Antares and governed local remediation agents</h2>
+    <p class="byline">By <a href="https://ca.linkedin.com/in/john-capobianco-644a1515" rel="noopener noreferrer">John Capobianco</a> <a class="original-link" href="https://www.linkedin.com/posts/john-capobianco-644a1515_cisco-released-antares-within-hours-i-had-activity-7497695668275183616-a7Vl" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">I shared this demo last week.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7497695668275183616/image-1.jpg" alt="Archived LinkedIn media for Cisco Antares and governed local remediation agents"></div>
+    <section class="research"><h3>Claim and assessment</h3>
+<p>The post and linked article describe a three-model workflow: Antares identifies a code weakness, a coding model proposes a fix, and a language model produces a human-facing report. The durable lesson is not that model-generated remediation should be trusted automatically. It is that a security workflow needs explicit separation between probabilistic analysis and deterministic controls: scoped repository access, identity and RBAC, traceable handoffs, human review, and a blocking approval gate before a change can ship.</p>
+<p>The post claims local execution through Ollama and an Itential Gateway, no external calls or token charges, same-day model registration, and rapid handling of CWE-78 and CWE-502 examples. These are author/project claims. The capture does not establish end-to-end isolation, actual network egress enforcement, model accuracy, false-positive/false-negative rates, remediation quality, latency, or general security efficacy.</p>
+<h3>Book relevance</h3>
+<p>High relevance for chapters on agent governance, secure software automation, approval boundaries, and the distinction between reasoning systems and deterministic workflow controls.</p>
+<p>Candidate claim/example: A useful agent-security architecture treats a vulnerability finding and a proposed patch as reviewable evidence, not authorization to change production code. Put repository scope, credentials, egress, validation, code review, approval, and audit trails outside the model’s discretionary control.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance. Hermione already coordinates tools, queues, browser sessions, commits, and side effects. This item reinforces that security-sensitive agent workflows should use explicitly scoped tools and repositories; retained logs and sanitized handoffs; deterministic validation and diff review; bounded retries; and a human-required gate before consequential writes. A future security-analysis workflow should run only against an authorized repository or fixture, in a contained environment with no implicit credentials or unrestricted network access, and should present a patch for independent review rather than apply it.</p>
+<h3>Evidence and limitations</h3>
+<p>Evidence strength: <strong>moderate for public model-listing metadata and project-authored workflow/demo material; discovery-only for performance, coverage, remediation correctness, local-only operation, governance enforcement, and production outcomes.</strong></p>
+<p>The public Hugging Face model record for <code>fdtn-ai/antares-1b</code> identifies a 1B text-generation model, Apache-2.0 license metadata, a Granite 4.0 1B fine-tuning base, and vulnerability-detection/security tags at revision <code>10417eb35641b32e7141157db19c76eb545193b6</code>. It is access-gated, and its access form cites Cisco’s privacy statement; neither weights nor code were downloaded or run. A public <code>automateyournetwork/netdiag-vuln-sample</code> repository at <code>6c14db3a976d5c7bca17587d924f1cbbb8c30248</code> describes itself as an intentionally planted CWE-78 demo target and has a later commit labelled as a CWE-502 fix. That corroborates a narrow demonstration fixture, not real-world detection or repair effectiveness.</p>
+<p>The captured LinkedIn article, comment, image, engagement counts, model listing, author/company blog, and demo repository are social or project-authored evidence. No model download, tool installation, vulnerability scan, exploit, code execution, benchmark, patch application, independent replication, or security audit was performed. Guest-visible comments are incomplete; authenticated comments and replies were not expanded. Raw HTML, raw metadata, authenticated browser artifacts, and the unviewed cookie-gated video remain excluded from commit and publication.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">I shared this demo last week. It deserved more than a post, so I wrote the whole thing up.
+
+Cisco released Antares: an open-weight, 1-billion-parameter model fine-tuned to find CWEs in code. Not CVEs on a router or switch. Weaknesses in the Python your team wrote this morning.
+
+Within hours it was registered in the Itential Platform and finding real vulnerabilities in a real Git repo. On my MacBook. Locally. For free.
+
+But finding the weakness isn&#x27;t the job. Fixing it is. Reporting it is. Getting a human to approve the change before it ships is. Antares was never built to do any of that, and it shouldn&#x27;t have to be.
+
+So I built three Itential FlowAgents around it:
+
+→ Antares finds the CWE
+→ Qwen3-Coder-30B writes the fix
+→ Gemma 4 reports what changed out to the humans
+
+The agents reason. The workflow runs. Every Git action, every handoff, and the approval gate before anything gets pushed are deterministic. No agent commits to a repository unsupervised.
+
+And every model runs locally through Ollama and a local Itential Gateway. Zero cloud calls. Zero token costs. Zero data leaving the building.
+
+Two live runs in the walkthrough: CWE-78 and CWE-502. Found, patched, and approved in seconds.
+
+Full article and the 20-minute video below. 👇</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7497629461228728320">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -59,7 +102,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497664143525789696">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -103,7 +146,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497402326907838464">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -140,7 +183,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496914876552929280">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Browser agents need capability and privacy boundaries</h2>
@@ -171,7 +214,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496754793592393728">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Sovereign Agent Mesh: connectivity is not authorization</h2>
@@ -225,7 +268,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496985706615980032">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>MegaMemory: durable context needs reviewable freshness and governance</h2>
@@ -256,7 +299,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496048232511361024">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 20 Aug 2026</p>
     <h2>LinkedIn intake — Train LLM From Scratch, from learning project to alignment pipeline</h2>
@@ -298,7 +341,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495609870918897664">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 18 Aug 2026</p>
     <h2>LinkedIn intake — EverOS local-first Markdown agent memory</h2>
@@ -326,7 +369,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495667626698784768">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Aug 2026 · Published 19 Aug 2026</p>
     <h2>Soup: layer-streamed local LoRA fine-tuning</h2>
@@ -364,7 +407,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495059757100142593">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Zeron: durable local coding-agent sessions with optional sync</h2>
@@ -391,7 +434,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495399009801523201">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 18 Aug 2026</p>
     <h2>Superlog: observability telemetry as an agent investigation surface</h2>
@@ -419,7 +462,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204188520448000">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Graft: a regenerable code-context layer for coding agents</h2>
@@ -470,7 +513,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204471862620160">
-  <div class="entry-number">13</div>
+  <div class="entry-number">14</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -499,7 +542,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">14</div>
+  <div class="entry-number">15</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
