@@ -19,11 +19,47 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>13 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>14 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7497664143525789696">
+  <article class="entry" id="post-7497629461228728320">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
+    <h2>LinkedIn intake summary</h2>
+    <p class="byline">By <a href="https://in.linkedin.com/in/sumanth077" rel="noopener noreferrer">Sumanth P</a> <a class="original-link" href="https://www.linkedin.com/posts/sumanth077_uc-berkeley-open-sourced-freetoken-freetoken-activity-7497629461228728320-GJGh" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">UC Berkeley open-sourced FreeToken!</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7497629461228728320/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake summary"></div>
+    <section class="research"><p>Research summary is pending for this archive.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">UC Berkeley open-sourced FreeToken!
+
+FreeToken is an edge-native inference engine for running frontier-scale MoE models on consumer hardware. GPU, CPU, host memory, and PCIe interconnects treated as one unified inference platform.
+
+The reason this works comes from how MoE models are structured. A model like DeepSeek-V4-Flash has 284B total parameters but only activates 13B per token - 6 out of 256 routed experts across each layer. The computation per token is feasible. The problem is the full expert pool still needs to be accessible in memory, which far exceeds GPU VRAM.
+
+FreeToken handles this with a two-level hierarchy. Non-expert weights stay resident on GPU. All expert weights live in host RAM. Only the experts needed for each token get fetched over PCIe. A bandwidth-adaptive policy continuously decides whether to fetch experts to GPU or compute them on CPU based on the machine&#x27;s actual measured PCIe bandwidth.
+
+The result: a laptop with 8GB VRAM runs Qwen3.6-35B. A single RTX 5090 runs DeepSeek-V4-Flash at 284B. A workstation GPU runs GLM-5.2 at 753B.
+
+No GGUF conversion needed. Loads HuggingFace safetensors directly. OpenAI and Anthropic API compatible on localhost. Native GUI with one-click install on Windows and Linux, with agent harnesses built in.
+
+Key capabilities:
+
+• Two-level expert hierarchy: GPU for non-expert weights, host RAM for expert pool
+• Bandwidth-adaptive CPU-GPU co-execution calibrated to your machine
+• Global LRU expert caching across all MoE layers
+• Semantic-aware KV caching for agentic workflows
+• Loads HuggingFace safetensors directly, no GGUF conversion
+• OpenAI and Anthropic API compatible on localhost
+• Native GUI with built-in agent harnesses
+
+100% open source.
+
+I&#x27;ve shared the link in the replies!</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7497664143525789696">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -67,7 +103,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497402326907838464">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -104,7 +140,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496914876552929280">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Browser agents need capability and privacy boundaries</h2>
@@ -135,7 +171,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496754793592393728">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Sovereign Agent Mesh: connectivity is not authorization</h2>
@@ -189,7 +225,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496985706615980032">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>MegaMemory: durable context needs reviewable freshness and governance</h2>
@@ -220,7 +256,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496048232511361024">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 20 Aug 2026</p>
     <h2>LinkedIn intake — Train LLM From Scratch, from learning project to alignment pipeline</h2>
@@ -262,7 +298,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495609870918897664">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 18 Aug 2026</p>
     <h2>LinkedIn intake — EverOS local-first Markdown agent memory</h2>
@@ -290,7 +326,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495667626698784768">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Aug 2026 · Published 19 Aug 2026</p>
     <h2>Soup: layer-streamed local LoRA fine-tuning</h2>
@@ -328,7 +364,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495059757100142593">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Zeron: durable local coding-agent sessions with optional sync</h2>
@@ -355,7 +391,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495399009801523201">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 18 Aug 2026</p>
     <h2>Superlog: observability telemetry as an agent investigation surface</h2>
@@ -383,7 +419,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204188520448000">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Graft: a regenerable code-context layer for coding agents</h2>
@@ -434,7 +470,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204471862620160">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -463,7 +499,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">13</div>
+  <div class="entry-number">14</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
