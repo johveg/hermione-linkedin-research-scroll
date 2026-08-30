@@ -19,11 +19,40 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>31 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>32 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7498784522138890240">
+  <article class="entry" id="post-7499296810264420353">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 30 Aug 2026 · Published 29 Aug 2026</p>
+    <h2>tare: local Claude Code usage forensics</h2>
+    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_aiagents-claudecode-developertools-activity-7499296810264420353-CG4x" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">tare reads the Claude Code session logs already on your disk and names what burned your quota: a re-read file, or a background job running fifty sessions at once.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7499296810264420353/image-1.jpg" alt="Archived LinkedIn media for tare: local Claude Code usage forensics"></div>
+    <section class="research"><h3>Post summary</h3>
+<p>André Lindenberg presents <code>tare</code>, a small Claude Code companion for attributing token/usage pressure from locally retained Claude Code session logs. The LinkedIn post says it can distinguish recurring context re-reads from background automation and reconstruct the rolling five-hour period around a reported lockout. It presents the tool as an early MIT-licensed repository with no account or server call for its core diagnosis.</p>
+<h3>Primary-source quick pass</h3>
+<p>The linked public repository is <code>kelviq/tare</code>, inspected read-only at commit <code>03159f2c354e52e5309b0e0d7582b32a5c0d00d0</code> (2026-08-28). Its documented core consists of stdlib Python analysis scripts that read Claude Code JSONL transcripts under <code>~/.claude/projects</code> and can write requested reports, CSVs, or a redacted share summary. The checked-in core scripts contain no network-client imports. The repository also includes <code>ccwatch.py</code>, explicitly excluded from the skill install, which reads a local Claude OAuth token and polls an undocumented <code>claude.ai</code> usage endpoint; that optional component is materially different from the local-only core.</p>
+<h3>Book relevance</h3>
+<ul>
+<li>Candidate chapters: coding-agent observability; context engineering and token economics; agent-loop governance; privacy-aware operational telemetry.</li>
+<li>Candidate example: transcript-derived traces can turn vague “where did quota go?” questions into inspectable evidence about session shape, cache reads, tool output, repeated context, and possible automation.</li>
+<li>Durable lesson: agent teams need privacy-scoped, trace-level operational telemetry before they can tune cost, latency, reliability, or trust; local collection does not make the underlying prompts, files, commands, project names, or session identifiers low-sensitivity.</li>
+<li>Evidence strength: moderate for documented repository structure and core local-analysis design at the pinned commit; discovery-only for the post’s general effectiveness, attribution accuracy across Claude Code versions, quota explanations, and user outcomes.</li>
+</ul>
+<h3>Hermione relevance</h3>
+<p>Hermione would benefit from auditable, privacy-safe run telemetry: model/provider choice, latency, retries, token/cache indicators where available, tool calls, workflow state, and bounded retention. The post is also a reminder that operational diagnostics can expose highly sensitive transcripts and command context. Any comparable capability should use explicit consent, least-privilege readers, clear local/remote boundaries, redaction before export, retention/deletion controls, and independent reconciliation with provider-side records rather than assuming local logs explain billing or rate limits completely.</p>
+<h3>Evidence and limitations</h3>
+<p>The LinkedIn post and engagement are social/discovery evidence. The repository’s README and SECURITY.md are project-authored documentation, not an independent security or accuracy audit. The core tool is documented for Claude Code logs only, so it does not directly diagnose Hermes or other agent runtimes. Its reports may contain private project names, paths, command arguments, session identifiers, prompts, and tool context; only the repository’s claimed redacted sharing mode is designed for review before sharing. The optional <code>ccwatch.py</code> accesses local OAuth credentials and makes an external request to an undocumented endpoint, so it requires a separate security and account-risk review. No package installation, skill installation, credential access, or code execution was performed for this intake.</p>
+<h3>Media summary</h3>
+<p>One post image displays a <code>tare</code> README-style panel describing local Claude Code-log analysis, a claimed no-dashboard/plain-language workflow, and a “My Claude Quota Vanished in 10 Minutes” graphic. It is project-authored promotional material, not independent validation.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">tare reads the Claude Code session logs already on your disk and names what burned your quota: a re-read file, or a background job running fifty sessions at once. It rebuilds the exact rolling 5-hour window you were locked out in, the moment other tools can only guess at. No account, no server call. Three plain Python scripts do the whole diagnosis. Early repo, MIT.
+#AIAgents #ClaudeCode #DeveloperTools #AIEngineering</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7498784522138890240">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn intake: Spec-Driven Development starter kit</h2>
@@ -91,7 +120,7 @@ https://lnkd.in/gYTMn2xY</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497747961620332546">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 24 Aug 2026</p>
     <h2>Browser Use: semantic web automation needs measured reliability and safeguards</h2>
@@ -127,7 +156,7 @@ https://lnkd.in/gYTMn2xY</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498740981190782976">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 27 Aug 2026</p>
     <h2>llm-d: state-aware Kubernetes inference serving</h2>
@@ -195,7 +224,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7497656714834542592">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 24 Aug 2026</p>
     <h2>OpenViking: inspectable, tiered context for agents</h2>
@@ -268,7 +297,7 @@ If you&#x27;re building agents that need to remember past one session, this is w
   </div>
 </article>
 <article class="entry" id="post-7499016331455868928">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 28 Aug 2026</p>
     <h2>pi-deploy: portable local coding-agent stack snapshots</h2>
@@ -315,7 +344,7 @@ https://lnkd.in/dGavR8vR
   </div>
 </article>
 <article class="entry" id="post-7499291632622759936">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 29 Aug 2026</p>
     <h2>vgpu: making agent-authored graphics testable</h2>
@@ -372,7 +401,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7499194808960372736">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Agent Orchestrator: independently observable coding-agent work</h2>
@@ -405,7 +434,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498201713208659968">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 26 Aug 2026</p>
     <h2>Envoy AI Gateway: a Kubernetes control plane for model and MCP traffic</h2>
@@ -462,7 +491,7 @@ I&#x27;ve been contributing to this project on the MCP side — a deeper dive on
   </div>
 </article>
 <article class="entry" id="post-7497647895333076992">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake: agentacct work receipts</h2>
@@ -487,7 +516,7 @@ I&#x27;ve been contributing to this project on the MCP side — a deeper dive on
   </div>
 </article>
 <article class="entry" id="post-7499099490021412864">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published Undated</p>
     <h2>350-agent trading desk: human approval needs evidence, not a final click</h2>
@@ -534,7 +563,7 @@ Reliable agents on your radar? Send me a message, happy to compare notes on what
   </div>
 </article>
 <article class="entry" id="post-7499107941380304896">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Metronix Memory: durable agent memory needs auditable governance</h2>
@@ -572,7 +601,7 @@ Reliable agents on your radar? Send me a message, happy to compare notes on what
   </div>
 </article>
 <article class="entry" id="post-7498929117090734080">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Headlong: persistent agents need governed self-improvement</h2>
@@ -630,7 +659,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498681461416378368">
-  <div class="entry-number">13</div>
+  <div class="entry-number">14</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn intake summary: Sovereign Agent Mesh discovery</h2>
@@ -659,7 +688,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498462040085426176">
-  <div class="entry-number">14</div>
+  <div class="entry-number">15</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 26 Aug 2026 · Published 26 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -733,7 +762,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497572315929673728">
-  <div class="entry-number">15</div>
+  <div class="entry-number">16</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 26 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -759,7 +788,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497380034807107584">
-  <div class="entry-number">16</div>
+  <div class="entry-number">17</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake — AGENTS.md field study and enforceable guardrails</h2>
@@ -789,7 +818,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497695668275183616">
-  <div class="entry-number">17</div>
+  <div class="entry-number">18</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>Cisco Antares and governed local remediation agents</h2>
@@ -832,7 +861,7 @@ Full article and the 20-minute video below. 👇</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497629461228728320">
-  <div class="entry-number">18</div>
+  <div class="entry-number">19</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -868,7 +897,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497664143525789696">
-  <div class="entry-number">19</div>
+  <div class="entry-number">20</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -912,7 +941,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497402326907838464">
-  <div class="entry-number">20</div>
+  <div class="entry-number">21</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -949,7 +978,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496914876552929280">
-  <div class="entry-number">21</div>
+  <div class="entry-number">22</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Browser agents need capability and privacy boundaries</h2>
@@ -980,7 +1009,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496754793592393728">
-  <div class="entry-number">22</div>
+  <div class="entry-number">23</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Sovereign Agent Mesh: connectivity is not authorization</h2>
@@ -1034,7 +1063,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496985706615980032">
-  <div class="entry-number">23</div>
+  <div class="entry-number">24</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>MegaMemory: durable context needs reviewable freshness and governance</h2>
@@ -1065,7 +1094,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496048232511361024">
-  <div class="entry-number">24</div>
+  <div class="entry-number">25</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 20 Aug 2026</p>
     <h2>LinkedIn intake — Train LLM From Scratch, from learning project to alignment pipeline</h2>
@@ -1107,7 +1136,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495609870918897664">
-  <div class="entry-number">25</div>
+  <div class="entry-number">26</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 18 Aug 2026</p>
     <h2>LinkedIn intake — EverOS local-first Markdown agent memory</h2>
@@ -1135,7 +1164,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495667626698784768">
-  <div class="entry-number">26</div>
+  <div class="entry-number">27</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Aug 2026 · Published 19 Aug 2026</p>
     <h2>Soup: layer-streamed local LoRA fine-tuning</h2>
@@ -1173,7 +1202,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495059757100142593">
-  <div class="entry-number">27</div>
+  <div class="entry-number">28</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Zeron: durable local coding-agent sessions with optional sync</h2>
@@ -1200,7 +1229,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495399009801523201">
-  <div class="entry-number">28</div>
+  <div class="entry-number">29</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 18 Aug 2026</p>
     <h2>Superlog: observability telemetry as an agent investigation surface</h2>
@@ -1228,7 +1257,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204188520448000">
-  <div class="entry-number">29</div>
+  <div class="entry-number">30</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Graft: a regenerable code-context layer for coding agents</h2>
@@ -1279,7 +1308,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204471862620160">
-  <div class="entry-number">30</div>
+  <div class="entry-number">31</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -1308,7 +1337,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">31</div>
+  <div class="entry-number">32</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
