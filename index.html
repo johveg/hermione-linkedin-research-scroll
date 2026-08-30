@@ -19,11 +19,60 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>34 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>35 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7499741767995465728">
+  <article class="entry" id="post-7499808311802753025">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 30 Aug 2026 · Published 30 Aug 2026</p>
+    <h2>LinkedIn intake — VoxCPM tokenizer-free TTS and voice cloning</h2>
+    <p class="byline">By <a href="https://in.linkedin.com/in/sumanth077" rel="noopener noreferrer">Sumanth P</a> <a class="original-link" href="https://www.linkedin.com/posts/sumanth077_clone-a-human-voice-in-real-time-without-activity-7499808311802753025-dEOL" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">Clone a human voice in real time without tokenization!</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7499808311802753025/image-1.jpg" alt="Archived LinkedIn media for LinkedIn intake — VoxCPM tokenizer-free TTS and voice cloning"></div>
+    <section class="research"><h3>Book relevance</h3>
+<p>High relevance for chapters on agent interfaces, multimodal interaction, local/private infrastructure, and responsible deployment.</p>
+<p>Candidate claim/example: Local TTS selection should be a governed product and infrastructure evaluation: measure first-audio and full-response latency on target hardware, test language/voice quality and stability, document code-and-weight licenses, and make consent, disclosure, audit, and anti-impersonation controls enforceable rather than relying only on model policy.</p>
+<h3>Hermione relevance</h3>
+<p>High relevance. Hermione can use TTS for voice replies, but voice cloning should require the speaker’s explicit consent and a scoped, auditable workflow. A practical improvement is to evaluate a local option only in an isolated test harness, compare it with the existing TTS service on Norwegian and English output plus latency, and retain clear synthetic-audio labeling and refusal/audit controls before any public or third-party voice use.</p>
+<h3>Evidence strength and limitations</h3>
+<p>Evidence strength: <strong>moderate for the existence and documented capabilities of VoxCPM; discovery-only for the LinkedIn post’s specific quality, cloning, and real-time claims; project-published for benchmark and runtime figures.</strong> The official repository was inspected read-only at commit <code>f5a1c6a6b901bc732e20f0d59a369f6829ad717a</code>; it documents tokenizer-free diffusion-autoregressive synthesis, streaming APIs, voice cloning, SFT/LoRA, and Apache-2.0 licensing. It also explicitly says cloning output may vary and forbids impersonation, fraud, and disinformation while recommending generated-audio marking. The linked Zenodo record could not be read because Zenodo returned a 403 unusual-traffic restriction; no bypass was attempted.</p>
+<p>The post is point-in-time social evidence. The visible comments are incomplete, post engagement is volatile, and no model was installed or run. The repository’s quality, RTF, hardware, multilingual, and benchmark claims remain project-published until independently reproduced on relevant hardware and target languages. See <code>wider-web-research.md</code> for the source trail and claim boundaries.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Clone a human voice in real time without tokenization!
+
+VoxCPM is an open-source text-to-speech system that models speech in continuous space instead of discrete tokens.
+
+Most TTS systems convert speech to discrete tokens before generation. This quantization creates a fundamental trade-off: tokens provide stability but lose acoustic details like breath, vocal texture, and subtle articulation.
+
+VoxCPM skips tokenization entirely.
+
+It models speech directly in continuous space using an end-to-end diffusion autoregressive architecture built on MiniCPM-4.
+
+The system uses hierarchical language modeling with two specialized components: a Text-Semantic Language Model that captures high-level prosody and structure, and a Residual Acoustic Model that recovers fine-grained acoustic details.
+
+This separation eliminates dependency on external speech tokenizers and prevents error accumulation from multi-stage pipelines.
+
+Two flagship capabilities:
+
+1. Context-aware speech generation: The model comprehends text to infer appropriate prosody and speaking style. Explanations slow down naturally, emphasis appears in the right places, questions sound like questions.
+
+2. Zero-shot voice cloning: With just 3-10 seconds of reference audio, it replicates speaker timbre, accent, emotional tone, rhythm, and pacing.
+
+Key features:
+
+• Tokenizer-free architecture with continuous speech modeling
+• Context-aware prosody generation without manual tuning
+• Zero-shot voice cloning from short reference audio
+• Streaming synthesis support for real-time applications
+• SFT and LoRA fine-tuning support
+
+It&#x27;s 100% open source
+
+Link to the GitHub repo in the comments!</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7499741767995465728">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 30 Aug 2026</p>
     <h2>LinkedIn intake — API protocol choice and system performance</h2>
@@ -64,7 +113,7 @@ Most slowness isn&#x27;t a code problem. It&#x27;s an architecture decision made
   </div>
 </article>
 <article class="entry" id="post-7498870503625871361">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn book-intake: Kubernetes and state-aware LLM inference</h2>
@@ -129,7 +178,7 @@ Full article:  https://lnkd.in/g-uMQSJD
   </div>
 </article>
 <article class="entry" id="post-7499296810264420353">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 29 Aug 2026</p>
     <h2>tare: local Claude Code usage forensics</h2>
@@ -158,7 +207,7 @@ Full article:  https://lnkd.in/g-uMQSJD
   </div>
 </article>
 <article class="entry" id="post-7498784522138890240">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn intake: Spec-Driven Development starter kit</h2>
@@ -226,7 +275,7 @@ https://lnkd.in/gYTMn2xY</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497747961620332546">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 24 Aug 2026</p>
     <h2>Browser Use: semantic web automation needs measured reliability and safeguards</h2>
@@ -262,7 +311,7 @@ https://lnkd.in/gYTMn2xY</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498740981190782976">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 27 Aug 2026</p>
     <h2>llm-d: state-aware Kubernetes inference serving</h2>
@@ -330,7 +379,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7497656714834542592">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 24 Aug 2026</p>
     <h2>OpenViking: inspectable, tiered context for agents</h2>
@@ -403,7 +452,7 @@ If you&#x27;re building agents that need to remember past one session, this is w
   </div>
 </article>
 <article class="entry" id="post-7499016331455868928">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 28 Aug 2026</p>
     <h2>pi-deploy: portable local coding-agent stack snapshots</h2>
@@ -450,7 +499,7 @@ https://lnkd.in/dGavR8vR
   </div>
 </article>
 <article class="entry" id="post-7499291632622759936">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 29 Aug 2026</p>
     <h2>vgpu: making agent-authored graphics testable</h2>
@@ -507,7 +556,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7499194808960372736">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Agent Orchestrator: independently observable coding-agent work</h2>
@@ -540,7 +589,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498201713208659968">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 26 Aug 2026</p>
     <h2>Envoy AI Gateway: a Kubernetes control plane for model and MCP traffic</h2>
@@ -597,7 +646,7 @@ I&#x27;ve been contributing to this project on the MCP side — a deeper dive on
   </div>
 </article>
 <article class="entry" id="post-7497647895333076992">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake: agentacct work receipts</h2>
@@ -622,7 +671,7 @@ I&#x27;ve been contributing to this project on the MCP side — a deeper dive on
   </div>
 </article>
 <article class="entry" id="post-7499099490021412864">
-  <div class="entry-number">13</div>
+  <div class="entry-number">14</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published Undated</p>
     <h2>350-agent trading desk: human approval needs evidence, not a final click</h2>
@@ -669,7 +718,7 @@ Reliable agents on your radar? Send me a message, happy to compare notes on what
   </div>
 </article>
 <article class="entry" id="post-7499107941380304896">
-  <div class="entry-number">14</div>
+  <div class="entry-number">15</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Metronix Memory: durable agent memory needs auditable governance</h2>
@@ -707,7 +756,7 @@ Reliable agents on your radar? Send me a message, happy to compare notes on what
   </div>
 </article>
 <article class="entry" id="post-7498929117090734080">
-  <div class="entry-number">15</div>
+  <div class="entry-number">16</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Headlong: persistent agents need governed self-improvement</h2>
@@ -765,7 +814,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498681461416378368">
-  <div class="entry-number">16</div>
+  <div class="entry-number">17</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn intake summary: Sovereign Agent Mesh discovery</h2>
@@ -794,7 +843,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498462040085426176">
-  <div class="entry-number">17</div>
+  <div class="entry-number">18</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 26 Aug 2026 · Published 26 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -868,7 +917,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497572315929673728">
-  <div class="entry-number">18</div>
+  <div class="entry-number">19</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 26 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -894,7 +943,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497380034807107584">
-  <div class="entry-number">19</div>
+  <div class="entry-number">20</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake — AGENTS.md field study and enforceable guardrails</h2>
@@ -924,7 +973,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497695668275183616">
-  <div class="entry-number">20</div>
+  <div class="entry-number">21</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>Cisco Antares and governed local remediation agents</h2>
@@ -967,7 +1016,7 @@ Full article and the 20-minute video below. 👇</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497629461228728320">
-  <div class="entry-number">21</div>
+  <div class="entry-number">22</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -1003,7 +1052,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497664143525789696">
-  <div class="entry-number">22</div>
+  <div class="entry-number">23</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -1047,7 +1096,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497402326907838464">
-  <div class="entry-number">23</div>
+  <div class="entry-number">24</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -1084,7 +1133,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496914876552929280">
-  <div class="entry-number">24</div>
+  <div class="entry-number">25</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Browser agents need capability and privacy boundaries</h2>
@@ -1115,7 +1164,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496754793592393728">
-  <div class="entry-number">25</div>
+  <div class="entry-number">26</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Sovereign Agent Mesh: connectivity is not authorization</h2>
@@ -1169,7 +1218,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496985706615980032">
-  <div class="entry-number">26</div>
+  <div class="entry-number">27</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>MegaMemory: durable context needs reviewable freshness and governance</h2>
@@ -1200,7 +1249,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496048232511361024">
-  <div class="entry-number">27</div>
+  <div class="entry-number">28</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 20 Aug 2026</p>
     <h2>LinkedIn intake — Train LLM From Scratch, from learning project to alignment pipeline</h2>
@@ -1242,7 +1291,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495609870918897664">
-  <div class="entry-number">28</div>
+  <div class="entry-number">29</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 18 Aug 2026</p>
     <h2>LinkedIn intake — EverOS local-first Markdown agent memory</h2>
@@ -1270,7 +1319,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495667626698784768">
-  <div class="entry-number">29</div>
+  <div class="entry-number">30</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Aug 2026 · Published 19 Aug 2026</p>
     <h2>Soup: layer-streamed local LoRA fine-tuning</h2>
@@ -1308,7 +1357,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495059757100142593">
-  <div class="entry-number">30</div>
+  <div class="entry-number">31</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Zeron: durable local coding-agent sessions with optional sync</h2>
@@ -1335,7 +1384,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495399009801523201">
-  <div class="entry-number">31</div>
+  <div class="entry-number">32</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 18 Aug 2026</p>
     <h2>Superlog: observability telemetry as an agent investigation surface</h2>
@@ -1363,7 +1412,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204188520448000">
-  <div class="entry-number">32</div>
+  <div class="entry-number">33</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Graft: a regenerable code-context layer for coding agents</h2>
@@ -1414,7 +1463,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204471862620160">
-  <div class="entry-number">33</div>
+  <div class="entry-number">34</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -1443,7 +1492,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">34</div>
+  <div class="entry-number">35</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
