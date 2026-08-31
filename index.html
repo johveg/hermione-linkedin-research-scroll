@@ -19,11 +19,72 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>36 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>37 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7499936154318831618">
+  <article class="entry" id="post-7500156940711276544">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 31 Aug 2026 · Published 31 Aug 2026</p>
+    <h2>Memory hierarchy as infrastructure for local MoE inference</h2>
+    <p class="byline">By <a href="https://in.linkedin.com/in/sumanth077" rel="noopener noreferrer">Sumanth P</a> <a class="original-link" href="https://www.linkedin.com/posts/sumanth077_run-frontier-moe-models-on-hardware-you-already-activity-7500156940711276544-gzPr" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">Run frontier MoE models on hardware you already own!</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7500156940711276544/image-1.jpg" alt="Archived LinkedIn media for Memory hierarchy as infrastructure for local MoE inference"></div>
+    <section class="research"><h3>Post summary</h3>
+<p>Sumanth P presents Colibrì as a pure-C inference engine for Mixture-of-Experts (MoE) models. The post frames VRAM, RAM, and NVMe as tiers for the same model weights: dense or hot weights remain close to compute, while colder routed experts can be streamed from storage. It claims routing-aware caching, learned hot-expert pinning, and one-layer-ahead prefetch can make limited VRAM a speed trade-off rather than a model-selection constraint.</p>
+<h3>Claim and assessment</h3>
+<p>The durable lesson is that total parameter count alone is a poor deployment proxy for sparse models. MoE sparsity, quantization, resident dense/shared weights, expert-routing locality, RAM/VRAM cache policy, storage bandwidth, and I/O/compute overlap jointly determine whether a large model is usable. Disk streaming can expand the set of technically runnable models, but it can impose severe first-token and per-token latency; it should not be described as a drop-in path to interactive frontier-model inference.</p>
+<h3>Primary-source quick pass</h3>
+<p>The author’s visible comment named <code>JustVugg/colibri</code>; it was inspected by direct network fetch rather than by clicking LinkedIn. At commit <code>12a5c464b5c1f8292d578c62458706bc32d6ac95</code> (2026-08-31), the public Apache-2.0 repository documented pure-C default CPU operation, optional accelerator backends, multi-tier storage/RAM/VRAM placement, routing-aware policies, eight named MoE families, releases through v1.10.1, and project-published benchmark guidance. Its own benchmark document makes the constraint concrete: the listed 25-GB-RAM WSL2/NVMe reference box reports approximately 0.05–0.1 tokens/s cold for the large streaming case, while faster results depend on substantially different hardware, RAM/cache state, and/or accelerators. No release artifact, model, or benchmark was downloaded or run here.</p>
+<h3>Book relevance</h3>
+<ul>
+<li><strong>Candidate chapters:</strong> local and private AI infrastructure; inference systems and memory hierarchy; model deployment economics; measurement and operational realism.</li>
+<li><strong>Candidate claim/example:</strong> MoE sparsity and tiered weight placement can decouple total model size from fast-memory capacity, but disk/OS-page-cache streaming trades that capability for I/O sensitivity, latency, storage footprint, and hardware-specific engineering.</li>
+<li><strong>Why it matters:</strong> It provides a useful counterweight to simplistic model-size comparisons: deployment is a placement-and-measurement problem, not just a VRAM checklist.</li>
+</ul>
+<h3>Hermione relevance</h3>
+<p>This is relevant to Hermione for private or offline background workloads, experimentation, and resource-aware model selection. It is not evidence that an interactive assistant should replace a responsive hosted or fully resident model with disk-streamed frontier MoE inference. Any evaluation should measure end-to-end latency, time to first token, sustained throughput, storage and SSD behavior, quality, model-weight licence, failure recovery, and the actual target workload before adoption.</p>
+<h3>Evidence and limitations</h3>
+<ul>
+<li><strong>Evidence strength:</strong> moderate for the public repository, Apache-2.0 declaration, documented design, releases, and project-published measurements; discovery-only for the LinkedIn framing and broad real-world usability claims.</li>
+<li>LinkedIn remains social/discovery evidence. Seven guest-visible comments were captured from eight reported comments and are a partial thread.</li>
+<li>The visible comments appropriately flag routing locality, cache-thrashing risk, storage contention, and disk bandwidth as practical constraints; they are not independent performance validation.</li>
+<li>The authored project materials state that some policies can overfit, cache effects matter, and storage latency is not free. Project and community-reported figures were not independently reproduced.</li>
+<li>Engine licensing does not determine whether individual model weights are available or licensed for a proposed use.</li>
+</ul>
+<h3>Media summary</h3>
+<p>One project-style infographic brands Colibrì as a “tiny engine, immense model” and claims 744B–2.8T MoE support through storage/RAM/VRAM multitiering. It lists several model families and shows a dark web dashboard. The image is promotional/project-authored material, not an independent demonstration or benchmark.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Run frontier MoE models on hardware you already own!
+
+Colibrì is a pure C inference engine that runs massive Mixture-of-Experts models by treating VRAM, RAM, and NVMe storage as one memory hierarchy.
+
+The key idea is that MoE models may have hundreds of billions or even trillions of parameters, but only a small subset of experts are activated for each token.
+
+So instead of trying to keep the entire model in GPU memory, Colibrì moves weights across different storage tiers depending on which experts are actually needed.
+
+Hot experts can stay in VRAM or RAM. Colder experts can live on NVMe and get streamed in when the router selects them.
+
+This turns model loading into more of a dynamic placement problem.
+
+Colibrì tracks routing patterns, keeps frequently used experts closer to compute, and can prefetch experts for the next layer before they are requested.
+
+The result is that limited VRAM changes how fast the model runs, not which model you are running.
+
+Key capabilities:
+
+• AI memory multitiering: Treat VRAM, RAM, and NVMe as placement tiers for the same model weights
+• Expert streaming: Load routed MoE experts from storage instead of keeping every expert resident in memory
+• Routing-aware caching: Use per-layer LRU, learned hot-expert pinning, and one-layer-ahead prefetching
+• Heterogeneous execution: Run across CPU, CUDA, Metal, NUMA memory, and partial or full expert residency
+• Frontier-scale MoE support: Models currently range from Qwen3.6 at 35B parameters to Kimi K3 at 2.8T, alongside GLM-5.2, DeepSeek V4 Flash, and others
+
+It’s 100% open source.
+
+I&#x27;ve shared the GitHub repo in the comments!</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7499936154318831618">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 31 Aug 2026 · Published 30 Aug 2026</p>
     <h2>Governed database access through an MCP client</h2>
@@ -60,7 +121,7 @@
   </div>
 </article>
 <article class="entry" id="post-7499808311802753025">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 30 Aug 2026</p>
     <h2>LinkedIn intake — VoxCPM tokenizer-free TTS and voice cloning</h2>
@@ -109,7 +170,7 @@ Link to the GitHub repo in the comments!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7499741767995465728">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 30 Aug 2026</p>
     <h2>LinkedIn intake — API protocol choice and system performance</h2>
@@ -150,7 +211,7 @@ Most slowness isn&#x27;t a code problem. It&#x27;s an architecture decision made
   </div>
 </article>
 <article class="entry" id="post-7498870503625871361">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn book-intake: Kubernetes and state-aware LLM inference</h2>
@@ -215,7 +276,7 @@ Full article:  https://lnkd.in/g-uMQSJD
   </div>
 </article>
 <article class="entry" id="post-7499296810264420353">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 29 Aug 2026</p>
     <h2>tare: local Claude Code usage forensics</h2>
@@ -244,7 +305,7 @@ Full article:  https://lnkd.in/g-uMQSJD
   </div>
 </article>
 <article class="entry" id="post-7498784522138890240">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn intake: Spec-Driven Development starter kit</h2>
@@ -312,7 +373,7 @@ https://lnkd.in/gYTMn2xY</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497747961620332546">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 30 Aug 2026 · Published 24 Aug 2026</p>
     <h2>Browser Use: semantic web automation needs measured reliability and safeguards</h2>
@@ -348,7 +409,7 @@ https://lnkd.in/gYTMn2xY</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498740981190782976">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 27 Aug 2026</p>
     <h2>llm-d: state-aware Kubernetes inference serving</h2>
@@ -416,7 +477,7 @@ Follow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Lea
   </div>
 </article>
 <article class="entry" id="post-7497656714834542592">
-  <div class="entry-number">09</div>
+  <div class="entry-number">10</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 24 Aug 2026</p>
     <h2>OpenViking: inspectable, tiered context for agents</h2>
@@ -489,7 +550,7 @@ If you&#x27;re building agents that need to remember past one session, this is w
   </div>
 </article>
 <article class="entry" id="post-7499016331455868928">
-  <div class="entry-number">10</div>
+  <div class="entry-number">11</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 28 Aug 2026</p>
     <h2>pi-deploy: portable local coding-agent stack snapshots</h2>
@@ -536,7 +597,7 @@ https://lnkd.in/dGavR8vR
   </div>
 </article>
 <article class="entry" id="post-7499291632622759936">
-  <div class="entry-number">11</div>
+  <div class="entry-number">12</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 29 Aug 2026</p>
     <h2>vgpu: making agent-authored graphics testable</h2>
@@ -593,7 +654,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7499194808960372736">
-  <div class="entry-number">12</div>
+  <div class="entry-number">13</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 29 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Agent Orchestrator: independently observable coding-agent work</h2>
@@ -626,7 +687,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498201713208659968">
-  <div class="entry-number">13</div>
+  <div class="entry-number">14</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 26 Aug 2026</p>
     <h2>Envoy AI Gateway: a Kubernetes control plane for model and MCP traffic</h2>
@@ -683,7 +744,7 @@ I&#x27;ve been contributing to this project on the MCP side — a deeper dive on
   </div>
 </article>
 <article class="entry" id="post-7497647895333076992">
-  <div class="entry-number">14</div>
+  <div class="entry-number">15</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake: agentacct work receipts</h2>
@@ -708,7 +769,7 @@ I&#x27;ve been contributing to this project on the MCP side — a deeper dive on
   </div>
 </article>
 <article class="entry" id="post-7499099490021412864">
-  <div class="entry-number">15</div>
+  <div class="entry-number">16</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published Undated</p>
     <h2>350-agent trading desk: human approval needs evidence, not a final click</h2>
@@ -755,7 +816,7 @@ Reliable agents on your radar? Send me a message, happy to compare notes on what
   </div>
 </article>
 <article class="entry" id="post-7499107941380304896">
-  <div class="entry-number">16</div>
+  <div class="entry-number">17</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Metronix Memory: durable agent memory needs auditable governance</h2>
@@ -793,7 +854,7 @@ Reliable agents on your radar? Send me a message, happy to compare notes on what
   </div>
 </article>
 <article class="entry" id="post-7498929117090734080">
-  <div class="entry-number">17</div>
+  <div class="entry-number">18</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 28 Aug 2026 · Published 28 Aug 2026</p>
     <h2>Headlong: persistent agents need governed self-improvement</h2>
@@ -851,7 +912,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498681461416378368">
-  <div class="entry-number">18</div>
+  <div class="entry-number">19</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 27 Aug 2026 · Published 27 Aug 2026</p>
     <h2>LinkedIn intake summary: Sovereign Agent Mesh discovery</h2>
@@ -880,7 +941,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7498462040085426176">
-  <div class="entry-number">19</div>
+  <div class="entry-number">20</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 26 Aug 2026 · Published 26 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -954,7 +1015,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497572315929673728">
-  <div class="entry-number">20</div>
+  <div class="entry-number">21</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 26 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -980,7 +1041,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497380034807107584">
-  <div class="entry-number">21</div>
+  <div class="entry-number">22</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 25 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake — AGENTS.md field study and enforceable guardrails</h2>
@@ -1010,7 +1071,7 @@ Thanks to Flint AI team for working with me on this post!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497695668275183616">
-  <div class="entry-number">22</div>
+  <div class="entry-number">23</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>Cisco Antares and governed local remediation agents</h2>
@@ -1053,7 +1114,7 @@ Full article and the 20-minute video below. 👇</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497629461228728320">
-  <div class="entry-number">23</div>
+  <div class="entry-number">24</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -1089,7 +1150,7 @@ I&#x27;ve shared the link in the replies!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497664143525789696">
-  <div class="entry-number">24</div>
+  <div class="entry-number">25</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 24 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -1133,7 +1194,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7497402326907838464">
-  <div class="entry-number">25</div>
+  <div class="entry-number">26</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 24 Aug 2026 · Published 23 Aug 2026</p>
     <h2>LinkedIn intake summary</h2>
@@ -1170,7 +1231,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496914876552929280">
-  <div class="entry-number">26</div>
+  <div class="entry-number">27</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Browser agents need capability and privacy boundaries</h2>
@@ -1201,7 +1262,7 @@ Don&#x27;t forget to drop a ★!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496754793592393728">
-  <div class="entry-number">27</div>
+  <div class="entry-number">28</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>Sovereign Agent Mesh: connectivity is not authorization</h2>
@@ -1255,7 +1316,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496985706615980032">
-  <div class="entry-number">28</div>
+  <div class="entry-number">29</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 23 Aug 2026 · Published 22 Aug 2026</p>
     <h2>MegaMemory: durable context needs reviewable freshness and governance</h2>
@@ -1286,7 +1347,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7496048232511361024">
-  <div class="entry-number">29</div>
+  <div class="entry-number">30</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 20 Aug 2026</p>
     <h2>LinkedIn intake — Train LLM From Scratch, from learning project to alignment pipeline</h2>
@@ -1328,7 +1389,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495609870918897664">
-  <div class="entry-number">30</div>
+  <div class="entry-number">31</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 20 Aug 2026 · Published 18 Aug 2026</p>
     <h2>LinkedIn intake — EverOS local-first Markdown agent memory</h2>
@@ -1356,7 +1417,7 @@ Attention or reward model. Which would you build first? 👇
   </div>
 </article>
 <article class="entry" id="post-7495667626698784768">
-  <div class="entry-number">31</div>
+  <div class="entry-number">32</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 19 Aug 2026 · Published 19 Aug 2026</p>
     <h2>Soup: layer-streamed local LoRA fine-tuning</h2>
@@ -1394,7 +1455,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495059757100142593">
-  <div class="entry-number">32</div>
+  <div class="entry-number">33</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Zeron: durable local coding-agent sessions with optional sync</h2>
@@ -1421,7 +1482,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495399009801523201">
-  <div class="entry-number">33</div>
+  <div class="entry-number">34</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 18 Aug 2026</p>
     <h2>Superlog: observability telemetry as an agent investigation surface</h2>
@@ -1449,7 +1510,7 @@ Link to the GitHub repo in the comments.</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204188520448000">
-  <div class="entry-number">34</div>
+  <div class="entry-number">35</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>Graft: a regenerable code-context layer for coding agents</h2>
@@ -1500,7 +1561,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7495204471862620160">
-  <div class="entry-number">35</div>
+  <div class="entry-number">36</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 18 Aug 2026 · Published 17 Aug 2026</p>
     <h2>mex: grounded codebase memory and drift checking</h2>
@@ -1529,7 +1590,7 @@ OpenSource, 100% free</div></details>
   </div>
 </article>
 <article class="entry" id="post-7494855914513014784">
-  <div class="entry-number">36</div>
+  <div class="entry-number">37</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 17 Aug 2026 · Published 16 Aug 2026</p>
     <h2>Duckle: reviewable DuckDB ETL with an MCP control surface</h2>
