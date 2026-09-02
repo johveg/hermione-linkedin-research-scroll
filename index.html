@@ -19,11 +19,49 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>3 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>4 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7500576400639340544">
+  <article class="entry" id="post-7500666466413875200">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
+    <h2>Apache Maka: durable agent records require explicit execution boundaries</h2>
+    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_agentruntime-eventsourcing-opensource-activity-7500666466413875200-fcmX" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">Apache Maka is a local-first agent workspace, incubating at Apache.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7500666466413875200/image-1.jpg" alt="Archived LinkedIn media for Apache Maka: durable agent records require explicit execution boundaries"></div>
+    <section class="research"><h3>Core post claim</h3>
+<p>André Lindenberg highlights Apache Maka (Incubating) as a local-first agent workspace. The post says model messages, tool calls, permission decisions, and outcomes are written to an append-only event log; the UI and next prompt are views of that history. It also says tools leaving a sandbox need approval.</p>
+<h3>Primary-source quick pass</h3>
+<p>A read-only review of <code>apache/maka</code> at commit <code>22ec4682e090c0ed700158fe0c868ec6e69fee78</code> corroborates that the public Apache-2.0 repository describes a Runtime Event Log as canonical for model messages, tool calls, results, and termination facts, and says compaction changes prompt projections rather than history. Its current sandbox documentation describes managed profiles using Seatbelt on macOS and bubblewrap on Linux, with fail-closed platform selection where a required restricted profile cannot be enforced. The project’s security policy explicitly says the operating system—not the in-process permission engine, redaction, or URL controls—is the enforcement boundary against an adversarial LLM.</p>
+<p>This confirms documented architecture and policy, not security effectiveness, complete enforcement coverage, operational readiness, or independent audit results. The repository is incubating and its own disclaimer says it is not yet fully endorsed by the ASF; its README labels nightly builds as not intended for production use.</p>
+<h3>Book relevance</h3>
+<ul>
+<li>Candidate chapters: durable agent state and observability; runtime isolation and tool governance; recovery and trustworthy autonomy.</li>
+<li>Durable claim: context compaction must not erase the authoritative execution record; reliable agents need recoverable event history alongside explicit, externally enforced execution boundaries.</li>
+<li>Candidate example: replayable model/tool/permission events make a failed run inspectable, but approval UX alone is not an isolation boundary.</li>
+</ul>
+<h3>Hermione relevance</h3>
+<p>This is directly relevant to Hermione’s multi-step tool and browser workflows. Hermione should preserve run-level provenance for decisions and tool results while treating context summaries as projections rather than the source of truth. For untrusted inputs or execution, security needs OS- or infrastructure-enforced scopes, least-privilege credentials, auditable egress, and recovery tests—not only prompts or approval dialogs.</p>
+<h3>Evidence and limitations</h3>
+<p>Evidence strength: moderate for the repository’s documented architecture, Apache-2.0 license, stated support matrix, and security-policy boundaries at the pinned commit; discovery-only for the LinkedIn framing and claims of practical security, local privacy, or broad reliability.</p>
+<ul>
+<li>LinkedIn remains social/discovery evidence; project-authored media and engagement do not independently validate claims.</li>
+<li>The post’s guest HTML exposed two comments while LinkedIn reported three; the authenticated viewport showed the post and image but no expanded comment thread. Replies and the remaining comment were not expanded.</li>
+<li>One visible commenter’s experience supports the debugging value of durable history but is anecdotal and not a verification of Maka.</li>
+<li>No code, desktop build, release artifact, benchmark, security test, sandbox escape test, external integration, or agent workflow was run.</li>
+<li>No independent audit or replication was established. The project’s own security policy warns that coverage is not universal: bypass/unrestricted/external profiles and host PTY paths are outside its managed local sandbox boundary.</li>
+<li>The submitted shortlink was resolved by a normal network request to a referral-bearing share URL; no LinkedIn control or external link was clicked. The catalogue uses the sanitized canonical activity URL.</li>
+<li>Raw guest HTML and authenticated visible text, JSON, and screenshot are retained local-only because they can contain unrelated LinkedIn UI.</li>
+</ul>
+<h3>Media summary</h3>
+<p>One static screenshot shows Apache Maka (Incubating) branding and a project README. Visible project-authored wording describes a local-first agent workspace that runs tools under a sandbox boundary and records model/tool activity as recoverable execution facts. It illustrates the project’s presentation rather than proving implementation or security properties.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Apache Maka is a local-first agent workspace, incubating at Apache. Bring your own model, it runs on your machine. Every message, tool call, permission decision, and outcome writes to an append-only event log, the UI and the next prompt are only views. Tools leaving the sandbox need approval. If something breaks, the log outlasts whatever the agent remembers about itself. 4.4k stars, Apache-2.0.
+#AgentRuntime #EventSourcing #OpenSource #AIEngineering</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7500576400639340544">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
     <h2>Corpus-to-knowledge-graph extraction: useful navigation, uncertain edges</h2>
@@ -58,7 +96,7 @@
   </div>
 </article>
 <article class="entry" id="post-7500279175522484224">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 31 Aug 2026</p>
     <h2>Intake summary: persistence semantics for agent state</h2>
@@ -75,7 +113,7 @@
   </div>
 </article>
 <article class="entry" id="post-7500541666886606849">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 01 Sep 2026</p>
     <h2>LinkedIn intake: Magnitude local inference for agent harnesses</h2>
