@@ -19,11 +19,46 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>2 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>3 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7500279175522484224">
+  <article class="entry" id="post-7500576400639340544">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
+    <h2>Corpus-to-knowledge-graph extraction: useful navigation, uncertain edges</h2>
+    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_graphrag-knowledgegraphs-aiengineering-activity-7500576400639340544-I8Vu" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">knowledge_graph chunks your document, asks a 7B model which concepts relate, then adds an edge between any two names that shared a chunk, right or wrong.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7500576400639340544/image-1.jpg" alt="Archived LinkedIn media for Corpus-to-knowledge-graph extraction: useful navigation, uncertain edges"></div>
+    <section class="research"><h3>Core post claim</h3>
+<p>André Lindenberg highlights <code>rahulnyk/knowledge_graph</code>, a notebook-oriented method that chunks a text corpus, uses a 7B model to extract concepts and relations, adds shared-chunk proximity links, aggregates repeated pairs into weighted edges, and renders a NetworkX/Pyvis graph. The post presents the resulting graph as a possible substrate for GraphRAG or knowledge-graph question answering.</p>
+<h3>Primary-source quick pass</h3>
+<p>A read-only primary-source pass of the repository at pinned commit <code>3447d58fcabc2ddf8cde21f01314db2c276adae9</code> confirms a public MIT-licensed exploratory project, its notebooks, and its documented chunk → LLM concepts/relations → contextual-proximity edges → weighted aggregation → NetworkX/Pyvis flow. This corroborates the existence and described method, not retrieval accuracy, answer quality, scale, privacy, or production readiness.</p>
+<h3>Book relevance</h3>
+<ul>
+<li>Candidate chapters: graph-structured context and GraphRAG; document ingestion and retrieval provenance; agent context engineering; evaluation of AI-generated structure.</li>
+<li>Durable claim: graph context can help agents navigate concepts and communities, but a graph must preserve edge provenance and uncertainty. LLM-extracted relations and shared-chunk co-occurrence are not equivalent evidence.</li>
+<li>Candidate example: frequency-weighted co-occurrence can be a recall-oriented discovery signal, while precision needs source spans, confidence, typed relations, validation, and a comparison to text/hybrid retrieval.</li>
+</ul>
+<h3>Hermione relevance</h3>
+<p>Hermione can use a corpus graph as a navigation aid for research or book materials, but must not treat centrality, community labels, or graph edges as verified facts. Any future trial should retain document/page/chunk provenance; label LLM-extracted versus co-occurrence edges; expose confidence and source spans; test retrieval and answer quality against a representative corpus; and keep text/hybrid fallback paths.</p>
+<h3>Evidence and limitations</h3>
+<p>Evidence strength: moderate for the public repository, its MIT license, dependencies, and documented notebook method; discovery-only for the LinkedIn framing and effectiveness claims.</p>
+<ul>
+<li>LinkedIn is social/discovery evidence. The image is project material and not an independent evaluation.</li>
+<li>The repository&#x27;s own README describes a shared-chunk proximity assumption; a guest-visible comment likewise characterizes the result as a co-occurrence graph.</li>
+<li>GitHub popularity figures are point-in-time observations and do not establish correctness.</li>
+<li>No code, Docker image, notebook, model, benchmark, or retrieval evaluation was executed; no independent replication or security/privacy audit was performed.</li>
+<li>The selected guest-visible comments are three of ten exposed while LinkedIn reported fifteen; replies and later comments were not expanded.</li>
+</ul>
+<h3>Media summary</h3>
+<p>One static image shows the project title “Convert any Corpus of Text into a Graph of Knowledge” and a colored force-directed network. It visually supports that the project renders a graph, but it does not demonstrate extraction accuracy, provenance, or RAG quality.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">knowledge_graph chunks your document, asks a 7B model which concepts relate, then adds an edge between any two names that shared a chunk, right or wrong. Pyvis renders the result as a force-directed network, and networkx layers in degree and community detection so you can rank concepts by importance. Repeated pairs collapse into one edge with summed weight and concatenated relations. 3.7k stars, MIT.
+#GraphRAG #KnowledgeGraphs #AIEngineering #ContextEngineering</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7500279175522484224">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 31 Aug 2026</p>
     <h2>Intake summary: persistence semantics for agent state</h2>
@@ -40,7 +75,7 @@
   </div>
 </article>
 <article class="entry" id="post-7500541666886606849">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 01 Sep 2026</p>
     <h2>LinkedIn intake: Magnitude local inference for agent harnesses</h2>
@@ -84,7 +119,7 @@ Apache 2.0. No rate limits, and nothing leaves the machine.
 The post also states: &quot;npm i -g @magnitudedev/cli&quot; and says the GitHub repository link is in the first comment.</div></details>
   </div>
 </article>
-  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: 01 Sep 2026. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
+  <footer>Built from the sanitized LinkedIn intake archive. Latest filing: 02 Sep 2026. New filings are added by rebuilding this page and publishing the resulting static site.</footer>
 </main>
 </body>
 </html>
