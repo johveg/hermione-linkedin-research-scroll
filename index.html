@@ -19,11 +19,48 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>8 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>9 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7500884142432256000">
+  <article class="entry" id="post-7500964370928091136">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
+    <h2>OpenWhispr: local speech-to-text as a privacy-sensitive agent interface</h2>
+    <p class="byline">By <a href="https://de.linkedin.com/in/alindnbrg" rel="noopener noreferrer">André Lindenberg</a> <a class="original-link" href="https://www.linkedin.com/posts/alindnbrg_speechtotext-localfirst-opensource-activity-7500964370928091136-vOvA" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">OpenWhispr wraps local Whisper and NVIDIA Parakeet into more than dictation: a voice-command AI agent that edits text in place, meeting transcription with on-device speaker ID, notes with semantic search, an MCP server.</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7500964370928091136/image-1.jpg" alt="Archived LinkedIn media for OpenWhispr: local speech-to-text as a privacy-sensitive agent interface"></div>
+    <section class="research"><h3>Post summary</h3>
+<p>André Lindenberg presents OpenWhispr as a cross-platform desktop voice interface built around local Whisper and NVIDIA Parakeet speech-to-text: hotkey dictation into the focused cursor, voice commands for an AI assistant, meeting transcription with on-device speaker identification, notes with search, and an MCP server. The post frames cloud processing as opt-in and calls the project MIT-licensed.</p>
+<h3>Primary-source quick pass</h3>
+<p>The repository URL in a guest-visible comment was fetched directly by normal network request, not clicked through LinkedIn: https://github.com/OpenWhispr/openwhispr. At inspected commit <code>fad475c6f4e756db08fe0f0eec7d9f4bdf149160</code>, the project README documents macOS, Windows, and Linux releases; local Whisper/Parakeet options; optional cloud/BYOK processing; global hotkeys; local speaker diarization; notes/search; and an API/MCP integration. GitHub metadata reported an MIT repository license and the current release <code>v1.9.2</code> dated 29 August 2026.</p>
+<p>The project security policy says local audio is transcribed through whisper.cpp or NVIDIA Parakeet unless the user explicitly configures an external service, and describes OS-keychain-backed credential storage. It also says Linux systems without a keyring can fall back to plaintext credential storage. This is project-authored documentation, not an independent audit. The reviewed package manifest contains native compilation and multiple dependency/model download scripts; nothing was installed, built, or run during this intake.</p>
+<h3>Book relevance</h3>
+<ul>
+<li>Candidate chapters: private multimodal input; agent interfaces and human control; local-first AI infrastructure; safe tool-mediated action.</li>
+<li>Candidate claim: a local voice interface can reduce exposure of sensitive spoken context before it becomes an agent prompt, but privacy depends on the full local storage, key-management, model-download, telemetry, and cloud-opt-in path.</li>
+<li>Candidate example: a hotkey can convert a spoken instruction into a prompt or focused-text edit, making explicit target selection, confirmation for consequential actions, and provenance especially important.</li>
+<li>Counterweight: on-device transcription is not equivalent to secure agent operation. Speaker identification, desktop paste capability, MCP connectivity, optional screenshots, cloud providers, and native helpers expand the threat model.</li>
+</ul>
+<h3>Hermione relevance</h3>
+<p>This is highly relevant to Hermione because spoken dictation can carry the same private operational context as a typed agent prompt. A future Hermione voice workflow should preserve local-first options while requiring consent for recording and speaker identification, visible disclosure when generated audio or transcriptions leave private use, scoped MCP/tool authority, confirmation for external side effects, and review of local storage and fallback behavior. It is a candidate improvement, not an adoption recommendation: any integration should be tested in an isolated environment with representative language, latency, accuracy, consent, and security checks.</p>
+<h3>Evidence and limitations</h3>
+<p>Evidence strength: <strong>moderate for the existence, license, release, and documented capabilities of the project at the pinned repository commit; discovery-only for LinkedIn engagement, quality, privacy outcomes, compatibility, and productivity claims.</strong> No independent benchmark, security audit, installation, binary, model, or live transcription/agent workflow was run.</p>
+<ul>
+<li>The submitted <code>lnkd.in</code> URL resolved through one normal non-interactive request to a referral-bearing share URL. The archive and catalogue use the sanitized canonical activity URL. No CAPTCHA was presented, interacted with, or bypassed.</li>
+<li>Guest-visible metadata contained seven comments. Themes included local prompts as sensitive input, interest in combining Whisper/Parakeet and on-device diarization, and a suggestion that organizations may tailor and security-review these capabilities in-house. The comments are social discussion, not independent validation.</li>
+<li>The authenticated viewport visibly showed the target post, its single repository-style media image, and three comments. No login wall, MFA, CAPTCHA, or security checkpoint appeared. Several visible comments were collapsed with <code>… more</code>; comments/replies remain partial and were not expanded or clicked.</li>
+<li>Raw authenticated text, state JSON, and screenshot remain local-only because they include unrelated LinkedIn navigation, account, notification, and promoted-content UI. No LinkedIn post, profile, comment, reaction, or external link was clicked.</li>
+<li>The media image is a visual capture of the OpenWhispr GitHub README, showing project branding, MIT license, platform labels, a release label, and a six-thousand-star badge. It is illustrative and project-authored, not a benchmark result.</li>
+</ul>
+<h3>Media summary</h3>
+<p>One JPEG image was archived from guest-visible metadata (98,690 bytes; SHA-256 <code>b82207542219564370d80b191f6cfff390401c8d31becf4edf5b6320344b3d30</code>). It presents a GitHub README view for OpenWhispr and does not independently establish functional or security claims.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">OpenWhispr wraps local Whisper and NVIDIA Parakeet into more than dictation: a voice-command AI agent that edits text in place, meeting transcription with on-device speaker ID, notes with semantic search, an MCP server. Press a hotkey, talk, and the text lands at your cursor, no cloud unless you opt in. 6k stars, MIT.
+#SpeechToText #LocalFirst #OpenSource #AIEngineering #Privacy</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7500884142432256000">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>Code as Agent Harness: executable state and verification, not merely code generation</h2>
@@ -88,7 +125,7 @@ I&#x27;ve shared the paper in the comments!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7501034434985435138">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>OmniRoute: provider routing needs reproducibility, security, and policy controls</h2>
@@ -125,7 +162,7 @@ I&#x27;ve shared the paper in the comments!</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500853253056696320">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>OpenBot: governed, self-hosted agent coworkers</h2>
@@ -165,7 +202,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500989467147542528">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>Utopia: temporal knowledge needs provenance, controls, and operational limits</h2>
@@ -202,7 +239,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500666466413875200">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
     <h2>Apache Maka: durable agent records require explicit execution boundaries</h2>
@@ -240,7 +277,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500576400639340544">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
     <h2>Corpus-to-knowledge-graph extraction: useful navigation, uncertain edges</h2>
@@ -275,7 +312,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500279175522484224">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 31 Aug 2026</p>
     <h2>Intake summary: persistence semantics for agent state</h2>
@@ -292,7 +329,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500541666886606849">
-  <div class="entry-number">08</div>
+  <div class="entry-number">09</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 01 Sep 2026</p>
     <h2>LinkedIn intake: Magnitude local inference for agent harnesses</h2>
