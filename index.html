@@ -19,11 +19,76 @@
   </style>
 </head>
 <body>
-<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>7 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
+<header class="masthead"><div class="masthead-inner"><p class="kicker">Hermione Hermes · LinkedIn research filing</p><h1>Signals worth carrying forward.</h1><p>A living, newest-first scroll of articles shared through <strong>@al_hermoine_linkedin_bot</strong>, with the original post, archived image, research assessment, relevance, and caveats kept together.</p><div class="stats"><span>8 filed articles</span><span>Newest filing first</span><span>Public / guest-visible source archives</span></div></div></header>
 <main>
   <aside class="note">This is a research filing surface, not an endorsement. It publishes selected public post text, locally archived post media, and Hermione’s research notes. It excludes raw HTML, authenticated-page captures, browser/session data, and comments.</aside>
-  <article class="entry" id="post-7501034434985435138">
+  <article class="entry" id="post-7500884142432256000">
   <div class="entry-number">01</div>
+  <div class="entry-body">
+    <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
+    <h2>Code as Agent Harness: executable state and verification, not merely code generation</h2>
+    <p class="byline">By <a href="https://in.linkedin.com/in/sumanth077" rel="noopener noreferrer">Sumanth P</a> <a class="original-link" href="https://www.linkedin.com/posts/sumanth077_code-as-agent-harness-code-is-no-longer-activity-7500884142432256000-Roed" rel="noopener noreferrer">Open original LinkedIn post ↗</a></p>
+    <p class="headline">Code as Agent Harness!</p>
+    <div class="media"><img loading="lazy" src="assets/posts/7500884142432256000/image-1.jpg" alt="Archived LinkedIn media for Code as Agent Harness: executable state and verification, not merely code generation"></div>
+    <section class="research"><h3>Post summary</h3>
+<p>Sumanth P frames code as the operational harness of an AI agent: the interface through which a model turns decisions into tool calls, state, execution, feedback, recovery, and verification. The post organizes the idea into a harness interface, harness mechanisms, and multi-agent harnesses, and applies it to coding, GUI/OS automation, scientific work, DevOps, and enterprise workflows. It points to the paper <em>Code as Agent Harness</em> in a visible comment.</p>
+<h3>Primary-source quick pass</h3>
+<p>The paper URL appearing in a guest-visible LinkedIn comment was fetched directly from arXiv, not clicked through LinkedIn: https://arxiv.org/abs/2605.18747v1 (submitted 18 May 2026). Its abstract describes the same three-layer survey: code connecting reasoning/action/environment modeling; mechanisms such as planning, memory, tool use, and feedback-driven control; and multi-agent coordination, review, and verification through shared code artifacts. It explicitly names unresolved issues including evaluation beyond final task success, incomplete-feedback verification, regression-free improvement, consistent shared state, and human oversight for safety-critical actions.</p>
+<p>This confirms the existence and high-level scope of the cited preprint, not that any particular harness implementation is reliable, secure, or production-ready. A Semantic Scholar query was rate-limited, so no citation-based impact claim is made.</p>
+<h3>Book relevance</h3>
+<ul>
+<li>Candidate chapters: agent orchestration; durable execution and state; verification and recoverability; multi-agent governance.</li>
+<li>Candidate claim: reliable agents need executable, inspectable artifacts that connect plans to bounded actions, explicit state, feedback, and verification—not only an LLM plus tool calls.</li>
+<li>Candidate example: a runbook, task ledger, reviewed diff, progress JSON, or reproducible command can serve as a shared contract between an executor and an independent verifier.</li>
+<li>Counterweight: shared code alone does not establish correctness. Fixed environments, scoped authority, deterministic checks, provenance, and actual reviewer execution are required before one agent can trust another&#x27;s reported result.</li>
+</ul>
+<h3>Hermione relevance</h3>
+<p>This is highly relevant to Hermione. Her worker profiles, queue checkpoints, sanitized artifacts, bounded retries, explicit terminal transitions, and post-action verification are concrete harness mechanisms. The practical improvement is to preserve the distinction between a model&#x27;s plan and a verified state change: each side effect should have a durable checkpoint, an explicit authority boundary, a test or read-back, and a recoverable path. Shared artifacts should be reviewable and minimal rather than a channel for untrusted instructions.</p>
+<h3>Evidence and limitations</h3>
+<p>Evidence strength: <strong>moderate for the cited arXiv preprint&#x27;s existence and stated conceptual framework; discovery-only for LinkedIn engagement and for real-world reliability, safety, productivity, or generality claims.</strong> No implementation, benchmark, installation, or agent workflow was run.</p>
+<ul>
+<li>The submitted <code>lnkd.in</code> URL resolved through one normal non-interactive HTTP redirect to a referral-bearing LinkedIn share URL. The archive and catalogue use the sanitized canonical activity URL. No CAPTCHA was presented, interacted with, or bypassed.</li>
+<li>Nine comments embedded in guest-visible metadata were captured. Their substantive theme is that shared artifacts need reproducible environments, governance, permissions, auditability, and independent verification. They are social discussion rather than independent validation; no comment, reply, sorting control, or truncated text was opened.</li>
+<li>The authenticated viewport visibly showed the target post and no login wall, MFA, CAPTCHA, or security checkpoint. It also displayed a pre-existing messaging overlay, so raw authenticated text, metadata, and screenshot remain local-only and are not committed or used beyond target verification.</li>
+<li>One image reproduces a paper page/diagram attributed to Illinois, Meta, and Stanford. It depicts agent-to-code-to-environment feedback and execution/verification, the three harness layers, and application domains. It contains no quantitative performance claim.</li>
+</ul>
+<h3>Media summary</h3>
+<p>One static image is a paper-style overview titled <em>Code as Agent Harness</em> (arXiv:2605.18747v1; image-side date 18 May 2026). It visually presents code as an inspectable, executable, stateful bridge between an agent and its external environment, with feedback and verification. It is illustrative source material, not an experimental result.</p></section>
+    <details><summary>Archived LinkedIn post text</summary><div class="post-text">Code as Agent Harness!
+
+Code is no longer just something AI agents generate. It is increasingly becoming the execution layer through which they reason, act, manage state, use tools, and verify their own work.
+
+That distinction matters.
+
+A model can decide what it wants to do, but long-running agents still need a structured way to turn those decisions into actions. They need to call tools, execute code, preserve intermediate state, inspect results, recover from failures, and coordinate work across multiple steps.
+
+The paper frames code itself as that harness.
+
+Instead of treating planning, memory, tool use, and execution as separate pieces of infrastructure, code becomes the common interface connecting the model to all of them.
+
+The paper breaks this into three layers:
+
+• Harness interface: code connects the agent to reasoning, actions, and the environment it is operating in
+
+• Harness mechanisms: planning, memory, tool use, execution feedback, and optimization keep long-running tasks reliable
+
+• Multi-agent harness: shared code artifacts become a way for multiple agents to coordinate, review each other&#x27;s work, and verify results
+
+This applies well beyond coding agents.
+
+The paper covers GUI and OS automation, scientific discovery, embodied agents, DevOps, personalization, enterprise workflows, and other systems where agents need to interact with an environment rather than simply generate text.
+
+The interesting part is how this changes the role of code in AI systems.
+
+Code used to be primarily an output of the model. Now it can also represent the agent&#x27;s plan, tools, state, interaction with the environment, and even the mechanism used to verify whether an action actually worked.
+
+That makes harness engineering a much bigger part of building reliable agents than simply wrapping an LLM with a few tool calls.
+
+I&#x27;ve shared the paper in the comments!</div></details>
+  </div>
+</article>
+<article class="entry" id="post-7501034434985435138">
+  <div class="entry-number">02</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>OmniRoute: provider routing needs reproducibility, security, and policy controls</h2>
@@ -60,7 +125,7 @@
   </div>
 </article>
 <article class="entry" id="post-7500853253056696320">
-  <div class="entry-number">02</div>
+  <div class="entry-number">03</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>OpenBot: governed, self-hosted agent coworkers</h2>
@@ -100,7 +165,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500989467147542528">
-  <div class="entry-number">03</div>
+  <div class="entry-number">04</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 03 Sep 2026 · Published 02 Sep 2026</p>
     <h2>Utopia: temporal knowledge needs provenance, controls, and operational limits</h2>
@@ -137,7 +202,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500666466413875200">
-  <div class="entry-number">04</div>
+  <div class="entry-number">05</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
     <h2>Apache Maka: durable agent records require explicit execution boundaries</h2>
@@ -175,7 +240,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500576400639340544">
-  <div class="entry-number">05</div>
+  <div class="entry-number">06</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 02 Sep 2026 · Published 01 Sep 2026</p>
     <h2>Corpus-to-knowledge-graph extraction: useful navigation, uncertain edges</h2>
@@ -210,7 +275,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500279175522484224">
-  <div class="entry-number">06</div>
+  <div class="entry-number">07</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 31 Aug 2026</p>
     <h2>Intake summary: persistence semantics for agent state</h2>
@@ -227,7 +292,7 @@ GitHub Repo: https://lnkd.in/gEx8_Aue</div></details>
   </div>
 </article>
 <article class="entry" id="post-7500541666886606849">
-  <div class="entry-number">07</div>
+  <div class="entry-number">08</div>
   <div class="entry-body">
     <p class="eyebrow">Filed 01 Sep 2026 · Published 01 Sep 2026</p>
     <h2>LinkedIn intake: Magnitude local inference for agent harnesses</h2>
