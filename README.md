@@ -18,7 +18,9 @@ On the Hermes host, rebuild from the intake archive:
 python3 scripts/build_site.py
 ```
 
-The generator writes `index.html`, `manifest.json`, and selected images under `assets/posts/`.
+The generator writes `index.html`, `posts.json`, `manifest.json`, and selected images under `assets/posts/`.
+
+`posts.json` is the durable public filing index. On each build, the current intake archive refreshes matching activity IDs and contributes new ones, while already-published IDs are retained even if the intake source is temporarily partial. The public page displays the newest 20 filings first; use **Show 20 more** (or continue toward the end of the loaded list) to load the next batch. Filing numbers increase chronologically, so the newest filing has the highest number and the first filing is number 1.
 
 ## Intake publication
 

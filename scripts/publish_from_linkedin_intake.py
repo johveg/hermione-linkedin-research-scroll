@@ -19,7 +19,7 @@ from pathlib import Path
 
 SITE_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path("/home/hermoine/agent-research-linkedin-source/data/posts")
-PUBLIC_PATHS = ("index.html", "manifest.json", "assets/posts")
+PUBLIC_PATHS = ("index.html", "posts.json", "manifest.json", "assets/posts")
 FORBIDDEN_PUBLIC_MARKERS = (
     "source.html",
     "comments.json",
