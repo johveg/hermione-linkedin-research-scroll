@@ -1,6 +1,22 @@
 {
-  "count": 162,
+  "count": 163,
   "posts": [
+    {
+      "activity_id": "7501640766973329409",
+      "title": "LinkedIn intake — NVIDIA PAIR personal AI cluster",
+      "headline": "🚀 NVIDIA PAIR can discover the computers on your network and route inference across them.",
+      "author": "Javier Medel, MSc",
+      "author_url": "https://ca.linkedin.com/in/javier-medel",
+      "canonical_url": "https://www.linkedin.com/posts/javier-medel_nvidia-pair-can-discover-the-computers-activity-7501640766973329409-_pvd",
+      "published_at": "2026-09-04T14:02:12.535Z",
+      "filed_at": "2026-09-05T02:39:55Z",
+      "post_text": "🚀 NVIDIA PAIR can discover the computers on your network and route inference across them. ⚡🧠\n\nThis one caught my attention.\n\nYour RTX gaming PC.\nYour AI workstation.\nYour Mac.\nYour NVIDIA DGX Spark.\n\nInstead of treating them as separate machines, PAIR can turn them into a personal AI inference cluster.\n\nAnd the crazy part?\n\nYou don't need racks, special cables, or complicated cluster orchestration.\n\nPAIR can:\n\n🧠 Discover available local compute\n⚡ Route workloads where capacity is available\n🔀 Run agent tasks in parallel\n🔒 Keep prompts, files & context on your network\n🛠️ Work with Ollama + LM Studio\n💻 Connect Windows, Linux & macOS\n\nI think this gets especially interesting with agentic AI.\n\nWhy have 10 tasks fighting over one GPU when you can spread them across machines that are already sitting idle?\n\nYou might not need a $20K AI server.\n\nYou might already own the compute.\n\nStop thinking about your AI PC.\n\nStart thinking about your AI network. 🤯",
+      "images": [
+        "assets/posts/7501640766973329409/image-1.jpg"
+      ],
+      "summary_html": "<h3>Post summary</h3>\n<p>The post presents NVIDIA PAIR as a way to discover local machines and route AI inference among them rather than treating a gaming PC, workstation, Mac, or DGX Spark as isolated resources. It claims a personal AI cluster can distribute agent work across spare local capacity, retain prompts, files, and context on the local network, and work with Ollama and LM Studio across Windows, Linux, and macOS.</p>\n<h3>Book relevance</h3>\n<p><strong>Candidate chapters:</strong> local AI infrastructure; agent orchestration and capacity planning; private inference boundaries; operational reliability of multi-machine systems.</p>\n<p><strong>Candidate claim/example:</strong> A local agent system can treat nearby heterogeneous machines as a capacity pool, but a useful routing layer must make hardware eligibility, local-network trust, model/runtime compatibility, task placement, and failure handling explicit rather than merely advertising unused compute.</p>\n<h3>Hermione relevance</h3>\n<p>Moderate relevance. Hermione could use a verified local-capacity inventory and a bounded scheduler for suitable background workloads, instead of assuming one GPU or host. Any adoption would require explicit device authorization, authenticated/segmented local networking, resource quotas, workload-data classification, compatibility tests, observability, and graceful fallbacks. NVIDIA&#x27;s beta documentation is not sufficient proof that the product meets Hermione&#x27;s safety or reliability needs.</p>\n<h3>Evidence and limitations</h3>\n<p>Evidence strength: <strong>moderate for the existence and content of the LinkedIn post, the publicly documented NVIDIA PAIR beta, its stated compatible-device categories, its advertised local endpoint, and launch support for Ollama and LM Studio; discovery-only for performance, real task parallelism, privacy/security guarantees, cost savings, cross-platform reliability, and suitability for a particular network.</strong></p>\n<p>The LinkedIn post is social/discovery evidence. NVIDIA&#x27;s product page is a vendor primary source, not an independent evaluation. Its claims about keeping data local and distributing requests need confirmation against installation documentation, network traffic, authentication and authorization behavior, supported model/runtime combinations, telemetry, fault recovery, and measured workload tests. No software was downloaded, installed, configured, or run.</p>",
+      "number": 163
+    },
     {
       "activity_id": "7500738020862607360",
       "title": "LinkedIn intake — Hardware-aware local LLM selection with llmfit",
