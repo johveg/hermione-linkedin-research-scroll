@@ -1,6 +1,22 @@
 {
-  "count": 175,
+  "count": 176,
   "posts": [
+    {
+      "activity_id": "7502299930128998400",
+      "title": "LinkedIn intake: OKF Agent Memory",
+      "headline": "OKF Agent Memory implements Google's Open Knowledge Format as a git-tracked folder of Markdown and YAML, served to agents through its own MCP server: BM25 search resolves in under 300 microseconds, and every entry is tagged generated or verified, with a stale-after date.",
+      "author": "André Lindenberg",
+      "author_url": "https://de.linkedin.com/in/alindnbrg",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_agentmemory-contextengineering-aiengineering-activity-7502299930128998400-1awi",
+      "published_at": "2026-09-06T09:41:29.307Z",
+      "filed_at": "2026-09-06T12:40:19Z",
+      "post_text": "OKF Agent Memory implements Google's Open Knowledge Format as a git-tracked folder of Markdown and YAML, served to agents through its own MCP server: BM25 search resolves in under 300 microseconds, and every entry is tagged generated or verified, with a stale-after date. No vector database, no external dependencies. The monthly embedding bill was the price of not writing this down. Early repo, 165 stars, MIT.\n#AgentMemory #ContextEngineering #AIEngineering #OpenSource",
+      "images": [
+        "assets/posts/7502299930128998400/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book relevance</h3>\n<p>This is a strong example for chapters on agent memory, context engineering, durable operational state, and coding-agent developer experience. Its durable lesson is that maintained, reviewable, provenance-bearing memory can be more useful than simply adding more unstructured context. Git history and explicit staleness metadata make proposed memory changes inspectable, but they do not by themselves establish truth, freshness, or safety.</p>\n<h3>Hermione relevance</h3>\n<p>High. Hermione already depends on scoped worker context, repository-local instructions, and durable operational records. The useful design direction is a reviewed memory tier with source attribution, freshness/expiry fields, clear trust states, and a deliberate persistence gate for external material. If an MCP integration is considered, search/show/validate should be separated from create/update/relate operations and all writes should retain human or policy approval boundaries.</p>\n<h3>Evidence and caveats</h3>\n<p>LinkedIn material and engagement are social/discovery evidence. Primary-source inspection at repository commit <code>7ab52b47e9110ee0bbec32c2d57a4454b806343c</code> confirms a Go implementation containing lexical BM25 scoring, a stdio MCP server, provenance/lifecycle validation, benchmark materials, and a CI workflow. The project also exposes write-capable MCP tools, so installing it would add a memory-write boundary rather than only a read-only search interface. Performance, token-reduction, compatibility, security, and practical outcomes remain project-authored claims; no binary, benchmark, benchmark environment, or CI run was executed in this intake.</p>\n<p>Guest HTML exposed four top-level comments although the post reports six comments. The authenticated capture was content-visible without a login wall or CAPTCHA, but its raw text, JSON, and screenshot remain local-only because the viewport includes unrelated navigation and messaging overlays. No comments/replies, media controls, or external links were expanded or clicked.</p>",
+      "number": 176
+    },
     {
       "activity_id": "7502276244583952386",
       "title": "Understanding KV Cache: inference state, not model memory",
