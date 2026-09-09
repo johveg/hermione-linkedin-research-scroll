@@ -1,6 +1,22 @@
 {
-  "count": 182,
+  "count": 183,
   "posts": [
+    {
+      "activity_id": "7503197423926878208",
+      "title": "LLM hardware-fit estimation: useful decision support, not a guarantee",
+      "headline": "Stop downloading LLMs your machine was never going to run.",
+      "author": "Aymane Mrini",
+      "author_url": "https://www.linkedin.com/in/aymane-mrini-a82530389",
+      "canonical_url": "https://www.linkedin.com/posts/aymane-mrini-a82530389_stop-downloading-llms-your-machine-was-never-activity-7503197423926878208-eaTP",
+      "published_at": "2026-09-08T21:07:48.529Z",
+      "filed_at": "2026-09-09T03:59:13Z",
+      "post_text": "Stop downloading LLMs your machine was never going to run.\n\nllmfit scans your hardware and tells you exactly which models will run.\n\nIt scans your RAM, CPU, GPU, and VRAM first.\n\nThen it scores every model across four dimensions:\n\n1. Quality, based on parameter count and quantization\n2. Speed, estimating tokens per second for your exact backend\n3. Fit, matching memory use to your hardware\n4. Context window support for your use case\n\nEach model gets a label: Perfect, Good, Marginal, or Too Tight.\n\nIt picks the best quantization automatically, stepping down until something fits.\n\nCovers hundreds of models from Meta, Mistral, Qwen, and DeepSeek.\n\nWorks with Ollama, llama.cpp, MLX, and LM Studio out of the box.\n\nOpen-source.\n\n🔗 Github repo: https://lnkd.in/eEEjBFEY",
+      "images": [
+        "assets/posts/7503197423926878208/image-1.jpg"
+      ],
+      "summary_html": "<h3>Post summary</h3>\n<p>Aymane Mrini presents llmfit as an open-source utility that inventories local RAM, CPU, GPU, and VRAM, then ranks models by quality, estimated speed, memory fit, and context-window support. The post says it automatically selects a lower quantization when necessary and supports local runtimes including Ollama, llama.cpp, MLX, and LM Studio.</p>\n<h3>Book relevance</h3>\n<ul>\n<li>Candidate chapter: local/private AI infrastructure and the operational reality of model selection.</li>\n<li>Candidate claim: a usable local-model workflow needs hardware-aware fit, quantization, context, and throughput estimates rather than parameter count alone.</li>\n<li>Durable lesson: model selection is a capacity-planning and verification problem. Memory headroom, backend, quantization, context length, and measured decode/prefill behavior determine whether a model is practical.</li>\n<li>Evidence strength: moderate for llmfit&#x27;s documented repository capabilities; LinkedIn remains discovery evidence and broad fit/speed guarantees require machine-specific validation.</li>\n</ul>\n<h3>Hermione relevance</h3>\n<p>This is directly relevant when Hermione considers local or private inference. A read-only hardware/profile and model-selection step could prevent unsuitable downloads or deployments. It is not a drop-in basis for interactive chat decisions: Hermione should require measured TTFT and token throughput on representative workloads, privacy review of any provider/benchmark-sharing feature, storage and model-license checks, and a hosted or smaller-model fallback.</p>\n<h3>Evidence and limitations</h3>\n<p>The visible post linked to <code>AlexsJones/llmfit</code>; its LinkedIn shortlink was resolved by a direct network fetch, not by clicking within LinkedIn. The repository was inspected at commit <code>1e7bdb3ecf43071597ffd2eb2305dfac35e22a40</code> (observed 2026-09-09). Its MIT-licensed documentation describes CPU/RAM/GPU detection, an HTTP API, model/quantization compatibility scoring, optional local/community measured benchmarks, and an explicit confidence field distinguishing measured, calibrated, estimated, and unsupported speed values. It also documents GPU-name fallbacks, heuristic quality/task alignment, and formula-based speed estimates. Those details support using llmfit as decision support, not as proof that any listed model will run well.</p>\n<p>The repository had public releases through v1.1.14 (published 2026-09-03) at inspection. Repository-maintainer documentation is primary-source evidence for documented behavior, not independent validation of estimates, benchmark accuracy, privacy behavior, or suitability on Hermione&#x27;s hardware.</p>",
+      "number": 183
+    },
     {
       "activity_id": "7503108857943089152",
       "title": "Cross-model KV cache transfer: a promising narrow interoperability layer",
