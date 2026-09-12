@@ -1,6 +1,22 @@
 {
-  "count": 184,
+  "count": 185,
   "posts": [
+    {
+      "activity_id": "7504310071259029506",
+      "title": "Hyperresearch: persistent, evidence-aware research context for Claude Code",
+      "headline": "Ask a deep research agent two related questions a week apart and the second run starts from zero.",
+      "author": "André Lindenberg",
+      "author_url": "https://de.linkedin.com/in/alindnbrg",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_aiagents-claudecode-aiengineering-activity-7504310071259029506-NHAo",
+      "published_at": "2026-09-11T22:49:04.299Z",
+      "filed_at": "2026-09-12T04:53:07Z",
+      "post_text": "Ask a deep research agent two related questions a week apart and the second run starts from zero. hyperresearch, a 16-step research pipeline inside Claude Code, keeps every source it reads in a searchable markdown vault, so later runs build on it. Hallucinated quotes and retracted citations block a report from shipping. Installs with one pip command, runs on your Claude subscription. 2.5k stars, MIT.\n#AIAgents #ClaudeCode #AIEngineering #OpenSource #DeepResearch",
+      "images": [
+        "assets/posts/7504310071259029506/image-1.jpg"
+      ],
+      "summary_html": "<h3>Post summary</h3>\n<p>André Lindenberg presents Hyperresearch as a Claude Code research pipeline intended to avoid starting related investigations from zero. The post says that sources are retained in a searchable vault and that quote integrity and retraction checks can block a report from shipping.</p>\n<h3>Claim and assessment</h3>\n<p>The durable idea is sound: persistent source records, provenance, and explicit release gates can make a later research run more cumulative and auditable than prompt-only context. A persistent vault is not sufficient by itself: source quality, retention, access control, indexing freshness, query coverage, and independent validation still determine whether reuse improves an answer.</p>\n<h3>Primary-source quick pass</h3>\n<p>The author-linked public repository <code>jordan-gibbs/hyperresearch</code> was inspected read-only at commit <code>1367c9becdc2b0ace9d8dc0d412e530125642365</code>. Its README documents a per-project <code>pip install hyperresearch &amp;&amp; hyperresearch install</code> path, a 16-step Claude Code skill pipeline, a SQLite-backed <code>.hyperresearch</code> vault, quote-integrity and retracted-citation gates, and wrapping fetched web bodies as untrusted data. The repository is MIT-licensed; GitHub reported 2,724 stars at inspection on 2026-09-12.</p>\n<p>The project’s claimed DeepResearch-Bench lead is not independently established here. Its own README labels the chart a forward-looking projection from a stratified pilot and says third-party validation is pending. No installation, model-provider action, or benchmark execution was performed for this intake.</p>\n<h3>Book relevance</h3>\n<ul>\n<li>Candidate chapters: agent memory and knowledge lifecycle; evidence-aware research loops; coding-agent context engineering; verification gates and provenance.</li>\n<li>Candidate claim: durable research context should store inspectable sources and provenance, while publication requires explicit evidence checks rather than confidence in generated prose.</li>\n<li>Useful counterweight: a growing vault can amplify stale, sensitive, duplicated, or low-quality material unless retention, source ranking, access boundaries, and evaluation are maintained.</li>\n</ul>\n<h3>Hermione relevance</h3>\n<p>High relevance. Hermione already benefits from durable queue checkpoints, source archives, skills, and explicit verification. A practical improvement is to treat reusable research as scoped, searchable evidence with provenance and expiry/review signals—not as unconstrained agent memory—and to keep fetched material fenced as untrusted content.</p>\n<h3>Evidence strength</h3>\n<p>Moderate for documented repository capabilities at the inspected commit; discovery-only for the LinkedIn framing, performance ranking, and operational effectiveness. The next step before recommending adoption is a controlled evaluation on representative questions, with source coverage, false-citation rate, latency/cost, retention/privacy behavior, and recovery from bad sources measured.</p>\n<h3>Media summary</h3>\n<p>One static 800×1000 promotional repository screenshot was archived. It depicts Hyperresearch, calls it a deep-research harness, and shows a project-authored RACE leaderboard chart. The chart is not independent benchmark evidence. No video was visible.</p>",
+      "number": 185
+    },
     {
       "activity_id": "7503851652878352384",
       "title": "KV-cache lifecycle is agent infrastructure, not merely a model detail",
