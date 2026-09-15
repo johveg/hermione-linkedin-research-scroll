@@ -1,6 +1,22 @@
 {
-  "count": 196,
+  "count": 197,
   "posts": [
+    {
+      "activity_id": "7505346310485516288",
+      "title": "Distributed GPU-cluster diagnostics: observe before scaling",
+      "headline": "🛠️ Built a Multi-Node Deep GPU & Network RDMA Diagnostic Tool for Next-Gen Clusters (GB200/GB300)",
+      "author": "Jerry Yang, Ph. D.",
+      "author_url": "https://www.linkedin.com/in/jerryyang888",
+      "canonical_url": "https://www.linkedin.com/posts/jerryyang888_aiinfrastructure-gpuperformance-slurm-activity-7505346310485516288--6Yy",
+      "published_at": "2026-09-14T19:26:42.982Z",
+      "filed_at": "2026-09-15T09:28:45Z",
+      "post_text": "🛠️ Built a Multi-Node Deep GPU & Network RDMA Diagnostic Tool for Next-Gen Clusters (GB200/GB300)\n\nWhen running high-density LLM training or inference across ultra-scale GPU clusters, silent hardware degradation—like IMEX fabric misalignment, RoCEv2 PFC/ECN congestion, or degraded PCIe/NVLink lanes—can drop cluster bandwidth or stall jobs mid-epoch.\n\nTo eliminate manual troubleshooting overhead, I engineered audit: an automated CLI suite performing 50+ deep health checks across network layers, GPU topologies, and host configurations.\n\nKey Capabilities:\n🔹 Preset Use Case Workflows: Targeted macro runs for imex_fabric, cluster_drift, preflight, nvlink_health, and network_perf.\n🔹 Deep Interconnect & RDMA Profiling: Real-time checking of MTU alignment, PFC/ECN congestion, RTTCC/RDMA paths, and physical lane health.\n🔹 GPU Topology & Health Checks: Comprehensive verification of NVLink/NVSwitch paths, GPU-NIC affinity, XID errors, and thermal throttling.\n\n🔹 Reproducible CLI Output: Automatically generates standalone executable commands so engineers can re-run and isolate specific subsystem checks on demand.\n\nDrop a comment or reach out if you’d like to compare notes on automating cluster pre-flight checks and hardware diagnostic workflows!\n\n\n#AIInfrastructure #GPUPerformance #Slurm #RDMA #RoCEv2 #NVLink #NVIDIA #SystemsEngineering",
+      "images": [
+        "assets/posts/7505346310485516288/image-1.jpg"
+      ],
+      "summary_html": "<h3>Post summary</h3>\n<p>Jerry Yang, Ph. D. presents <code>audit</code>, an asserted automated CLI suite for multi-node GPU and RDMA diagnostics on GB200/GB300-class clusters. The post says the suite performs 50+ checks across network, GPU-topology, and host-configuration layers, with preset workflows for IMEX fabric, cluster drift, preflight, NVLink health, and network performance. It claims to emit standalone executable commands so engineers can repeat an individual subsystem check.</p>\n<h3>Book relevance</h3>\n<ul>\n<li>Candidate chapters: AI infrastructure and operations; distributed training/inference reliability; observability and preflight verification; network/data-path bottlenecks.</li>\n<li>Candidate claim: distributed AI reliability depends on observability of the full serving/training substrate—host, GPU, fabric, and network—not just model/runtime metrics.</li>\n<li>Useful example: before diagnosing a stalled job or provisioning more accelerators, operators should distinguish GPU faults, thermal limits, PCIe/NVLink topology, RDMA path health, MTU alignment, and congestion signals from application-level failures.</li>\n<li>Caveat: a module list and social post do not validate diagnostic accuracy, safety, production scalability, or remediation quality.</li>\n</ul>\n<h3>Hermione relevance</h3>\n<p>This is directly relevant as an operational pattern. Hermione should favor small, reviewable, read-only preflight and evidence-collection steps before expensive or long-running agent/model jobs; capture reproducible observations and keep diagnosis separate from any state-changing remediation. If a future workflow generates shell commands, it needs constrained inputs, explicit allowlists, dry-run behavior, least privilege, and human review at the action boundary.</p>\n<h3>Evidence strength</h3>\n<p>Discovery-only. The post and its visible terminal image establish what the author presents, but not the implementation or operational effectiveness of the unnamed <code>audit</code> suite. No public repository, documentation, package, license, benchmark, or independently reproduced diagnostic result was located in this intake.</p>",
+      "number": 197
+    },
     {
       "activity_id": "7505265287861014529",
       "title": "Bottleneck-first AI infrastructure decisions, not accelerator labels",
