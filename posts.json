@@ -1,6 +1,22 @@
 {
-  "count": 200,
+  "count": 201,
   "posts": [
+    {
+      "activity_id": "7505921131686641664",
+      "title": "forkd: forkable Firecracker microVMs for agent fan-out",
+      "headline": "A coding agent hits a fork in its plan, unsure whether to try approach A or B, and today that means restarting from scratch: memory and file state gone.",
+      "author": "André Lindenberg",
+      "author_url": "https://de.linkedin.com/in/alindnbrg",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_agentharness-codingagents-aiinfra-activity-7505921131686641664-uN03",
+      "published_at": "2026-09-16T09:30:51.046Z",
+      "filed_at": "2026-09-16T18:03:35Z",
+      "post_text": "A coding agent hits a fork in its plan, unsure whether to try approach A or B, and today that means restarting from scratch: memory and file state gone. forkd's BRANCH clones a live, running Firecracker microVM in 56 ms median, snapshot copy-on-write, so the second path keeps the first's state instead of rebuilding it. Each child stays KVM-isolated from the host. 2.8k stars, Apache-2.0.\n#AgentHarness #CodingAgents #AIInfra #OpenSourc",
+      "images": [
+        "assets/posts/7505921131686641664/image-1.jpg"
+      ],
+      "summary_html": "<h3>What the post claims</h3>\n<p>The post presents forkd as a Firecracker-based microVM runtime for coding-agent branch-and-fan-out workflows. It claims that BRANCH clones a live running microVM while preserving memory and file state through copy-on-write snapshots, with a 56 ms median live-branch figure. It describes child microVMs as KVM-isolated from the host and promotes the project as Apache-2.0 licensed with approximately 2.8k stars at capture.</p>\n<p>Visible comments add the project repository URL and repeat project-authored fan-out/branch figures. Other comments see warm snapshotting as potentially useful for parallel agent work and compare it informally with Docker and another nano-VM product. These comments are partial social discussion, not independent validation. One promotional third-party comment was not used as evidence.</p>\n<h3>Book and Hermione relevance</h3>\n<p><strong>Book fit:</strong> High for agent runtime security, agent orchestration/fan-out, and recovery/rollback. The durable lesson is that warm snapshot branching can make stateful agent exploration cheaper, but runtime safety is an architecture rather than a microVM label: use a strong isolation boundary, disposable/revertible state, externally enforced egress controls, scoped credentials, hard resource quotas, and auditable recovery.</p>\n<p><strong>Hermione fit:</strong> High. Forkable isolated workers are a possible future design for parallel coding, research, evaluation, or untrusted-tool tasks, but this item is not grounds to install or adopt forkd. Any evaluation should be in a dedicated environment and first verify host/KVM exposure, default-deny egress enforced outside guests, short-lived scoped credentials excluded from snapshots and model context, CPU/memory/disk/PID/time limits, snapshot compatibility, and independent security review.</p>\n<h3>Evidence and limitations</h3>\n<ul>\n<li>The LinkedIn post, image, engagement counts, and comments are social/discovery evidence.</li>\n<li>forkd repository, PyPI, security policy, and benchmark statements are project-authored primary-source evidence; no independent benchmark replication, audit, or escape testing was found in this pass.</li>\n<li>The reported 56 ms measures the source-VM pause on a specified 1.5 GiB/HDD test setup, not universally available end-to-end branching latency or completed background-copy time.</li>\n<li>forkd is explicitly alpha/pre-1.0; snapshots are documented as version and CPU-microarchitecture sensitive.</li>\n<li>Visible comments are incomplete: no sorting, expansion, or load-more controls were used.</li>\n<li>The forkd repository was discovered in captured comment metadata and inspected directly by network fetch; it was never clicked through LinkedIn.</li>\n</ul>",
+      "number": 201
+    },
     {
       "activity_id": "7505124544630759425",
       "title": "Redis LangCache: semantic caching needs correctness boundaries",
