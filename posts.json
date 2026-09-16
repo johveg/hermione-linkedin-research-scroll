@@ -1,6 +1,22 @@
 {
-  "count": 198,
+  "count": 199,
   "posts": [
+    {
+      "activity_id": "7505570659435974656",
+      "title": "Intake summary: buildable AI projects and portfolio evidence",
+      "headline": "8 AI Projects That Get You Hired with (links)",
+      "author": "Ved Prakash Meena",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/ved-prakash-meena_8-ai-projects-that-get-you-hired-with-links-activity-7505570659435974656-TujJ",
+      "published_at": "2026-09-15T10:18:11.951Z",
+      "filed_at": "2026-09-16T04:38:44Z",
+      "post_text": "8 AI Projects That Get You Hired with (links👇)\nAll buildable. All on GitHub. All 50+ Stars.\n3 beginner. 3 intermediate. 2 advanced.\n\n-- Beginner --\n\n1 → PDF Chatbot\nUpload a PDF. Ask anything about it.\nLangChain + Chroma/Pinecone + Next.js.\nhttps://lnkd.in/gezUd4MK\n\n2 → Sentiment Analysis API\nClassify text emotions in real time.\nFastAPI + BERT + PyTorch.\nhttps://lnkd.in/g7sufwfH\n\n3 → News Article Extractor + Summarizer\nScrape any news site. Summarize, extract keywords.\nMulti-threaded, works in 10+ languages.\nhttps://lnkd.in/g-fsU_8G\n\n-- Intermediate --\n\n4 → AI Code Review Bot\nAuto-review PRs. Catch bugs, security, style issues.\nSelf-hosted, plugs into GitHub/GitLab/Bitbucket.\nhttps://lnkd.in/gRtFQSy8\n\n5 → Deep Research Agent\nGive it a topic. It plans, searches, cites, writes a report.\nAggregates 20+ sources per report.\nhttps://lnkd.in/gQPvHiAc\n\n-- Advanced --\n\n6 → Local Voice AI Pipeline\nSpeech in. LLM reasons. Speech out. Fully local.\nVAD + STT + LLM + TTS, OpenAI Realtime-compatible.\nhttps://lnkd.in/gb4cKpRH\n\n7 → RAG Evaluation Suite\nBuild tests for faithfulness, hallucination, recall.\nPytest-style testing for LLM apps.\nhttps://lnkd.in/g99ZaXvt\n\n8 → LLM Guardrails / Prompt Injection Defense\nBlock jailbreaks and prompt injection before they land.\nNVIDIA's programmable rails, config-driven.\nhttps://lnkd.in/gd-_Bgww\n\nBuild one per week. Your portfolio does the talking.\n\nSave this list. Pick one. Start today.\nRepost ♻️ for anyone breaking into AI.\n\nFollow Ved Prakash Meena for more AI resources.",
+      "images": [
+        "assets/posts/7505570659435974656/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book relevance</h3>\n<p><strong>Candidate chapters:</strong> practical AI learning and portfolio evidence; evaluation and assurance; agent safety and deployment boundaries.</p>\n<p>The durable lesson is not that any eight repositories guarantee employment. It is that a credible AI portfolio is stronger when it shows an end-to-end, testable system plus operational boundaries: source provenance, retrieval or model behavior, evaluation, review, safety controls, and documented human responsibility. The list usefully spans application construction, research, code review, voice interfaces, evaluation, and guardrails, but it does not provide hiring outcomes or comparative evidence.</p>\n<h3>Hermione relevance</h3>\n<p>Moderately high. Hermione already operates research, capture, and tool workflows; the post is a prompt to make those workflows demonstrable and auditable rather than to use projects as a checklist. The immediately relevant components are independent evaluation (including RAG tests), review gates, source/citation handling, and prompt-injection defenses. Any job-search use must remain source-grounded, preserve an audit trail, and require explicit human approval before external submission or recruiter interaction.</p>\n<h3>Limitations</h3>\n<ul>\n<li>The LinkedIn claim that these projects “get you hired” has no outcome data and is discovery-only.</li>\n<li>Star counts are volatile and popularity is not a quality, security, maintenance, or hiring signal.</li>\n<li>One linked PDF chatbot repository is archived; the sentiment API repository’s latest push shown by GitHub was in 2022. Verify maintenance, licenses, dependencies, and security before adopting any project.</li>\n<li>Captured LinkedIn comments are partial; neither replies nor hidden comments were expanded.</li>\n</ul>",
+      "number": 199
+    },
     {
       "activity_id": "7505643302411509760",
       "title": "NVIDIA NOOA: typed agent objects need an external execution boundary",
