@@ -1,6 +1,22 @@
 {
-  "count": 202,
+  "count": 203,
   "posts": [
+    {
+      "activity_id": "7505023650471890944",
+      "title": "LinkedIn intake summary",
+      "headline": "Prime Agent, the self-improving coding agent, used to spawn subagents blind to each other.",
+      "author": "André Lindenberg",
+      "author_url": "https://de.linkedin.com/in/alindnbrg",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_codingagents-multiagentsystems-agentorchestration-activity-7505023650471890944-3NPi",
+      "published_at": "2026-09-13T22:04:34.851Z",
+      "filed_at": "2026-09-17T04:48:36Z",
+      "post_text": "Prime Agent, the self-improving coding agent, used to spawn subagents blind to each other. Running agents and subagents can now discover each other and exchange messages, steering active work mid-session. rlm·spawn still forks the child; now a channel stays open, so one subagent's early finding can redirect a sibling immediately. Reach for it when one background agent's finding should change another's course. 20.7k stars, MIT.\n#CodingAgents #MultiAgentSystems #AgentOrchestration #AIEngineering #OpenSource",
+      "images": [
+        "assets/posts/7505023650471890944/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book relevance</h3>\n<p><strong>Candidate chapters:</strong> multi-agent loop engineering; long-running agent operations; secure delegation and failure containment; observability and audit trails.</p>\n<p><strong>Candidate claim/example:</strong> Direct cross-agent messaging can reduce handoff latency and let new findings redirect active work, but it changes the risk model: messages become a live control surface. Reliable systems need self-contained roles, scoped recipient relationships, bounded queues/rates, provenance, explicit independent verification, and permissions that limit the consequences of a bad message.</p>\n<p><strong>Evidence strength:</strong> Moderate for the project’s documented messaging/runtime features after primary-source inspection; discovery-only for marketing and benchmark/effectiveness claims until independently replicated.</p>\n<h3>Hermione relevance</h3>\n<p>High. Hermione already uses delegated work and queue-controlled operations. The item supports retaining isolated briefs and explicit verification rather than permitting unrestricted sideways steering. Any future inter-agent messaging should be family- or task-scoped, durable/auditable, rate- and budget-limited, and unable to expand tool, credential, or publication authority. Process isolation alone is not a security boundary; untrusted content belongs in externally restricted environments.</p>\n<h3>External research and caveats</h3>\n<p>The post author’s visible GitHub repository link was inspected directly without LinkedIn interaction. <code>wider-web-research.md</code> records the pinned repository and author-report evidence. The pinned project documentation and tests support the existence of direct messaging and explicit limits, while also warning that workers/kernels are not security sandboxes. The accompanying arXiv technical report and repository CI are project-authored signals, not independent proof of benchmark, safety, or production-reliability claims.</p>",
+      "number": 203
+    },
     {
       "activity_id": "7504667531715047425",
       "title": "AI infrastructure learning roadmap: a breadth-first curriculum needs evidence, sequencing, and practice",
