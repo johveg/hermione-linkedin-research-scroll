@@ -1,6 +1,22 @@
 {
-  "count": 212,
+  "count": 213,
   "posts": [
+    {
+      "activity_id": "7508878870540972032",
+      "title": "LinkedIn intake: Cua computer-use runtime",
+      "headline": "Computer use usually means a big model reading a screenshot and generating the next action.",
+      "author": "André Lindenberg",
+      "author_url": "https://de.linkedin.com/in/alindnbrg",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_aiagents-computeruse-agentruntimes-activity-7508878870540972032-uXIo",
+      "published_at": "2026-09-24T13:23:50.959Z",
+      "filed_at": "2026-09-24T14:58:07Z",
+      "post_text": "Computer use usually means a big model reading a screenshot and generating the next action. Cua gives agents the computer itself: a driver operating native apps on macOS, Windows and Linux over MCP, local VMs, and a bench. CUA-S1 scores each interface element instead and picks fill, check, click or skip. It scores them independently, not the form as a whole. 26k stars, MIT.\n#AIAgents #ComputerUse #AgentRuntimes #OpenSource #AIEngineering",
+      "images": [
+        "assets/posts/7508878870540972032/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book and Hermione relevance</h3>\n<ul>\n<li>Candidate chapter: agent runtimes and embodied tool use; useful example of separating planning from bounded interface-action selection.</li>\n<li>Durable lesson: computer-use agents need explicit action boundaries, per-element confidence/selection, and task-specific evaluation rather than treating a whole screen as one opaque generation problem.</li>\n<li>Hermione relevance: potentially useful for safe desktop automation only with strict capability scoping, sandbox/VM lifecycle controls, approval gates for consequential actions, and independent verification. It is not a reason to grant broad UI permissions or rely on a UI model alone.</li>\n<li>Evidence status: moderate for documented project capabilities; LinkedIn remains discovery/social evidence and effectiveness claims need corroboration.</li>\n</ul>\n<h3>Limitations</h3>\n<ul>\n<li>Only two of three reported comments were visible; the visible sort explicitly warned that some comments may not be displayed.</li>\n<li>The post media was captured as an animated asset, but the visible review establishes product messaging rather than a benchmark outcome.</li>\n<li>The authoritative post archive retains local-only raw guest/authenticated evidence; committed/public artifacts are limited to sanitized post text, visible comments, media, this summary, and the wider-web note.</li>\n</ul>",
+      "number": 213
+    },
     {
       "activity_id": "7508641612244291584",
       "title": "LinkedIn intake: Google AX agent-workload orchestration",
