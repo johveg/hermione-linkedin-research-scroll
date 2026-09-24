@@ -1,6 +1,22 @@
 {
-  "count": 215,
+  "count": 216,
   "posts": [
+    {
+      "activity_id": "7508958023843946498",
+      "title": "LinkedIn intake: kvcached elastic KV-cache sharing",
+      "headline": "This GitHub repo takes one of the oldest ideas in operating systems and applies it to one of the biggest bottlenecks in LLM serving.",
+      "author": "Mayank A.",
+      "author_url": "https://in.linkedin.com/in/curiouslearner",
+      "canonical_url": "https://www.linkedin.com/posts/curiouslearner_this-github-repo-takes-one-of-the-oldest-activity-7508958023843946498-L6yO",
+      "published_at": "2026-09-24T18:38:22.577Z",
+      "filed_at": "2026-09-24T20:53:48Z",
+      "post_text": "This GitHub repo takes one of the oldest ideas in operating systems and applies it to one of the biggest bottlenecks in LLM serving.\n\nVirtual memory, but for the KV cache.\n\nvLLM and SGLang can reserve large KV-cache pools for each model. PagedAttention manages those blocks efficiently inside a model, but the physical GPU memory is still difficult to redistribute across different model instances.\n\nkvcached separates the virtual KV address space from the physical GPU memory underneath it.\n\nA model can reserve a large virtual space, while physical GPU pages are mapped only as demand grows. Memory can then be reclaimed and reused by other models.\n\nThe underlying Prism system was published at OSDI ’26, and its kvcached balloon driver has been deployed across 10K+ GPUs.\n\nIf you work on LLM inference, this repo is worth studying:\nhttps://lnkd.in/dfDYkbgZ",
+      "images": [
+        "assets/posts/7508958023843946498/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book relevance</h3>\n<ul>\n<li>Candidate chapters: LLMOps and inference infrastructure; agent cost and latency; resource isolation and operational evidence.</li>\n<li>Candidate example: repeated prompts and bursty multi-model agent workflows move bottlenecks below prompt design into KV-cache lifecycle, cache scope, eviction, routing, and GPU-memory sharing.</li>\n<li>Durable lesson: cache reuse can reduce compatible-prefix prefill work, but useful production economics require workload-specific measurement of TTFT, tail latency, eviction/reclaim behavior, fragmentation, and failure modes—not a generic GPU-utilization or cost-savings claim.</li>\n<li>Evidence strength: moderate for the existence, licensing, documented capabilities, and project-authored benchmark setup; discovery-only for LinkedIn&#x27;s framing and for broad production/deployment or savings claims without independent replication.</li>\n</ul>\n<h3>Hermione relevance</h3>\n<p>Hermione is relevant conditionally: if she later uses self-hosted multi-model inference with repeated long system, tool, or retrieval context, bounded compatible-prefix reuse and GPU sharing could materially affect latency and cost. The required operational boundary is strict: scope KV state by tenant/session/project and sensitivity class; set cache budgets, TTL/eviction policy, metrics, and safe fallbacks; and do not treat cached state as innocuous merely because it is local GPU memory. There is no change to Hermione&#x27;s current hosted-model operation implied by this post.</p>\n<h3>Limitations</h3>\n<ul>\n<li>LinkedIn content and visible comments are social/discovery evidence, not independent validation.</li>\n<li>The guest page exposed three comments, while the authenticated viewport did not establish thread completeness; no comments or collapsed content were expanded.</li>\n<li>The repository, README, examples, issue signals, and paper abstract are project/authored primary sources. No kvcached benchmark, integration, GPU workload, or claimed deployment was run or independently replicated.</li>\n<li>The repository&#x27;s named-adopter graphics and the 10K+ deployment statement were not independently verified.</li>\n<li>Raw guest HTML, raw fetched metadata, authenticated visible text/state/screenshot, and transient signed media URLs remain local-only; committed artifacts are sanitized metadata, post text, guest-visible comments, static post media, and these research notes.</li>\n</ul>",
+      "number": 216
+    },
     {
       "activity_id": "7508587720332574720",
       "title": "LinkedIn intake: Jev coding-agent harness working note",
