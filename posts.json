@@ -1,6 +1,22 @@
 {
-  "count": 214,
+  "count": 215,
   "posts": [
+    {
+      "activity_id": "7508587720332574720",
+      "title": "LinkedIn intake: Jev coding-agent harness working note",
+      "headline": "JEV FOUNDER DIOGO ALMEIDA JUST DROPPED A PDF ON BUILDING A JEV HARNESS FOR CODING AGENTS",
+      "author": "Charly Wargnier ♨️",
+      "author_url": "https://fr.linkedin.com/in/charlywargnier",
+      "canonical_url": "https://www.linkedin.com/posts/charlywargnier_jev-founder-diogo-almeida-just-dropped-a-activity-7508587720332574720-IMDO",
+      "published_at": "2026-09-23T18:06:55.340Z",
+      "filed_at": "2026-09-24T19:55:39Z",
+      "post_text": "JEV FOUNDER DIOGO ALMEIDA JUST DROPPED A PDF ON BUILDING A JEV HARNESS FOR CODING AGENTS\n\nIt's a great blueprint for making your coding agents 200× faster and 400× cheaper.\n\nLink to the 12-page PDF → https://lnkd.in/epPXatmZ\n\nAlso bookmark zodchiii’s ace article on Jev. Well worth the read → https://lnkd.in/eZFrHdAu\n\nNow drop this PDF + article into Claude Code or Codex and put it to work ;)",
+      "images": [
+        "assets/posts/7508587720332574720/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book and Hermione relevance</h3>\n<ul>\n<li>Candidate chapters: coding-agent context engineering; agent orchestration and routing; tool/permission governance; evaluation and operational evidence.</li>\n<li>Candidate example: treat context construction, tool discovery, routing, and permission escalation as distinct, typed, measurable decisions rather than one opaque transcript loop.</li>\n<li>Durable lesson: explicit state and query-aware retrieval may reduce repeated context work, but a classifier/model recommendation must not become the sole authority for dangerous command execution. Enforce policy outside the model, preserve provenance, and evaluate whole-task quality, latency, cost, and failure modes together.</li>\n<li>Hermione relevance: high. Hermione already has worker profiles, bounded tools, explicit queue transitions, sanitized records, and independent verification. Useful improvements are conditional/retrieved instructions, structured handoff state, and shared read-only evidence; keep command authorization, secret boundaries, and side effects in deterministic policy and human-approval paths rather than a low-cost routing model.</li>\n<li>Evidence strength: moderate for TypeSafe’s documented early-access API/service and stated product design; discovery-only for the independent harness note and for 200×/400× end-to-end coding-agent gains.</li>\n</ul>\n<h3>Limitations</h3>\n<ul>\n<li>LinkedIn/social material is discovery evidence, not independent validation.</li>\n<li>Only ten of 44 reported comments were captured from guest HTML; the authenticated viewport showed only an initial partial thread and no continuation or collapsed content was expanded.</li>\n<li>The working note is an independent synthesis, not TypeSafe documentation. The linked X post was identified but not relied on for a technical conclusion.</li>\n<li>No Jev API, agent harness, installer, benchmark, permissions feature, or external code was run.</li>\n<li>Committed/public artifacts are limited to reviewed post text, guest-visible comments, the static note-cover image, this summary, and the wider-web note. Raw guest HTML, metadata, full authenticated capture, screenshot, and downloaded PDF remain local-only.</li>\n</ul>",
+      "number": 215
+    },
     {
       "activity_id": "7508562268515758080",
       "title": "LinkedIn intake: Beacon cross-harness memory with Jev ranking",
