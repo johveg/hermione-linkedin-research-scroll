@@ -1,6 +1,22 @@
 {
-  "count": 213,
+  "count": 214,
   "posts": [
+    {
+      "activity_id": "7508562268515758080",
+      "title": "LinkedIn intake: Beacon cross-harness memory with Jev ranking",
+      "headline": "Another insane Jev use case!",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/akshay-pachaar_another-insane-jev-use-case-jev-makes-it-activity-7508562268515758080-TZV_",
+      "published_at": "2026-09-23T16:25:47.154Z",
+      "filed_at": "2026-09-24T19:38:54Z",
+      "post_text": "Another insane Jev use case!\n\nJev makes it incredibly cheap to evaluate and classify agent runs at scale.\n\nAnd finally, someone open-sourced a self-improving memory layer that can put that capability to work across agent harnesses.\n\nIt turns your agent sessions into a compounding knowledge layer, where every successful run can make future agents smarter across:\n\n- Codex\n- Claude Code\n- Cursor\n- OpenCode and 20+ more\n\nBeacon by Asymptote Labs continuously builds a shared history across your agent harnesses and uses Jev to identify the runs worth learning from.\n\nIt then turns the best workflows, corrections, and debugging patterns into reusable skills.\n\nGitHub repo: https://lnkd.in/dW6nazc5.\n\n(don’t forget to star it ⭐)\n\nMost agent runs are messy.\n\nThey contain exploration, failed commands, dead ends, and one-off fixes that should never become permanent memory.\n\nSo Beacon preserves the full session history, while Jev helps decide what should be promoted, reviewed, or discarded.\n\nThe recording below shows this in action.\n\nBeacon found 579 sessions across 5 coding-agent harnesses and normalized them into one consistent history.\n\nFrom there, Jev surfaces the lessons worth keeping and makes them available across your agent stack.\n\n- A pattern learned in Cursor can carry into OpenCode.\n- A lesson from Claude Code can improve the next Codex run.\n\nEvery successful run adds to the shared knowledge layer, making future agents smarter.\n_____\nShare this with your network if you found this insightful ♻️\nFollow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Learning! | 12 comments on LinkedIn",
+      "images": [
+        "assets/posts/7508562268515758080/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book and Hermione relevance</h3>\n<ul>\n<li>Candidate chapter: operational memory, agent skills, and provenance-aware learning loops.</li>\n<li>Candidate example: separate full trace retention from an explicitly reviewed promotion path for reusable project knowledge.</li>\n<li>Durable lesson: agent memory should promote only bounded, evidence-backed lessons with source-trace provenance, project scope, review, rejection/supersession, and a clear write boundary; history is not automatically trustworthy memory.</li>\n<li>Hermione relevance: high. Hermione already benefits from durable skills and isolated workers, but should retain explicit review, scoped storage, redaction, cost/budget controls, and independent verification before a past run changes future instructions.</li>\n<li>Evidence status: moderate for project-documented behavior; the LinkedIn post remains social/discovery evidence and effectiveness claims need corroboration on representative workloads.</li>\n</ul>\n<h3>Limitations</h3>\n<ul>\n<li>Guest HTML exposed ten comment objects while the post reported twelve comments; the authenticated viewport showed only a partial thread and no “load more”/collapsed items were expanded.</li>\n<li>The captured image is a video thumbnail; it identifies a 29-second recording but does not establish the demonstration&#x27;s results.</li>\n<li>The official repository was inspected read-only at one pinned commit. No software, installer, hooks, evaluation API, or benchmark was run.</li>\n<li>Committed/public artifacts are limited to sanitized post text, visible guest comments, the selected media thumbnail, this summary, and the wider-web note. Raw HTML and authenticated capture artifacts remain local-only.</li>\n</ul>",
+      "number": 214
+    },
     {
       "activity_id": "7508878870540972032",
       "title": "LinkedIn intake: Cua computer-use runtime",
