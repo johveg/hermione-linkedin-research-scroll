@@ -1,6 +1,22 @@
 {
-  "count": 211,
+  "count": 212,
   "posts": [
+    {
+      "activity_id": "7508641612244291584",
+      "title": "LinkedIn intake: Google AX agent-workload orchestration",
+      "headline": "Google built an orchestrator for agent workloads, then kept its objects out of Kubernetes on purpose.",
+      "author": "André Lindenberg",
+      "author_url": "https://de.linkedin.com/in/alindnbrg",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_aiagents-aiinfrastructure-kubernetes-activity-7508641612244291584-gOFC",
+      "published_at": "2026-09-23T21:41:04.173Z",
+      "filed_at": "2026-09-24T10:24:32Z",
+      "post_text": "Google built an orchestrator for agent workloads, then kept its objects out of Kubernetes on purpose. AX is kubectl-shaped: declare a task, the repos it starts with and the hosts it's allowed to reach. Its design doc says millions of short-lived tasks push etcd past its storage limits, so state lives in Redis. Debug mode opens ax ssh into the sandbox. 8.8k stars, Apache-2.0.\n#AIAgents #AIInfrastructure #Kubernetes #PlatformEngineering #AIEngineering",
+      "images": [
+        "assets/posts/7508641612244291584/image-1.jpg"
+      ],
+      "summary_html": "<h3>What the post says</h3>\n<p>The post presents AX as a kubectl-shaped agent-task orchestrator. It says task declarations include workspace repositories and permitted hosts; it attributes moving transient task state to Redis rather than etcd to the needs of high-churn workloads, and calls out opt-in sandbox debugging with <code>ax ssh</code>.</p>\n<p>The attached project image states: “Declare an agentic task. AX runs it at scale.” It claims to sandbox the task, wire its workspace, fence its network, and support many tasks per cluster. This is project-authored promotional material, not an independent benchmark.</p>\n<p>Guest-visible comments include the author-provided Google AX repository, discussion of transient-state scale and egress policy, and operational concerns about Redis durability, partial failure, replay, and human decisions. The seven captured comments equal the guest-reported count at capture, but replies, ordering controls, and later changes were not explored.</p>\n<h3>Book relevance</h3>\n<p><strong>Candidate chapters:</strong> agent runtime security and sandboxing; control planes for autonomous work; production agent operations; context and supply-chain governance.</p>\n<p><strong>Claim/example:</strong> High-churn agent systems may need a task-oriented control plane separate from long-lived service orchestration, but the operational boundary must include durable task identity, replay/idempotency, observable partial failure, externally enforced egress policy, scoped credentials, and a reviewable bootstrap path for repositories, MCP servers, skills, and goal text.</p>\n<p><strong>Evidence strength:</strong> Moderate for documented repository capabilities and implementation intent; discovery-only for scalability, security, availability, performance, and production outcomes.</p>\n<h3>Limitations and caveats</h3>\n<ul>\n<li>LinkedIn text, image, comments, stars, and engagement are social/discovery evidence.</li>\n<li>Project documentation is primary-source material, not an independent security or performance assessment.</li>\n<li>AX&#x27;s documented agent bootstrap can clone repositories and configure MCP/skills; these are supply-chain and execution inputs requiring review.</li>\n<li>The exact underlying isolation boundary, egress-enforcement location, secret-delivery model, and independent escape/audit evidence were not established here.</li>\n<li>Authenticated capture contained signed-in surrounding UI; raw capture artifacts remain local-only and were not used beyond target-post verification.</li>\n</ul>",
+      "number": 212
+    },
     {
       "activity_id": "7508142119576862720",
       "title": "Local agent analytics requires data-boundary evidence, not just a local dashboard",
