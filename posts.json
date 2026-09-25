@@ -1,6 +1,20 @@
 {
-  "count": 217,
+  "count": 218,
   "posts": [
+    {
+      "activity_id": "7509196071005474816",
+      "title": "LinkedIn intake: autonomous Claude Code workflow with review",
+      "headline": "Claude Code workflow: autonomous execution with review",
+      "author": "Darshal Jaitwar",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/darshal-jaitwar-_anthropic-engineer-youre-not-supposed-activity-7509196071005474816-uCL6",
+      "published_at": "",
+      "filed_at": "2026-09-25T14:55:10Z",
+      "post_text": "Anthropic engineer:\n\n\"You're not supposed to watch Claude Code work. You're supposed to wake up and review what it shipped.\"\n\nIn 22 minutes she builds the entire workflow live on camera.\n\nMost people close their terminal and everything stops.\nThis setup keeps shipping while you sleep.\n\nWatch the video, then save the exact setup below.",
+      "images": [],
+      "summary_html": "<h3>Book relevance</h3>\n<ul>\n<li>Candidate chapters: reliable coding-agent orchestration; verification, review, and approval boundaries; long-running autonomous work.</li>\n<li>Candidate example: shift a human from continuous terminal watching to review of a bounded, logged job with predeclared acceptance checks and rollback.</li>\n<li>Durable lesson: autonomy is valuable when verification and authority are designed into the workflow; a completed agent run is not automatically a verified or authorized change.</li>\n<li>Evidence strength: discovery-only for the LinkedIn post, demo, timing, and operational claims. Official Claude Code documentation supports general product capabilities but does not validate this particular workflow.</li>\n</ul>\n<h3>Hermione relevance</h3>\n<p>This is directly relevant to Hermione’s long-running and queued work. Hermione should preserve durable queue checkpoints, use explicit tool and credential scopes, attach command/test/diff evidence to execution results, and require risk-proportionate review before external side effects. For unattended work, status reporting and stop/defer conditions must be designed before launch rather than inferred from a successful-looking terminal session.</p>\n<h3>Limitations</h3>\n<ul>\n<li>LinkedIn post text, attached-video framing, engagement values, and comments are social/discovery evidence, not independent validation.</li>\n<li>Only four visible top-level comments were captured. The reported thread count was 31; collapsed comments and replies were not expanded.</li>\n<li>The video was not played or downloaded, and no reliable author, presenter, transcript, duration, setup instructions, or video metadata was available.</li>\n<li>The post’s “Anthropic engineer” attribution, 22-minute timing, and claim of continued autonomous shipping were not independently corroborated.</li>\n<li>Anthropic documentation is primary product documentation. It was inspected read-only and does not establish safety, efficacy, or production suitability for the post’s workflow.</li>\n</ul>",
+      "number": 218
+    },
     {
       "activity_id": "7508466105619767296",
       "title": "LinkedIn intake: TypeSafe Jev in Apache Airflow",
