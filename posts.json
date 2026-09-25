@@ -1,6 +1,22 @@
 {
-  "count": 218,
+  "count": 219,
   "posts": [
+    {
+      "activity_id": "7508786435232174080",
+      "title": "LinkedIn intake: AirLLM layer streaming for low-VRAM inference",
+      "headline": "AirLLM is a Python library that lets 70B parameter language models run on a single 4GB GPU, without quantization, distillation, or pruning.",
+      "author": "ARYAN RAJ",
+      "author_url": "https://in.linkedin.com/in/arynnraj",
+      "canonical_url": "https://www.linkedin.com/posts/arynnraj_airllm-is-a-python-library-that-lets-70b-activity-7508786435232174080-TLr4",
+      "published_at": "2026-09-24T07:16:32.664Z",
+      "filed_at": "2026-09-25T16:02:21Z",
+      "post_text": "AirLLM is a Python library that lets 70B parameter language models run on a single 4GB GPU, without quantization, distillation, or pruning.\n\nThe problem it's solving is access. Large open-source models keep getting released, but running them normally requires enough GPU memory to hold the entire model at once, which puts most of them out of reach for anyone without high-end or multiple GPUs.\n\nAirLLM's approach:\nduring inference, the original model is first decomposed and saved layer-wise. That's how it avoids needing the full model resident in memory at once. For MoE models specifically, it goes further and streams one expert at a time rather than a whole layer, since a token typically doesn't need every expert to run.\n\nIt works with almost any popular model, you just pass a Hugging Face repo ID, and it works the same way regardless of model size or family, Llama, Qwen, DeepSeek, Mistral, Phi, Gemma, ChatGLM, Baichuan, InternLM, and others are all supported. There's also an optional compression feature, block-wise quantization that delivers up to 3x faster inference with almost ignorable accuracy loss.\n\nIt's Apache 2.0 licensed, has 25.5k stars, and has been actively maintained, with new model support added on an ongoing basis.\n\nHere's the GitHub Repo: https://lnkd.in/dV7FDsWG",
+      "images": [
+        "assets/posts/7508786435232174080/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book relevance</h3>\n<ul>\n<li>Candidate chapters: local/offline AI infrastructure; inference memory hierarchy; hardware-aware model deployment.</li>\n<li>Candidate example: layer- and expert-streaming makes peak VRAM a different constraint from total model size, shifting pressure to disk, host memory, prefetching, and token latency.</li>\n<li>Candidate claim: memory-constrained deployment should report VRAM, RAM, disk footprint, preprocessing time, throughput/latency, and workload type together rather than presenting a single low-VRAM figure.</li>\n<li>Evidence strength: moderate for documented project mechanisms and requirements; discovery-only for LinkedIn framing, star count, and broad practical-access claims. No local installation, model download, or performance benchmark was run.</li>\n</ul>\n<h3>Hermione relevance</h3>\n<p>This is relevant for Hermione only as a potential option for private or low-priority offline/background model experimentation. It is not a drop-in replacement for interactive assistant inference: any adoption would require pinned model and runtime versions, available storage, measured first-token and steady-state latency, resource limits, data-handling review, and recovery behavior under I/O or model-load failure.</p>\n<h3>Limitations</h3>\n<ul>\n<li>The LinkedIn post, screenshot, image, engagement values, author reply, and comments are social/discovery evidence rather than independent performance validation.</li>\n<li>Ten guest-visible comments and the beginning of an authenticated thread were observed; the reported total was 36 and collapsed comments/replies were not expanded.</li>\n<li>The image is a project/README-style graphic, not an independently reproducible benchmark.</li>\n<li>Project README and GitHub metadata are maintainer-authored primary sources; they document intended mechanisms and stated requirements, not independent accuracy, latency, durability, or production-readiness validation.</li>\n<li>The post’s numerical claims mix peak GPU VRAM with a broader resource footprint. Model downloads, transformed layer storage, host RAM, I/O bandwidth, and token latency were not measured here.</li>\n</ul>",
+      "number": 219
+    },
     {
       "activity_id": "7509196071005474816",
       "title": "LinkedIn intake: autonomous Claude Code workflow with review",
