@@ -1,6 +1,22 @@
 {
-  "count": 232,
+  "count": 233,
   "posts": [
+    {
+      "activity_id": "7509801511137292288",
+      "title": "LinkedIn intake — llm-d inference routing on Kubernetes",
+      "headline": "LLM inference routing with llm-d",
+      "author": "Sowmith Durusoju",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/sowmith-durusoju-50487b227_llm-kubernetes-mlops-activity-7509801511137292288-9Xa1",
+      "published_at": "2026-09-27T02:30:05.619Z",
+      "filed_at": "2026-10-01T16:28:30Z",
+      "post_text": "vLLM runs your model. Kubernetes schedules your pods. But who makes intelligent routing decisions in between? That's llm-d.\n\nLLM inference involves more than just running a model server. As inference workloads scale, the routing layer becomes increasingly important.\n\nllm-d brings inference-aware capabilities including:\n\n- Cache-aware routing, which routes requests toward servers that already hold relevant KV-cache data to reduce redundant computation.\n- Prefill/decode disaggregation, which uses independent pod pools: prefill handles heavy computation and decode handles token generation.\n- Hierarchical KV-cache management, which moves cached context across memory tiers to make better use of limited GPU memory.\n\nThe post links to an author-written llm-d architecture breakdown and describes how the pieces work together at scale.\n\n#LLM #Kubernetes #MLOps #vLLM #ArtificialIntelligence #LLMOps #InferenceEngineering #LLMInference #GPU #AI",
+      "images": [
+        "assets/posts/7509801511137292288/image-1.jpg"
+      ],
+      "summary_html": "<h3>What the post claims</h3>\n<p>The post frames llm-d as the routing/orchestration layer between a model server such as vLLM and Kubernetes scheduling. Its stated mechanisms are cache-aware routing, separate prefill and decode pools, and hierarchical KV-cache management across memory tiers. The accompanying architecture graphic shows a gateway, endpoint-picker/router, compute-bound prefill pool, memory-bound decode pool, and LMCache offload tier.</p>\n<h3>Book relevance</h3>\n<p><strong>Candidate chapter:</strong> LLMOps and the inference infrastructure beneath agent prompts.</p>\n<p><strong>Candidate claim/example:</strong> Agent latency, capacity, and cost increasingly depend on serving-layer state management: compatible-prefix/KV-cache reuse, routing, prefill/decode balance, cache placement, eviction, and observability. A useful counterweight is that these mechanisms help only for an observed workload with reuse locality and an adequately provisioned, measurable transport and scheduling path.</p>\n<h3>Hermione relevance</h3>\n<p>High but conditional. Hermione&#x27;s recurring system instructions, tool schemas, and long-context research/coding tasks could benefit from compatible-prefix reuse if she later runs self-hosted or managed inference with these capabilities. Any implementation must keep cache ownership scoped by user/session/project/trust boundary, set capacity and TTL/eviction limits, measure cache hit rate plus TTFT/decode/P95-P99 under representative concurrency, and avoid sharing sensitive prompt, tool, or retrieved-context state merely to improve a cache metric. This post does not imply a change to Hermione&#x27;s current hosted-model operation.</p>\n<h3>Evidence assessment and limitations</h3>\n<p><strong>Strength: moderate for the project’s documented architecture; discovery-only for LinkedIn’s operational framing and all deployment-specific performance implications.</strong></p>\n<ul>\n<li>LinkedIn material, including the visible comment, is social/discovery evidence.</li>\n<li>The post does not supply a reproducible workload, cache-key policy, tenancy model, hardware/network topology, capacity plan, or latency/throughput measurements.</li>\n<li>Cache-aware routing does not create reuse for random or incompatible request contexts; prefill/decode disaggregation and KV offload can exchange one bottleneck for transport, memory, scheduling, or tail-latency constraints.</li>\n<li>Shared cached state can create privacy, authorization, stale/poisoned-context, timing-side-channel, eviction, and invalidation risks. The post does not evaluate those boundaries.</li>\n<li>The guest capture showed one of a reported three comments, and the authenticated viewport was intentionally not expanded. Comment completeness is not claimed.</li>\n</ul>",
+      "number": 233
+    },
     {
       "activity_id": "7509952342646181888",
       "title": "LinkedIn intake — A2A agent registry and capability-based routing",
