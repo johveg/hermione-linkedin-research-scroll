@@ -1,6 +1,22 @@
 {
-  "count": 236,
+  "count": 237,
   "posts": [
+    {
+      "activity_id": "7511492416718168064",
+      "title": "LinkedIn intake: Magnitude and shared prefix-cache inference",
+      "headline": "Two local agents on one machine means loading the model twice.",
+      "author": "André Lindenberg",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_aiagents-localllm-opensource-activity-7511492416718168064-wX4f",
+      "published_at": "2026-10-01T18:29:08.925Z",
+      "filed_at": "2026-10-02T16:18:35Z",
+      "post_text": "Two local agents on one machine means loading the model twice. Magnitude is an inference engine that compiles and tunes its own kernels for your exact device, then shares one prefix cache across sessions instead of duplicating it. Against llama·cpp, decode is up 92% on Metal and 19% on CUDA, with memory per agent down 27%. One click connects your existing agent. 6k stars, Apache-2.0.\n#AIAgents #LocalLLM #OpenSource #AIEngineering #LLM",
+      "images": [
+        "assets/posts/7511492416718168064/image-1.jpg"
+      ],
+      "summary_html": "<h3>What the post claims</h3>\n<p>The post presents Magnitude as a local inference engine that tunes kernels for the specific device and shares a prefix cache across agent sessions. It claims up to 92% faster decode on Metal, 19% on CUDA, and 27% lower memory per agent versus llama.cpp, plus Apache-2.0 licensing and roughly 6,000 GitHub stars.</p>\n<h3>Book relevance</h3>\n<p>This is a moderate-strength case study for an LLMOps chapter: agent responsiveness and capacity depend on serving-layer state, not only prompts or model choice. Shared compatible prefixes can reduce repeated prefill and memory pressure, but the production design must make cache keys, scope, eviction, observability, and benchmark controls explicit. A useful counterpoint is the visible comment asking whether the claimed gain has been independently tried.</p>\n<h3>Hermione relevance</h3>\n<p>High relevance for future self-hosted inference. Hermione&#x27;s recurring system prompts, tools, and workflow context may create compatible prefixes, but shared cache state can retain sensitive user, tool, retrieval, and project context. The item does not justify installation or adoption. Any evaluation should scope cache reuse by user/session/project trust boundary; define TTL, eviction, isolation, and invalidation behavior; and measure hit rate, TTFT, decode latency, P95/P99, memory, and fallback behavior under representative concurrency.</p>\n<h3>Evidence and limitations</h3>\n<ul>\n<li>LinkedIn content and comments remain social/discovery evidence.</li>\n<li>Repository mechanisms and benchmark design are project-authored documentation at a pinned commit, not independent validation.</li>\n<li>The post does not provide reproducible benchmark configuration, model, quantization, hardware, concurrency, cache-key policy, or multitenant isolation evidence for its headline figures.</li>\n<li>Guest-visible comments may be partial; replies and controls were not expanded.</li>\n<li>The raw authenticated text and screenshot are intentionally untracked local evidence to avoid unrelated UI exposure.</li>\n</ul>",
+      "number": 237
+    },
     {
       "activity_id": "7511095453073981440",
       "title": "LinkedIn intake: OpenHuman and the always-on-agent pattern",
