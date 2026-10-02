@@ -1,6 +1,22 @@
 {
-  "count": 235,
+  "count": 236,
   "posts": [
+    {
+      "activity_id": "7511095453073981440",
+      "title": "LinkedIn intake: OpenHuman and the always-on-agent pattern",
+      "headline": "Two weeks ago Meta shipped Muse Charm, an always-on agent with a Tamagotchi-style front end.",
+      "author": "André Lindenberg",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/alindnbrg_aiagents-agentmemory-opensource-activity-7511095453073981440--pHj",
+      "published_at": "2026-09-30T16:11:45.416Z",
+      "filed_at": "2026-10-02T08:47:00Z",
+      "post_text": "Two weeks ago Meta shipped Muse Charm, an always-on agent with a Tamagotchi-style front end. Yesterday OpenAI announced Dots, agents that run continuously in the background. OpenHuman dropped that same idea months earlier: a headless Rust core, always on and deployable to the cloud, paired with a separate Realtime Mascot, idle, thinking, dreaming, that only runs on the desktop. 40k stars, GPL-3.0.\n#AIAgents #AgentMemory #OpenSource #Rust #AIEngineering",
+      "images": [
+        "assets/posts/7511095453073981440/image-1.jpg"
+      ],
+      "summary_html": "<h3>What the post claims</h3>\n<p>The post frames OpenHuman as an earlier version of the always-on-agent idea: a headless Rust core that can run in the cloud plus a desktop “Realtime Mascot.” It also claims 40k GitHub stars and GPL-3.0 licensing. A visible author comment calls it the “fastest, cheapest, most efficient” open-source agent harness.</p>\n<h3>Book relevance</h3>\n<p>This is a moderate-strength case study for a chapter on persistent agent operation: continuity is not merely a UI presence, but requires explicit state/checkpointing, identity and permission boundaries, conflict handling across runtimes, and inspectable approvals for consequential actions. The visible comment questioning what an idle agent may touch is a useful counterpoint. The durable lesson is that “always on” should be designed as bounded, resumable work with scoped capabilities and observable state—not as unconstrained autonomy.</p>\n<h3>Hermione relevance</h3>\n<p>High relevance. Hermione already operates durable queues and scheduled monitoring. The post reinforces the need to retain explicit checkpoints, narrow credentials and egress, approval gates for irreversible effects, resumable work, and a clear distinction between a conversational presence and autonomous background execution. It does not justify adding continuous autonomy or adopting OpenHuman.</p>\n<h3>Evidence and limitations</h3>\n<ul>\n<li>LinkedIn content remains social/discovery evidence.</li>\n<li>Repository capabilities are documented by the project at a pinned commit, not independently benchmarked or audited.</li>\n<li>“Fastest,” “cheapest,” “most efficient,” and the image award statements are vendor/author claims.</li>\n<li>Visible comments are incomplete; no replies were expanded.</li>\n<li>The source screenshot and authenticated body text are intentionally untracked local evidence to avoid unrelated UI exposure.</li>\n</ul>",
+      "number": 236
+    },
     {
       "activity_id": "7510714634979676161",
       "title": "ZeroMem: extractive pointer models as a bounded RAG answer layer",
