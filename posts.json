@@ -1,6 +1,20 @@
 {
-  "count": 246,
+  "count": 247,
   "posts": [
+    {
+      "activity_id": "7511685001755676674",
+      "title": "A visual metaphor for web crawling is not an operational specification",
+      "headline": "this is exactly how I imagined a web crawler would look",
+      "author": "Charly Wargnier ♨️",
+      "author_url": "https://fr.linkedin.com/in/charlywargnier",
+      "canonical_url": "https://www.linkedin.com/posts/charlywargnier_this-is-exactly-how-i-imagined-a-web-crawler-activity-7511685001755676674-wmZY",
+      "published_at": "2026-10-02T07:14:24.776Z",
+      "filed_at": "2026-10-03T12:50:46Z",
+      "post_text": "this is exactly how I imagined a web crawler would look\n\ncredit: @rybinfx (https://x.com/rybinfx) | 38 comments on LinkedIn",
+      "images": [],
+      "summary_html": "<h3>Caveats</h3>\n<ul>\n<li>The post is a brief social visual, not technical documentation, code, a benchmark, or an operational case study.</li>\n<li>LinkedIn reported 38 comments, while only eight guest-visible comments were preserved; replies and collapsed material were not expanded.</li>\n<li>The 16-second video was visible as an unplayed player. It was not downloaded, played, or transcribed, so its full content is not claimed.</li>\n<li>The credited X URL was identified from visible text only and was not opened or investigated.</li>\n<li>No crawler, external site, package, or code was run or inspected. LinkedIn claims and visible comments remain discovery evidence.</li>\n</ul>",
+      "number": 247
+    },
     {
       "activity_id": "7511716040490520576",
       "title": "LLMFIT: hardware-aware local-model selection is a planning aid, not a deployment guarantee",
