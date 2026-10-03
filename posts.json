@@ -1,6 +1,22 @@
 {
-  "count": 245,
+  "count": 246,
   "posts": [
+    {
+      "activity_id": "7511716040490520576",
+      "title": "LLMFIT: hardware-aware local-model selection is a planning aid, not a deployment guarantee",
+      "headline": "STOP DOWNLOADING LLMS YOUR MACHINE WAS NEVER GOING TO RUN",
+      "author": "Charly Wargnier ♨️",
+      "author_url": "https://fr.linkedin.com/in/charlywargnier",
+      "canonical_url": "https://www.linkedin.com/posts/charlywargnier_stop-downloading-llms-your-machine-was-never-activity-7511716040490520576-m-1K",
+      "published_at": "2026-10-02T09:17:44.987Z",
+      "filed_at": "2026-10-03T10:48:35Z",
+      "post_text": "STOP DOWNLOADING LLMS YOUR MACHINE WAS NEVER GOING TO RUN\n\nLLMFIT is a new open-source tool that scans your hardware first, then tells you exactly which models will actually run well on your setup.\n\nIt inspects:\n→ RAM\n→ CPU\n→ GPU(s)\n→ VRAM / unified memory\n\nThen it scores every model across four dimensions:\n\n→ quality, based on parameter count and quantization\n→ speed, estimating tokens per second for your exact backend\n→ fit, matching memory usage to your hardware\n→ context window support for your use case\n\nEach model then gets a clear label: Perfect, Good, Marginal, or Too Tight.\n\nIt also picks the best quantization automatically, stepping down until something fits instead of leaving you to guess GGUF sizes by hand.\n\nCoverage is broad too! Hundreds of models from Meta, Mistral, Qwen, DeepSeek, and more.\n\nIt works with Ollama, llama.cpp, MLX, and LM Studio out of the box.\n\nAnd that’s not even it!\n\nThere’s also a lightweight TUI, a web dashboard, and REST API endpoints if you want to plug it into orchestrators or deployment pipelines.\n\nThis should be step zero before every local model download :)\n\n100% free and open-source. macOS, Linux, and Windows.\n\nRepo → official repository identified separately in wider-web research.\n\nShoutout to Alex Jones for building this and making it open-source for the community.\n\nDon't forget to drop a ★!",
+      "images": [
+        "assets/posts/7511716040490520576/image-1.jpg"
+      ],
+      "summary_html": "<h3>Caveats</h3>\n<ul>\n<li>The post&#x27;s broad compatibility and “exactly which models will run well” wording is project/social evidence, not independent validation.</li>\n<li>Estimates depend on runtime/backend, memory bandwidth, quantization, model architecture, context length, and warm/cold state; prefill/TTFT, storage, and operational reliability need workload-specific checks.</li>\n<li>Local runtime integration can query configured endpoints and some user actions can download models or initiate benchmark sharing; it is not a harmless read-only integration by default.</li>\n<li>The guest-visible comments are incomplete: three were archived while LinkedIn reported five; replies and later comments were not expanded.</li>\n<li>No binary, package, container, benchmark, model download, code audit, security assessment, or independent replication was performed.</li>\n</ul>",
+      "number": 246
+    },
     {
       "activity_id": "7511425693625303040",
       "title": "Versioned standards are useful agent context, but not an enforcement boundary",
