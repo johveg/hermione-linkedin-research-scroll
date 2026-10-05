@@ -1,6 +1,22 @@
 {
-  "count": 255,
+  "count": 256,
   "posts": [
+    {
+      "activity_id": "7512534257827999745",
+      "title": "LinkedIn intake: OpenDots",
+      "headline": "4 days, 3000 GitHub stars",
+      "author": "Atai Barkai",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/atai-barkai_4-days-3000-github-stars-opendots-is-the-activity-7512534257827999745-9vH0",
+      "published_at": "2026-10-04T15:29:03.202Z",
+      "filed_at": "2026-10-05T04:14:04Z",
+      "post_text": "4 days, 3000 GitHub stars\n\nOpenDots is the best open source version of OpenAI Dots!\n\nWe announced it last Thursday, Oct 1.\nToday, it passed 3K GitHub stars ⭐\n\nThere are no other free templates like this.\n\nIt excites me to think that CopilotKit makes building these types of AI products incredibly easy, quick, and simple.\n\nThat's exactly why it takes us just days to do so.\n\nFor those who don't know: CopilotKit is the product stack for agents.\n\nMeaning- we provide all of the infra you'd need in order to bring agents into user-facing products, with the latest features, tools, and tech.\n\nIncluding (but not limited to):\n- Chat UI\n- Generative UI\n- Automatic Learning\n- Threads\n- Any agent harness\n- Channels (Slack, Teams...)\n- Product Analytics\n- Self-hosting or Cloud\n\nIf you've built on top of our OpenBots template, we would love to see it!\n\n👉 Try OpenDots: https://lnkd.in/gdjcSFGA",
+      "images": [
+        "assets/posts/7512534257827999745/image-1.jpg"
+      ],
+      "summary_html": "<h3>Book relevance</h3>\n<p>The post is useful discovery evidence for a chapter on the product layer around autonomous agents: persistent specialist roles, conversational context, human approval points, channels, and execution environments. Its durable lesson is not that one template is production-ready, but that user-facing agent systems need an explicit operating model for role scope, approval continuity, state, channels, and tool permissions.</p>\n<h3>Hermione relevance</h3>\n<p>High relevance. Hermione already operates as a coordinator with specialized workers, browser/session state, scheduled work, and approval boundaries. The OpenDots framing reinforces two practical design questions: preserve task/approval provenance when work crosses channels, and make per-worker permissions, persistent state, and human takeover inspectable rather than implicit.</p>\n<h3>Evidence assessment and caveats</h3>\n<p>LinkedIn is social/discovery evidence. Primary-source inspection confirms that <code>CopilotKit/OpenDots</code> exists, is MIT-licensed, and labels itself alpha. Its README documents specialist Dots, per-Dot computer permissions, browser/file/shell control, a human approval card before saving, and a Slack integration with an allowlist. Those are project-authored claims, not independent validation. The README also says some connected-service integrations remain unverified. A visible comment points to an open issue alleging that conversations require CopilotKit Intelligence and may send conversation/tool content to its cloud; the issue is an unverified concern, but it makes data-flow disclosure and self-hosting boundaries material follow-up questions.</p>",
+      "number": 256
+    },
     {
       "activity_id": "7508154856931627008",
       "title": "Jev’s decision sweet spot: bounded semantic judgment needs calibrated fallback",
