@@ -1,6 +1,22 @@
 {
-  "count": 274,
+  "count": 275,
   "posts": [
+    {
+      "activity_id": "7514311034002698240",
+      "title": "TrueForge: agent-harness control layer",
+      "headline": "TrueFoundry has open-sourced TrueForge, an agent harness that handles the execution responsibilities surrounding an LLM.",
+      "author": "Sandhya Ahuja",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/digcreator_truefoundry-has-open-sourced-trueforge-an-activity-7514311034002698240-QcTH",
+      "published_at": "2026-10-09T13:09:19.654Z",
+      "filed_at": "2026-10-09T20:37:46Z",
+      "post_text": "TrueFoundry has open-sourced TrueForge, an agent harness that handles the execution responsibilities surrounding an LLM. Its runtime manages model calls, MCP connections, tool approvals, session persistence and context compaction through a common HTTP API. One interesting design choice is treating sandbox execution as an on-demand tool, keeping credentials in the harness while provisioning isolated environments when needed. Developers can run it locally with SQLite or deploy a shared instance using PostgreSQL and Redis. The repository includes a chat interface, TypeScript SDK, Helm charts and benchmarking code. Local mode has no authentication by default and should remain localhost-only.\n\nGitHub repository (the visible LinkedIn shortlink was resolved by a plain network fetch; it was not clicked in LinkedIn): https://github.com/truefoundry/trueforge",
+      "images": [
+        "assets/posts/7514311034002698240/image-1.jpg"
+      ],
+      "summary_html": "<h3>Limitations</h3>\n<ul>\n<li>LinkedIn remains social/discovery evidence; project and author claims are not independent validation.</li>\n<li>Guest-visible comments were empty; the authenticated capture was a non-interactive initial viewport, not an exhaustive comment capture.</li>\n<li>The raw authenticated viewport included unrelated LinkedIn navigation/profile/messaging UI. Its text, JSON, and screenshot are local-only and were not quoted or published.</li>\n<li>No LinkedIn controls or external links were clicked, and no likes, comments, shares, follows, or messages were performed.</li>\n</ul>",
+      "number": 275
+    },
     {
       "activity_id": "7509935628986425345",
       "title": "Semantic decision gates for agent workflows",
