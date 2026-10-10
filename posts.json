@@ -1,6 +1,22 @@
 {
-  "count": 277,
+  "count": 278,
   "posts": [
+    {
+      "activity_id": "7512767961435262976",
+      "title": "LinkedIn intake: Agentic RAG with Pydantic AI",
+      "headline": "I'm migrating our RAG to an Agentic RAG using Pydantic AI.",
+      "author": "Jeremy Arancio",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/jeremy-arancio_im-migrating-our-rag-to-an-agentic-rag-using-activity-7512767961435262976-NYRy",
+      "published_at": "2026-10-05T06:57:42.484Z",
+      "filed_at": "2026-10-10T18:07:09Z",
+      "post_text": "I'm migrating our RAG to an Agentic RAG using Pydantic AI.\nHere's a couple of learnings:\n\nEven if building an agentic system is not that hard - It's a for-loop with API calls, come on - I decided to experiment with a framework that doesn't hide all the complexity.\n\nLangchain: I prefer not even think about it\nCrewAI: Vade retro satana!\nLanggraph: Why not, but might be a bit too complex if I go with only one agent\n\nTherefore, Pydantic AI.\n\nMy impression? Gladly surprised actually.\n\nThe framework fits into the server Clean Architecture by prioritizing dependency injection into the Agent.\nThis means that an agent can switch between adapters or settings without touching its core.\n\nIt also comes with out-of-the box agentic features such as tool calling, retries, thinking capabilities and tracing.\n\nThis actually saves me a lot of time in writing logics.\n\nAfter a few experimentation, the new Agentic search seems to work great.\nIt is able to treat most of user queries \"smartly\" and retrieve relevant informations almost on first try.\n\nI need to go deeper into the framework and experiment with various tools, but the results are promising.\n\nWhat about you? Do you use a framework for your Agentic Search? Any tips for me?",
+      "images": [
+        "assets/posts/7512767961435262976/image-1.jpg"
+      ],
+      "summary_html": "<h3>Evidence and limitations</h3>\n<ul>\n<li>Evidence strength: discovery-only for the author&#x27;s reported migration outcome. The post contains no workload, baseline, evaluation set, success rate, latency, token/cost figures, complete implementation, or independent replication.</li>\n<li>The post reports 40 comments, while only nine were guest-visible and the safe authenticated capture did not expand thread controls. Comments are therefore incomplete.</li>\n<li>The raw authenticated visible text, authenticated JSON, screenshot, and guest HTML are local-only because they include unrelated LinkedIn UI and/or raw page details. They are deliberately not staged.</li>\n<li>No LinkedIn buttons, profiles, reactions, comments, or external links were clicked. The named Pydantic AI project was inspected separately through direct network fetches, not through LinkedIn.</li>\n</ul>",
+      "number": 278
+    },
     {
       "activity_id": "7513938901405896704",
       "title": "Agent harnesses: the runtime layers that shape model behavior",
