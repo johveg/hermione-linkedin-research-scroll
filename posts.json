@@ -1,6 +1,22 @@
 {
-  "count": 280,
+  "count": 281,
   "posts": [
+    {
+      "activity_id": "7513888131939573760",
+      "title": "Intake LI-000241: Claude Code + Codex in one working conversation (AgentBridge fork)",
+      "headline": "I wanted Claude Code and Codex in the same working conversation, with me as the third participant.",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/nipunikajain_agenticai-claude-codex-activity-7513888131939573760-bi2G",
+      "published_at": "2026-10-08T09:08:51.944Z",
+      "filed_at": "2026-11-06T22:19:37Z",
+      "post_text": "I wanted Claude Code and Codex in the same working conversation, with me as the third participant.\n\nI connected them using the open source AgentBridge project and found a gap. Codex’s activity reached Claude automatically, but Claude’s updates needed an explicit send. When I worked with Claude, Codex stayed out of the discussion.\n\nSo I extended a local fork. Now every message I send Claude also goes to Codex, along with a short summary of what Claude is doing. Claude keeps ownership of the task. Codex joins as a reviewer, not a second worker.\n\nIn this demo, I ask Claude to check a project plan. Claude analyzes it while Codex reviews it at the same time and flags four gaps. Claude checks each gap against the file and brings them to me. When I ask a follow-up, Codex replies “nothing to add.” I never relay anything between terminals.\n\nThat last reply is the tradeoff. Every automatic share is a model call, even when the answer is “nothing to add.”\n\nThree rules matter:\n- Only one agent does the work. The other reviews.\n- Decide what happens when the other agent is busy.\n- “Done” messages shouldn’t start a new conversation.\n\nThe core loop works. Next I’m working out when that participation earns its cost.\nBuilt on AgentBridge: https://lnkd.in/gjQZggEb\n\n#AgenticAI #Claude #Codex #LLM #MCP",
+      "images": [
+        "assets/posts/7513888131939573760/image-1.jpg"
+      ],
+      "summary_html": "",
+      "number": 281
+    },
     {
       "activity_id": "7514676443411505152",
       "title": "Fine-tuned decision models for bounded agent choices",
