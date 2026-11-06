@@ -1,6 +1,22 @@
 {
-  "count": 282,
+  "count": 283,
   "posts": [
+    {
+      "activity_id": "7515406120585424897",
+      "title": "Intake LI-000243: Unlimited OCR (Baidu) single-pass OCR post",
+      "headline": "🚨 CHINA JUST OPEN SOURCED AN OCR THAT EATS 100 PAGE PDFS IN ONE PASS",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/mahmood-dev_china-just-open-sourced-an-ocr-that-eats-activity-7515406120585424897-qZGy",
+      "published_at": "2026-10-12T13:40:48.640Z",
+      "filed_at": "2026-11-06T22:35:18Z",
+      "post_text": "🚨 CHINA JUST OPEN SOURCED AN OCR THAT EATS 100 PAGE PDFS IN ONE PASS\n\nIt’s called Unlimited OCR. Only 3B params. Runs locally.\n\nEvery other OCR tool chops your doc into pages and loses the thread. This one reads the whole thing in one continuous pass.\n\n→ One shot full context parsing (32K context window)\n→ Multilingual out of the box\n→ 93% on the standard parsing benchmark (6 points over baseline)\n→ Under 0.11 error rate past 40 pages\n→ Runs 100% locally on your own hardware\n→ Works with Transformers, vLLM, SGLang, Docker, Ollama, llama.cpp\n\nTraditional cloud OCR (Textract, Google Vision, Azure Doc Intelligence) costs $1.50 to $15 per 1,000 pages.\n\nThis runs on your machine. For free. Forever.\n\nBaidu built it explicitly to push DeepSeek OCR one step further. Already at 1.9M downloads on Hugging Face and most people have no idea it exists yet.\n\n100% open source.\n\nhttps://lnkd.in/dwPDsX39 | 103 comments on LinkedIn",
+      "images": [
+        "assets/posts/7515406120585424897/image-1.jpg"
+      ],
+      "summary_html": "",
+      "number": 283
+    },
     {
       "activity_id": "7515489210573942784",
       "title": "Intake LI-000242: Jev inside an open agent harness (Akshay Pachaar)",
