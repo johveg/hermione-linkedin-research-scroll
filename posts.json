@@ -1,6 +1,22 @@
 {
-  "count": 283,
+  "count": 284,
   "posts": [
+    {
+      "activity_id": "7515363637344202753",
+      "title": "Intake LI-000244: Voicebox local voice studio (Chorouk Malmoum)",
+      "headline": "🚨 The #1 trending repo on GitHub is a free open-source alternative to ElevenLabs + WisprFlow that runs locally",
+      "author": "Chorouk Malmoum",
+      "author_url": "https://fr.linkedin.com/in/chorouk-malmoum",
+      "canonical_url": "https://www.linkedin.com/posts/chorouk-malmoum_the-1-trending-repo-on-github-is-a-free-activity-7515363637344202753-2IOf",
+      "published_at": "2026-10-12T10:51:59.846Z",
+      "filed_at": "2026-11-06T22:41:50Z",
+      "post_text": "🚨 The #1 trending repo on GitHub is a free open-source alternative to ElevenLabs + WisprFlow that runs locally\n\nIts called ''Voicebox'', an open-source AI voice studio that clones voices, generates speech and takes dictation in one free app.\n\nSo instead of paying one subscription to generate speech, another one to dictate,\nAnd leaving your voice samples on someone else's servers\n\nVoicebox puts the full voice stack in one desktop app, running on your own machine.\n\nClone a voice from a few seconds of audio, then generate speech with it.\nPress a hotkey, talk, and the text lands in whatever app you're working in.\n\nAnd it ships with an MCP server so your coding agent can talk back, in a voice you own.\n\nThe numbers speak for themselves:\n→ 50K+ GitHub stars\n→ 2.6M downloads\n→ 8 TTS engines, 23 languages\n\nThe setup takes one minute:\n1. Download the app (Mac or Windows)\n2. Record a few seconds of your voice\nDone.\n\nWorks with Claude Code, Cursor, Cline, and any MCP-aware agent.\nAnd everything runs locally, fully open source.\nYour voice is your data: keep it on your machine.\n\n🔗 Github repo: https://lnkd.in/et2wvWSm\n\nSo, are you still renting your voice stack, or running it yourself?\n\n📩 We explain this in more detail in the AgentX Newsletter. Join 30K builders and execs and get :\n→ Weekly AI agent briefings\n→ Free templates & exclusive giveaways\n👉 https://lnkd.in/dvvUD3hA",
+      "images": [
+        "assets/posts/7515363637344202753/image-1.jpg"
+      ],
+      "summary_html": "",
+      "number": 284
+    },
     {
       "activity_id": "7515406120585424897",
       "title": "Intake LI-000243: Unlimited OCR (Baidu) single-pass OCR post",
