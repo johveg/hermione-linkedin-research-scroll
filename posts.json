@@ -1,6 +1,22 @@
 {
-  "count": 284,
+  "count": 285,
   "posts": [
+    {
+      "activity_id": "7515707030486159360",
+      "title": "Intake LI-000245: JevEval - Jev as a judge for LLM evals",
+      "headline": "Jev as a judge for LLM evals!",
+      "author": "Sumanth P",
+      "author_url": "https://in.linkedin.com/in/sumanth077",
+      "canonical_url": "https://www.linkedin.com/posts/sumanth077_jev-as-a-judge-for-llm-evals-jeveval-uses-activity-7515707030486159360-qtQ-",
+      "published_at": "2026-10-13T09:36:31.151Z",
+      "filed_at": "2026-11-06T22:47:33Z",
+      "post_text": "Jev as a judge for LLM evals!\n\nJevEval uses Jev as the judge for custom LLM evals instead of relying on another generative LLM for every evaluation.\n\nThe idea is pretty simple.\n\nYou define the exact decisions you want the evaluator to make, Jev evaluates each one and returns probabilities, and DeepEval uses those results to calculate the final score.\n\nFor example, with an AI agent you can evaluate the trace itself, checking whether the agent selected the right tools, followed the expected sequence of actions, and actually completed the task.\n\nJev handles those semantic judgments, while the scoring logic stays outside the model.\n\nThat is the main difference from a normal LLM-as-a-judge setup.\n\nWith a generative judge, the model often has to interpret the rubric, reason about the response, and generate the evaluation itself.\n\nWith JevEval, you define the decision structure upfront.\n\nYou can also assign different weights to different checks or use 'strict_mode' when every requirement needs to pass.\n\nSo if one part of the agent workflow matters more than another, you can reflect that directly in the scoring logic instead of leaving the entire evaluation to the judge model.\n\nKey capabilities:\n\n- Evaluate agent outputs and traces with Jev\n- Define custom checks as bounded decisions\n- Use yes/no, score, and closed-choice questions\n- Weight different checks or require all of them to pass\n- Evaluate both single-turn outputs and multi-turn conversations\n\nThis is where Jev makes a lot of sense for evals.\n\nIf you already know what needs to be checked, you can define those decisions upfront, let Jev handle the semantic judgment, and keep the final scoring deterministic.\n\nI’ve shared the DeepEval post in the comments!",
+      "images": [
+        "assets/posts/7515707030486159360/image-1.jpg"
+      ],
+      "summary_html": "",
+      "number": 285
+    },
     {
       "activity_id": "7515363637344202753",
       "title": "Intake LI-000244: Voicebox local voice studio (Chorouk Malmoum)",
