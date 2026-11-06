@@ -1,6 +1,22 @@
 {
-  "count": 281,
+  "count": 282,
   "posts": [
+    {
+      "activity_id": "7515489210573942784",
+      "title": "Intake LI-000242: Jev inside an open agent harness (Akshay Pachaar)",
+      "headline": "I just put Jev inside an open agent harness.",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/akshay-pachaar_i-just-put-jev-inside-an-open-agent-harness-activity-7515489210573942784-G068",
+      "published_at": "2026-10-12T19:10:58.837Z",
+      "filed_at": "2026-11-06T22:25:54Z",
+      "post_text": "I just put Jev inside an open agent harness.\n\n(150x cheaper decision-making than LLM)\n\nAgents burn a lot of tokens on decisions that are really just picking one option from a short list, like matching a client request to the right GitHub issue.\n\nSo I built a weekly client follow-up agent that does exactly that. I tested it on 40 requests, and it was as accurate as letting Opus make every match, at 150x lower decision cost.\n\nHere",
+      "images": [
+        "assets/posts/7515489210573942784/image-1.jpg"
+      ],
+      "summary_html": "",
+      "number": 282
+    },
     {
       "activity_id": "7513888131939573760",
       "title": "Intake LI-000241: Claude Code + Codex in one working conversation (AgentBridge fork)",
