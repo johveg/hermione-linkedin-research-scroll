@@ -1,5 +1,5 @@
 {
-  "count": 313,
+  "count": 314,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 314
+    },
+    {
+      "activity_id": "7523068689680756736",
+      "title": "Intake LI-000274: Docling + ContextGem integration (Peter W. J. Staar)",
+      "headline": "🚀 From unstructured documents to structured insights — now even easier with Docling + ContextGem!",
+      "author": "Peter W. J. Staar",
+      "author_url": "https://ch.linkedin.com/in/peter-w-j-staar-7b261373",
+      "canonical_url": "https://www.linkedin.com/posts/peter-w-j-staar-7b261373_docling-contextgem-opensource-activity-7523068689680756736-KClo",
+      "published_at": "2026-11-02T17:09:07.476Z",
+      "filed_at": "2026-11-07T03:00:52Z",
+      "post_text": "🚀 From unstructured documents to structured insights — now even easier with Docling + ContextGem! 🚀\n\nExciting news from the Docling ecosystem! 🎉\n\nContextGem, an open-source framework for extracting structured data and insights from documents using LLMs and decision models, now has a native Docling integration!\n\nWhy does this matter? 🤔\n\nConverting documents is only half the challenge. The real value comes from extracting meaningful insights without losing the context and structure that make those insights useful.\n\nThat's exactly what this integration enables.\n🔹 Structure-aware extraction — Text blocks and table rows become paragraphs, with table column headers preserved.\n🔹 Context that travels with your data — Every paragraph retains its section headings and sheet or slide information.\n🔹 Built-in traceability — Page numbers are preserved, making it easier to trace extracted information back to its source.\n🔹 Multimodal support — Pictures and video frames are carried over as images.\n🔹 Broad format compatibility — Works with all input formats supported by Docling.\n\nAnd the best part? Just one call to bridge the two: `Document.from_docling()`\nGetting started is just as simple: uv add \"contextgem[docling]\"\n\nThis is another step toward building more reliable, context-aware document AI pipelines — where document understanding and structured information extraction work seamlessly together.\n\n🔗 Documentation: https://lnkd.in/et9aXp5Y\n⭐ GitHub: https://lnkd.in/e7_J3kM5\n\nGreat to see the open-source document AI ecosystem becoming more connected and powerful! 🙌\n\nIf your open-source project is using Docling, let me know!\n\n#Docling #ContextGem #OpenSource #DocumentAI #GenAI #LLM #InformationExtraction #AIEngineering",
+      "images": [
+        "assets/posts/7523068689680756736/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 313
     },
