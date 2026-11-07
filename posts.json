@@ -1,5 +1,5 @@
 {
-  "count": 296,
+  "count": 297,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 297
+    },
+    {
+      "activity_id": "7515427341821427715",
+      "title": "Intake LI-000257: Open RLM agent for grounded Wikidata search (Anastasia Stasenko)",
+      "headline": "Today we release an open agent for grounded search over Wikidata beating GPT-6-Luna, GLM 5.3 Flash and Gemini Flash.",
+      "author": "Anastasia Stasenko",
+      "author_url": "https://fr.linkedin.com/in/anastasia-stasenko",
+      "canonical_url": "https://www.linkedin.com/posts/anastasia-stasenko_today-we-release-an-open-agent-for-grounded-activity-7515427341821427715-rlc2",
+      "published_at": "2026-10-12T15:05:08.177Z",
+      "filed_at": "2026-11-07T00:52:22Z",
+      "post_text": "Today we release an open agent for grounded search over Wikidata beating GPT-6-Luna, GLM 5.3 Flash and Gemini Flash.\n\nBased on a RLM harness approach, it answers complex, multi-step factual questions asked in plain language by searching the graph through code, and traces every answer back to the statements and sources that support it.\n\nOur agent, built on Qwen3.8-27B, an open-weight model running on a single GPU, gets the best score in our evaluation: 74 correct answers out of 100, against 61 for gpt-6-luna, 50 for GLM-5.3-flash and 41 for Gemini-3.1-flash-lite. The gap is widest on the hardest questions, the multi-hop ones, where it answers 28 out of 50 against 19 for gpt-6-luna.\n\nThe difference lies in how the search is carried out. Instead of pasting graph results into its context, the model writes Python against graph functions, keeps results in variables and prints only what it needs. It can follow chains of relations through entities the question never names, and it reaches the right one far more often.\n\nThese results are a starting point. Even the best configuration answers 28 of the 50 multi-hop questions, so it still fails on almost half of the questions that require complex chaining of several facts, notably in multilingual setting.\n\nThis is why alongside the harness, we publish the dataset of 10,235 search traces it recorded, for further training of models to do better and learning to navigate the graph natively.\n\nTraces of graph exploration over questions with a certified answer cannot be collected from the web, nor from commercial models that hide their reasoning and restrict training on their outputs. So we produce them synthetically: questions grown from the graph with controlled difficulty, solved in the harness, recorded turn by turn.\n\nOur next step is to train a series of open models on these traces inside the same harness, and to let the two evolve together, with the models learning to use the environment and the environment reshaped around what the models need, from reusing graph results to verifying answers before stopping.\n\nThe work was carried out within AI-BRIDGES, at the Digital Humanities Research Hub of the University of Londondon, supported by Wikimedia CHCH and in close collaboration with Wikimedia Deutschland e. V.\n\nThe agent, the dataset and the full write-up are below.",
+      "images": [
+        "assets/posts/7515427341821427715/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 296
     },
