@@ -1,5 +1,5 @@
 {
-  "count": 306,
+  "count": 307,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -13,6 +13,22 @@
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
       "summary_html": "",
+      "number": 307
+    },
+    {
+      "activity_id": "7519347994056499200",
+      "title": "Intake LI-000267: Nine places to use Decision Models (Jev) in an Agentic RAG system",
+      "headline": "𝗡𝗶𝗻𝗲 𝗽𝗹𝗮𝗰𝗲𝘀 𝘁𝗼 𝘂𝘀𝗲 𝗗𝗲𝗰𝗶𝘀𝗶𝗼𝗻 𝗠𝗼𝗱𝗲𝗹𝘀 (𝗝𝗲𝘃) 𝗶𝗻 𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗥𝗔𝗚 𝘀𝘆𝘀𝘁𝗲𝗺 front to back 👇 | Aurimas Griciūnas",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/aurimas-griciunas_%F0%9D%97%A1%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2-%F0%9D%97%BD%F0%9D%97%B9%F0%9D%97%AE%F0%9D%97%B0%F0%9D%97%B2%F0%9D%98%80-%F0%9D%98%81%F0%9D%97%BC-%F0%9D%98%82%F0%9D%98%80%F0%9D%97%B2-%F0%9D%97%97%F0%9D%97%B2%F0%9D%97%B0%F0%9D%97%B6%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-activity-7519347994056499200-Kkc7",
+      "published_at": "",
+      "filed_at": "2026-11-07T02:07:29Z",
+      "post_text": "𝗡𝗶𝗻𝗲 𝗽𝗹𝗮𝗰𝗲𝘀 𝘁𝗼 𝘂𝘀𝗲 𝗗𝗲𝗰𝗶𝘀𝗶𝗼𝗻 𝗠𝗼𝗱𝗲𝗹𝘀 (𝗝𝗲𝘃) 𝗶𝗻 𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗥𝗔𝗚 𝘀𝘆𝘀𝘁𝗲𝗺 front to back 👇\n\n𝟭. 𝗠𝗼𝗱𝗲𝗹 𝗿𝗼𝘂𝘁𝗶𝗻𝗴. The prompt goes to a decision model, it picks the tier. Cheap models for lookups, expensive for what you cannot afford to get wrong.\n𝟮. 𝗚𝘂𝗮𝗿𝗱𝗿𝗮𝗶𝗹𝘀. A separate yes-or-no per potential hazard. Before the LLM sees the input or on the answer that has been produced.\n𝟯. 𝗥𝗲𝘁𝗿𝗶𝗲𝘃𝗮𝗹 𝘀𝘂𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝗰𝘆. Is what came back enough to answer, or should we search again.\n𝟰. 𝗣𝗮𝘀𝘀𝗮𝗴𝗲 𝗳𝗶𝗹𝘁𝗲𝗿𝗶𝗻𝗴 𝗮𝗻𝗱 𝗿𝗲𝗿𝗮𝗻𝗸𝗶𝗻𝗴. Does this passage answer the question or is it only keyword-adjacent. Apply per candidate and sort by probability.\n𝟱. 𝗖𝗶𝘁𝗮𝘁𝗶𝗼𝗻 𝗰𝗵𝗲𝗰𝗸𝗶𝗻𝗴. Does this source support the claim, contradict it, or fail to address it.\n𝟲. 𝗧𝗼𝗼𝗹-𝗰𝗮𝗹𝗹 𝗴𝗮𝘁𝗶𝗻𝗴. Allow, ask or deny per call, with the bands in your code.\n𝟳. 𝗟𝗼𝗼𝗽 𝘁𝗲𝗿𝗺𝗶𝗻𝗮𝘁𝗶𝗼𝗻. Does the result actually satisfy the acceptance criteria?\n𝟴. 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗰𝗼𝗺𝗽𝗮𝗰𝘁𝗶𝗼𝗻. Score each piece of context and drop the stale ones instead of summarising them.\n𝟵. 𝗘𝘃𝗮𝗹𝘀 𝗮𝘁 𝗳𝘂𝗹𝗹 𝗰𝗼𝘃𝗲𝗿𝗮𝗴𝗲. Significantly cheaper per verdict than an LLM judge. Potentially unlocks the ability to grade every trace instead of sampling.\n\nOutside the Agentic RAG loop there are so many other use cases:\n\n➡️ Bulk labeling.\n➡️ Inbox triage.\n➡️ Secret detection in diffs.\n➡️ …\n\nWhat to watch out for:\n\n❌ You still need to eval your decision model use.\n❌ Closely monitor your thresholds and version them as code.\n❌ Decision models do not return an explanation, only which outputs are bad. If you require an explanation, fall back to an LLM judge.\n\n👉 Generation is one call in most systems. The decisions around it are the other twenty, and that is where this pays.\n\nWhat else belongs on the list? 👇 | 102 comments on LinkedIn",
+      "images": [
+        "assets/posts/7519347994056499200/image-1.jpg"
+      ],
+      "summary_html": "<h3>Limitations</h3>\n<p>Guest HTML had no author/comments; authenticated visible capture used for comments (not expanded, no clicks). Raw authenticated text/screenshot kept local. Companion to LI-000265 (Jev ontology) and LI-000264 (Jev review layer).</p>",
       "number": 306
     },
     {
