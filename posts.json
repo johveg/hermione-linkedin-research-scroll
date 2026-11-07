@@ -1,5 +1,5 @@
 {
-  "count": 312,
+  "count": 313,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 313
+    },
+    {
+      "activity_id": "7523964821894221824",
+      "title": "Intake LI-000273: AI harness - 6 must-know concepts (Prem N.)",
+      "headline": "𝗔𝗻 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁 𝗶𝘀𝗻'𝘁 𝗷𝘂𝘀𝘁 𝗮 𝗺𝗼𝗱𝗲𝗹 𝘁𝗵𝗮𝘁 𝘂𝘀𝗲𝘀 𝘁𝗼𝗼𝗹𝘀.",
+      "author": "Prem N.",
+      "author_url": "https://www.linkedin.com/in/prem-natarajan-ai",
+      "canonical_url": "https://www.linkedin.com/posts/prem-natarajan-ai_ai-aiharness-aiagents-activity-7523964821894221824-oS4A",
+      "published_at": "2026-11-05T04:30:02.045Z",
+      "filed_at": "2026-11-07T02:53:07Z",
+      "post_text": "𝗔𝗻 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁 𝗶𝘀𝗻'𝘁 𝗷𝘂𝘀𝘁 𝗮 𝗺𝗼𝗱𝗲𝗹 𝘁𝗵𝗮𝘁 𝘂𝘀𝗲𝘀 𝘁𝗼𝗼𝗹𝘀. 𝗜𝘁 𝗻𝗲𝗲𝗱𝘀 𝗮 𝗵𝗮𝗿𝗻𝗲𝘀𝘀 𝘁𝗼 𝗰𝗼𝗻𝘁𝗿𝗼𝗹 𝗵𝗼𝘄 𝗶𝘁 𝘄𝗼𝗿𝗸𝘀.\n\nThe model provides intelligence. The AI harness provides the structure, execution, and control that make an agent work.\n\nWithout a proper harness, even powerful models can struggle with complex tasks, context, tools, and safety.\n\n𝗛𝗲𝗿𝗲 𝗮𝗿𝗲 𝟲 𝗺𝘂𝘀𝘁 𝗸𝗻𝗼𝘄 𝗔𝗜 𝗵𝗮𝗿𝗻𝗲𝘀𝘀 𝗰𝗼𝗻𝗰𝗲𝗽𝘁𝘀.\n\n𝟭. 𝗔𝗴𝗲𝗻𝘁 𝗟𝗼𝗼𝗽\n\nManages the cycle of calling the model, executing tools, and returning results.\n\n• Sends requests to the model.\n• Executes requested tools.\n• Feeds results back.\n• Repeats until the task is complete or a limit is reached.\n\n𝗕𝗲𝘀𝘁 𝗳𝗼𝗿: Multi step agent workflows.\n\n𝟮. 𝗧𝗼𝗼𝗹 𝗖𝗮𝗹𝗹𝗶𝗻𝗴\n\nAllows agents to interact with external tools and services.\n\n• Selects tools and provides arguments.\n• Validates and executes requests.\n• Returns results to the model.\n\n𝗕𝗲𝘀𝘁 𝗳𝗼𝗿: APIs, databases, web searches, and external actions.\n\n𝟯. 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗠𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁\n\nControls what information the model receives at each step.\n\n• Combines instructions and conversation history.\n• Includes relevant tool results.\n• Manages context limits and older messages.\n\n𝗕𝗲𝘀𝘁 𝗳𝗼𝗿: Keeping agents focused during long tasks.\n\n𝟰. 𝗖𝗵𝗲𝗰𝗸𝗽𝗼𝗶𝗻𝘁𝗶𝗻𝗴\n\nSaves workflow state so an agent can resume after interruptions.\n\n• Stores progress and results.\n• Restores previous checkpoints.\n• Continues without restarting the entire task.\n\n𝗕𝗲𝘀𝘁 𝗳𝗼𝗿: Long running tasks and workflow recovery.\n\n𝟱. 𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻𝘀 𝗮𝗻𝗱 𝗦𝗮𝗻𝗱𝗯𝗼𝘅𝗶𝗻𝗴\n\nDefines what an agent can access and which actions it can perform.\n\n• Controls tool and file access.\n• Restricts sensitive operations.\n• Limits code execution.\n• Blocks unauthorized actions.\n\n𝗕𝗲𝘀𝘁 𝗳𝗼𝗿: Secure execution and controlled automation.\n\n𝟲. 𝗚𝘂𝗮𝗿𝗱𝗿𝗮𝗶𝗹𝘀\n\nChecks agent inputs, outputs, and tool requests before actions are taken.\n\n• Validates inputs and responses.\n• Detects unsafe actions.\n• Requests human approval when needed.\n\n𝗕𝗲𝘀𝘁 𝗳𝗼𝗿: Reducing risks and controlling AI workflows.\n\n𝗧𝗵𝗲 𝗸𝗲𝘆 𝘁𝗮𝗸𝗲𝗮𝘄𝗮𝘆\n\nBuilding an AI agent takes more than a powerful LLM.\n\nYou need an execution loop, tool integration, context management, checkpointing, permissions, and guardrails.\n\n𝗧𝗵𝗲 𝗺𝗼𝗱𝗲𝗹 𝗽𝗿𝗼𝘃𝗶𝗱𝗲𝘀 𝘁𝗵𝗲 𝗯𝗿𝗮𝗶𝗻. 𝗧𝗵𝗲 𝗵𝗮𝗿𝗻𝗲𝘀𝘀 𝗺𝗮𝗸𝗲𝘀 𝘁𝗵𝗲 𝗮𝗴𝗲𝗻𝘁 𝘄𝗼𝗿𝗸.\n\n𝗪𝗵𝗶𝗰𝗵 𝗽𝗮𝗿𝘁 𝗼𝗳 𝗮𝗻 𝗔𝗜 𝗵𝗮𝗿𝗻𝗲𝘀𝘀 𝗱𝗼 𝘆𝗼𝘂 𝗳𝗶𝗻𝗱 𝗺𝗼𝘀𝘁 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗶𝗻𝗴 𝘁𝗼 𝗯𝘂𝗶𝗹𝗱?\n\n♻️ Repost to help others understand reliable AI agents.\n\n➕ Follow Prem N. for more practical insights on AI agents and emerging AI architecture.\n\n📌 𝗖𝗿𝗲𝗱𝗶𝘁: Femke Plantinga for the original infographic.\n\n#AI #AIHarness #AIAgents #AgenticAI #LLM #AIEngineering #GenerativeAI",
+      "images": [
+        "assets/posts/7523964821894221824/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 312
     },
