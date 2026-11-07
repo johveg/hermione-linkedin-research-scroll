@@ -1,5 +1,5 @@
 {
-  "count": 317,
+  "count": 318,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -13,6 +13,22 @@
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
       "summary_html": "",
+      "number": 318
+    },
+    {
+      "activity_id": "7524855506109267968",
+      "title": "Intake LI-000278: One Architecture Diagram That Explains Every AI Agent",
+      "headline": "One Architecture Diagram That Explains Every AI Agent",
+      "author": "Brij Pandey",
+      "author_url": "https://www.linkedin.com/in/brijpandeyji",
+      "canonical_url": "https://www.linkedin.com/posts/brijpandeyji_one-architecture-diagram-that-explains-every-activity-7524855506109267968-fXTs",
+      "published_at": "2026-11-07T15:29:17.709Z",
+      "filed_at": "2026-11-07T16:35:24Z",
+      "post_text": "One Architecture Diagram That Explains Every AI Agent\n\nStrip away the framework names and every agent you have ever used is the same seven components wired into a loop.\n\nNot LangGraph specific. Not CrewAI specific. The pattern holds whether you built it yourself in 200 lines or bought it as a platform.\n\nHere is the anatomy.\n\n𝗣𝗲𝗿𝗰𝗲𝗽𝘁𝗶𝗼𝗻 𝗹𝗮𝘆𝗲𝗿\n Input arrives as user text, API calls, sensor data, events, or scheduled triggers. This layer normalizes all of it into something the model can reason over. Most teams underinvest here and then blame the model for bad outputs.\n\n𝗥𝗲𝗮𝘀𝗼𝗻𝗶𝗻𝗴 𝗲𝗻𝗴𝗶𝗻𝗲\n The LLM, running some structured reasoning pattern: chain of thought, ReAct, plan then execute. Its real job is one decision, made repeatedly: can I answer this directly, or do I need to act first?\n\n𝗣𝗹𝗮𝗻𝗻𝗶𝗻𝗴 𝗺𝗼𝗱𝘂𝗹𝗲\n When the answer is no, the goal gets decomposed into ordered subtasks. This is the component people skip when they prototype, and the one they retrofit painfully once tasks stop fitting in a single hop.\n\n𝗠𝗲𝗺𝗼𝗿𝘆 𝘀𝘆𝘀𝘁𝗲𝗺\n Two distinct systems that get collapsed into one far too often. Short term holds conversation context and working state. Long term holds vector stores, episodic memory, and learned patterns. Different write policies, different retrieval logic, different failure modes.\n\n𝗧𝗼𝗼𝗹 𝗲𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻 𝗹𝗮𝘆𝗲𝗿\n Where the agent touches the world. MCP servers, API calls, code execution, database queries, file systems, external services. Results flow back into reasoning, and the loop asks again: goal achieved?\n\n𝗚𝘂𝗮𝗿𝗱𝗿𝗮𝗶𝗹𝘀\n Permissions, approval gates, content filtering, rate limits, human checkpoints. Notice in the diagram that guardrails run vertically alongside everything rather than sitting at one entry point. That placement is the whole argument. A gate at the input does nothing about what the agent decides to do on step four.\n\n𝗢𝗯𝘀𝗲𝗿𝘃𝗮𝗯𝗶𝗹𝗶𝘁𝘆\n Traces, logs, metrics, cost tracking, latency monitoring. It spans the full width because you cannot debug a loop by inspecting one node in it. You need the trajectory.\n\nThe interesting part is not the boxes. It is the two diamonds: \"can I answer directly\" and \"goal achieved\". Those are the only places the agent actually decides anything. Everything else is plumbing. When agents misbehave in production, the fault is almost always in how those two checks were specified, not in the model doing the reasoning.\n\nWhere do you draw the line between an agent and a workflow that happens to call an LLM?\n\nMy working definition is whether the system chooses its own next step rather than following a predetermined path, but that gets blurry the moment a planner writes the steps in advance.",
+      "images": [
+        "assets/posts/7524855506109267968/image-1.jpg"
+      ],
+      "summary_html": "<h3>Limitations</h3>\n<p>Social/discovery evidence; comments may be partial. Authenticated visible capture: no login wall, no CAPTCHA; no clicks. Raw authenticated-visible files and metadata.json kept local/unstaged except sanitized metadata.</p>",
       "number": 317
     },
     {
