@@ -1,5 +1,5 @@
 {
-  "count": 304,
+  "count": 305,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -13,6 +13,22 @@
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
       "summary_html": "",
+      "number": 305
+    },
+    {
+      "activity_id": "7518287477879607297",
+      "title": "LinkedIn intake LI-000265: Paul Iusztin - define what agents reason about (Jev + ontologies)",
+      "headline": "Don",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/pauliusztin_dont-waste-all-your-time-improving-how-your-activity-7518287477879607297-uSof",
+      "published_at": "",
+      "filed_at": "2026-11-07T01:47:51Z",
+      "post_text": "Don't waste all your time improving how your AI agents reason.\n\nDo this instead...\n\nSpend more time defining what they should reason about.\n\nEven the smartest model can make a bad decision if the options are poorly defined.\n\nThis is why I like using Jev and ontologies together...\n\nJev by TypeSafe AI turns unstructured inputs into structured decisions with calibrated confidence scores.\n\nInstead of asking an LLM to reason through every decision, you define the possible outcomes in code.\n\nJev selects an outcome and returns its confidence. And the ontology defines what those outcomes mean.\n\nImagine an AI agent handling customer support tickets.\n\nThe ontology defines:\n\n- Which issues belong to billing versus technical support.\n- How customers, subscriptions, and invoices relate.\n- Which categories should never overlap.\n\nJev classifies tickets against those categories.\n\nBased on its confidence, your agent can:\n\n1. High confidence -> Execute an action.\n2. Medium confidence -> Escalate to an LLM.\n3. Low confidence -> Request human review.\n\nSo expensive reasoning is reserved for cases that need it.\n\nBut what if your ontology is wrong?\n\nJev can confidently choose the wrong category if the options are poorly defined.\n\nYou still need evals to identify failures, improve definitions, and test changes before deploying.\n\nAs those definitions evolve, version them like your prompts, datasets, and code.\n\nThe takeaway:\n\nBuilding better AI agents isn't always about making the model smarter.\n\nSometimes it's about defining its world more clearly.\n\nP.S. How are you defining the decision space for your AI agents?",
+      "images": [
+        "assets/posts/7518287477879607297/image-1.jpg"
+      ],
+      "summary_html": "<h3>Limitations</h3>\n<p>Local-only (not committed): authenticated-visible.txt/.json/.png, source.html, raw metadata. Guest HTML headline was truncated (&quot;Don&quot;); post.txt derived from the authenticated visible target post only.</p>",
       "number": 304
     },
     {
