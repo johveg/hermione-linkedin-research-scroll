@@ -1,5 +1,5 @@
 {
-  "count": 301,
+  "count": 302,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 302
+    },
+    {
+      "activity_id": "7517933700068777985",
+      "title": "Intake LI-000262: OmniGraph, \"Git for AI agent memory\"",
+      "headline": "Someone built Git for AI agent memory.",
+      "author": "Sandhya Ahuja",
+      "author_url": "https://in.linkedin.com/in/digcreator",
+      "canonical_url": "https://www.linkedin.com/posts/digcreator_someone-built-git-for-ai-agent-memory-its-activity-7517933700068777985-apvY",
+      "published_at": "2026-10-19T13:04:30.549Z",
+      "filed_at": "2026-11-07T01:29:38Z",
+      "post_text": "Someone built Git for AI agent memory.\n\nIts called OmniGraph, an open-source graph database that lets multiple AI agents share knowledge, create branches, review changes, and merge their work without overwriting each others state.\n\nThe idea is particularly useful for long-running agents that need to remember information and coordinate across different tasks.\n\nEach agent can work on its own branch of a shared knowledge graph, adding entities, relationships, documents, and evidence without immediately modifying the main graph.\n\nFor example, one agent can ingest research papers and extract claims while another resolves duplicate entities and links supporting evidence.Both work independently. Their changes can be inspected, compared, and merged into the shared graph after review.\n\nAnd the engineering goes much further.\n\nOmniGraph supports Git-style three-way merges, atomic commits, historical queries, and typed conflict detection. If two agents modify the same entity incompatibly, the engine reports a conflict rather than silently overwriting data.\n\nThe retrieval system is also interesting. It combines:\n→ Graph traversal for relationships\n→ Vector similarity search\n→ BM25 full-text search\n→ Reciprocal Rank Fusion for ranking results\n\nThese operations can run within the same query engine, allowing agents to retrieve information using both semantic similarity and explicit relationships.\n\nUnder the hood, its built in Rust and uses the open Lance columnar format for storage, with support for local files and S3-compatible object stores.\n\nSchemas define valid node types, relationships, and constraints. Cedar policies control mutations, while commit history records changes and their associated actors.\n\nThere's also an MCP server and TypeScript SDK for integrating the graph with coding agents and applications.\n\nFully open source.\n\nGitHub: https://lnkd.in/dBDfqT8p",
+      "images": [
+        "assets/posts/7517933700068777985/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 301
     },
