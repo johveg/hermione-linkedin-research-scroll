@@ -1,5 +1,5 @@
 {
-  "count": 291,
+  "count": 292,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 292
+    },
+    {
+      "activity_id": "7516418885340872704",
+      "title": "Intake LI-000252: Pydantic AI vs LangChain (Pierre-Alexandre Broux)",
+      "headline": "Most of us learned agents with LangChain.",
+      "author": "Pierre-Alexandre Broux",
+      "author_url": "https://fr.linkedin.com/in/pabroux",
+      "canonical_url": "https://www.linkedin.com/posts/pabroux_langchain-pydantic-agent-activity-7516418885340872704-MHkW",
+      "published_at": "2026-10-15T08:45:10.574Z",
+      "filed_at": "2026-11-06T23:58:28Z",
+      "post_text": "Most of us learned agents with LangChain.\n\nIt’s huge.\nIt connects to everything.\n\nPydantic AI goes the other way.\n\nFewer concepts.\nMore Python.\n\nIf you know FastAPI, you already know it.\n\nTyped outputs.\nTyped dependencies.\n\nWhen the model gets it wrong, Pydantic AI sends the error back.\nThe model fixes it.\n\nAnd like LangChain, it now supports System One models.\n\nModels like Jev don’t write.\nThey pick, and tell you how sure they are.\n\nSo how do they call a tool before answering?\n\nPydantic AI asks them questions.\n\nTool or answer?\nWhich tool?\nWhich value?\n\nJev picks.\nPydantic AI calls.\n\nJev down?\nPydantic AI allows us to fall back to a LLM.\n\nI built the same agent twice, once on Claude and once on Jev.\n\nThe tutorial is in the comments.\n\nNow I can’t wait to try it on a real project.\n\n#langchain #pydantic #agent #framework #code #developer #ai #systemone #llm",
+      "images": [
+        "assets/posts/7516418885340872704/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 291
     },
