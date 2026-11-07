@@ -1,5 +1,5 @@
 {
-  "count": 310,
+  "count": 311,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 311
+    },
+    {
+      "activity_id": "7523381046093168640",
+      "title": "Intake LI-000271: Harness Engineering 2.0 (UHP / HarnessRouter)",
+      "headline": "Harness Engineering 2.0 is here!",
+      "author": "Akshay Pachaar",
+      "author_url": "https://in.linkedin.com/in/akshay-pachaar",
+      "canonical_url": "https://www.linkedin.com/posts/akshay-pachaar_harness-engineering-20-is-here-after-protocols-activity-7523381046093168640-JwuD",
+      "published_at": "2026-11-03T13:50:19.047Z",
+      "filed_at": "2026-11-07T02:35:13Z",
+      "post_text": "Harness Engineering 2.0 is here!\n\nAfter protocols for tools, agent communication, and agent interfaces, harnesses now have one too.\n\nDevelopers just built UHP (Unified Harness Protocol), a standardized interface for running agent tasks across any agent harness.\n\nHarnessRouter is its open-source server implementation.\n\nHere’s how it works:\n\n- The product backend sends a task with a `harness_id`.\n- HarnessRouter starts the selected harness in its own session.\n- The harness runs its native agent loop and streams back progress.\n- Files, artifacts, failures, and the final output return through the same interface.\n\nWithout UHP, integrating every harness needs separate handling for task execution, sessions, streaming, files, recovery, and output formats.\n\nWith UHP, Codex, Claude Code, Gemini CLI, Hermes, Pi, and other harnesses can plug into the same product backend while keeping their native tools, skills, models, and agent loops.\n\nThis means developers can:\n\n- Switch harnesses without rebuilding the product integration.\n- Run the same task across different harnesses.\n- Add new harnesses without maintaining another execution stack.\n\nHarnessRouter currently supports 30 harness bases.\n\nI have shared a link to the GitHub repo in the replies.\n\nAs per official benchmarks, changing only the harness while keeping the model fixed reduced costs by 25% to 64% across several healthcare compliance tasks.\n\nAnd changing both the harness and model widened the difference to 99.8% between the highest and lowest-cost configurations.\n\nDevelopers can test their own workloads across different configurations using Harness Arena.\n\nAlibaba Cloud's Qoder has also adopted UHP, making it available as an agent backend through the HarnessRouter API.\n_____\nShare this with your network if you found this insightful ♻️\nFollow me (Akshay Pachaar) for more insights and tutorials on AI and Machine Learning!",
+      "images": [
+        "assets/posts/7523381046093168640/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 310
     },
