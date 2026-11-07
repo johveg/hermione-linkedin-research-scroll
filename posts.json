@@ -1,5 +1,5 @@
 {
-  "count": 311,
+  "count": 312,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 312
+    },
+    {
+      "activity_id": "7523375955524866048",
+      "title": "Intake LI-000272: Paul Iusztin - 6 terms for building AI agents",
+      "headline": "6 terms you MUST understand if you're building AI agents:",
+      "author": "Paul Iusztin",
+      "author_url": "https://ro.linkedin.com/in/pauliusztin",
+      "canonical_url": "https://www.linkedin.com/posts/pauliusztin_6-terms-you-must-understand-if-youre-building-activity-7523375955524866048-umk5",
+      "published_at": "2026-11-03T13:30:05.362Z",
+      "filed_at": "2026-11-07T02:47:39Z",
+      "post_text": "6 terms you MUST understand if you're building AI agents:\n\n(Especially if you want to build production-ready systems)\n\nAn AI agent is more than an LLM calling tools.\n\nThere's an entire system around the model that manages how it:\n\n• Executes tasks\n• Interacts with tools\n• Handles failures\n\nThis is what we call the agent harness.\n\nAnd to understand how it all works, you need to familiarize yourself with 6 core concepts:\n\n1. Agent Loop\n2. Tool Calling\n3. Context Management\n4. Checkpointing\n5. Permissions & Sandboxing\n6. Guardrails\n\nUnderstanding these concepts will help you build AI agents that can reliably execute real-world tasks.\n\nLet me know in the comments if I missed anything important.\n\nP.S. Want to learn how to build AI agents from scratch?\n\nI've put together two FREE roadmaps covering everything you need:\n\n1. AI Agent Foundations: https://lnkd.in/euhxMGrh\n2. Harness Engineering: https://lnkd.in/eaw8Zakt",
+      "images": [
+        "assets/posts/7523375955524866048/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 311
     },
