@@ -1,5 +1,5 @@
 {
-  "count": 319,
+  "count": 320,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 320
+    },
+    {
+      "activity_id": "7524790074539044864",
+      "title": "Intake LI-000280: txtai (AI Engineering post)",
+      "headline": "Combine vector search, graphs, and SQL in one embeddings database!",
+      "author": "AI Engineering",
+      "author_url": "https://www.linkedin.com/company/theaiengineering",
+      "canonical_url": "https://www.linkedin.com/posts/theaiengineering_combine-vector-search-graphs-and-sql-in-activity-7524790074539044864-Wa79",
+      "published_at": "2026-11-07T11:09:17.607Z",
+      "filed_at": "2026-11-08T05:22:50Z",
+      "post_text": "Combine vector search, graphs, and SQL in one embeddings database!\n\ntxtai is an open-source Python framework for semantic search, LLM orchestration, and language model workflows. Its core is an embeddings database, which brings together sparse and dense vector indexes, graph networks, and relational databases. That one store can serve vector search directly, or act as the knowledge source for LLM applications such as RAG and agents.\n\nAround it sit pipelines, which run LLM prompts, question answering, labeling, transcription, translation, and summarization. Workflows chain pipelines together, either as simple microservices or as multi-model workflows. Agents then connect embeddings, pipelines, workflows, and other agents to solve problems autonomously.\n\nWhat it gives you:\n\n• Embeddings for text, documents, audio, images, and video, searchable with SQL, plus object storage, topic modeling, and graph analysis\n\n• Agents built on smolagents, working with Hugging Face, 𝘭𝘭𝘢𝘮𝘢.𝘤𝘱𝘱, and OpenAI, Claude, or AWS Bedrock models through LiteLLM, with 𝘢𝘨𝘦𝘯𝘵𝘴.𝘮𝘥 and 𝘴𝘬𝘪𝘭𝘭.𝘮𝘥 prompting\n\n• RAG examples covering citations, retrieving context from the web or SQL, and GraphRAG\n\n• Models from small task-specific ones up to large language models, which can run locally\n\n• Web and Model Context Protocol (MCP) APIs, with bindings for JavaScript, Java, Rust, and Go\n\n• Scaling out with container orchestration\n\n𝘱𝘪𝘱 𝘪𝘯𝘴𝘵𝘢𝘭𝘭 𝘵𝘹𝘵𝘢𝘪 is enough to start: 𝘤𝘳𝘦𝘢𝘵𝘦 𝘵𝘹𝘵𝘢𝘪.𝘌𝘮𝘣𝘦𝘥𝘥𝘪𝘯𝘨𝘴(), index a list of strings, and call search. It is built on Python 3.10+, Hugging Face Transformers, Sentence Transformers, and FastAPI.\n\nGitHub repo in the comments",
+      "images": [
+        "assets/posts/7524790074539044864/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 319
     },
