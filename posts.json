@@ -1,5 +1,5 @@
 {
-  "count": 322,
+  "count": 323,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 323
+    },
+    {
+      "activity_id": "7525093131848146944",
+      "title": "Intake: Clients ask me which tool to buy (John Wernfeldt)",
+      "headline": "Clients ask me which tool to buy.",
+      "author": "John Wernfeldt",
+      "author_url": "https://se.linkedin.com/in/john-wernfeldt-82894b58",
+      "canonical_url": "https://www.linkedin.com/posts/john-wernfeldt-82894b58_clients-ask-me-which-tool-to-buy-i-usually-activity-7525093131848146944-4fL3",
+      "published_at": "2026-11-08T07:13:32.099Z",
+      "filed_at": "2026-11-08T11:42:21Z",
+      "post_text": "Clients ask me which tool to buy.\n⠀\nI usually say a whiteboard.\n⠀\nI have seen this with many clients.\n⠀\nCustomer is always super broadly discussed, and we have workshop after workshop.\n⠀\nAnd they usually start investing in systems.\n⠀\nSometimes they ask me, okay, what is the best business glossary?\nWhat are the best tools?\n⠀\nBut I usually say that the only tool you need is a room with the right people, a pen and a whiteboard.\n⠀\nBecause you need the right people agreeing on things.\nThe rules.\nAnd the decision rights.\n⠀\nThat's the most important thing here.\n⠀\nIf you can't really agree on what customer means, then you will not be able to scale AI and advanced analytics on top of that.\n⠀\nAnd customer is only where it starts.\n⠀\nYou can go into other parts, like active customer, customer churn, and those kind of things.\n⠀\nBut if you don't really fix those things, you will never be able to scale.\n⠀\nAnd it's even worse with AI.\n⠀\nBecause AI doesn't ask which is the right definition.\nIt just takes the definition and executes.\n⠀\nThat would just make it worse and worse.\n⠀\nSo that's why we need to fix this.\n⠀\nI've written down how to start in 30 days, you find the plan here: https://lnkd.in/dRkqe64E",
+      "images": [
+        "assets/posts/7525093131848146944/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 322
     },
