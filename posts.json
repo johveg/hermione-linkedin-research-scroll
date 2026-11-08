@@ -1,5 +1,5 @@
 {
-  "count": 320,
+  "count": 321,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 321
+    },
+    {
+      "activity_id": "7524430689266753536",
+      "title": "Intake: What an Ontology for AI Agents Actually Needs (Connected Data, 2026-11-06)",
+      "headline": "What an Ontology for AI Agents Actually Needs",
+      "author": "Connected Data",
+      "author_url": "https://www.linkedin.com/company/connecteddataworld",
+      "canonical_url": "https://www.linkedin.com/posts/connecteddataworld_aiagents-semanticlayer-dataengineering-activity-7524430689266753536-i8Yw",
+      "published_at": "2026-11-06T11:21:13.481Z",
+      "filed_at": "2026-11-08T06:44:52Z",
+      "post_text": "What an Ontology for AI Agents Actually Needs\n\n\"Ontology\" now covers metrics layers, data catalogs, context graphs and standards-based models of business meaning. Each does a different job.\n\nA catalog can name the owner of a table. It cannot tell an agent whether two records describe the same customer.\n\nThe more useful question is which semantic capability an agent needs at each stage of its lifecycle. The answer is a system, not a single file or graph:\n\n• Meaning and facts stay apart. The ontology is the schema layer, the knowledge graph is the instance layer. The ontology defines the grammar. The graph supplies the evidence.\n\n• Model the business, not the database. In an unfamiliar domain, discover first: open extraction, a seed ontology, then extraction guided by that ontology.\n\n• Two loops run together. A build loop turns changing data into governed knowledge. A query loop uses the ontology to interpret each request, graph traversal for precise multi-hop facts, and vector retrieval for fuzzy context.\n\n• Operational depth. Interfaces, derived properties, entity resolution that keeps provenance and uncertainty, and security policies resolved alongside meaning.\n\n• Trust has a lifecycle. New relationships begin as candidate edges and are proposed, evaluated, accepted, remapped or retired.\n\n• A knowledge spine. A queryable, versioned semantic model bound to source systems. It centralizes the resolution of meaning, not the storage of data.\n\nThe suggested starting point is modest: one decision an agent must explain or execute, a small seed ontology, and one context path through it.\n\nThe test is whether an agent can use the ontology to resolve meaning, retrieve evidence, apply policy and improve the next decision.\n\nBy Ananth Packkildurai. Link in comments\n\n#AIAgents #SemanticLayer #DataEngineering #ContextEngineering #EnterpriseAI\n\n--\n\nConnected Data London 2026 | 11–12 November | Leonardo Royal Hotel London Tower Bridge\n\n🎟 Tickets on sale now - 🔔 Last call!\n\nhttps://lnkd.in/dbn_dqDF\n\n📺 Sponsorship opportunities available. Contact info@connected-data.london for details.\n\n#KnowledgeGraph #GraphRAG #Ontology #Graph #AI #DataScience #GraphDB #SemTech",
+      "images": [
+        "assets/posts/7524430689266753536/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 320
     },
