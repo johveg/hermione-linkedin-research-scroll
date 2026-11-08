@@ -1,5 +1,5 @@
 {
-  "count": 321,
+  "count": 322,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 322
+    },
+    {
+      "activity_id": "7524975833938231296",
+      "title": "Intake: Sarthak Rastogi - enterprise AI agent architecture (AgentCore/LangGraph/Cedar/Terraform)",
+      "headline": "AI agents in enterprise have a challenge:",
+      "author": "Sarthak Rastogi",
+      "author_url": "https://nz.linkedin.com/in/sarthakrastogi",
+      "canonical_url": "https://www.linkedin.com/posts/sarthakrastogi_ai-aiagents-genai-activity-7524975833938231296-S5u7",
+      "published_at": "2026-11-07T23:27:26.099Z",
+      "filed_at": "2026-11-08T10:27:25Z",
+      "post_text": "AI agents in enterprise have a challenge:\n\nBuilding a system that can safely run multiple agents in an enterprise environment with auth, tools, and observability is hard.\n\nA production-ready agent system needs several things working together:\n\n- Isolation: Agent sessions should be isolated, and model-generated code should never execute in the agent's own environment.\n- Deterministic authorisation: Don't rely on prompts to decide which tools an agent can access. Enforce permissions outside the LLM.\n- Governed tool access: Put MCP servers and other tools behind a central gateway.\n- Scoped memory: Users should have their own memory namespaces.\n- Observability and evals: Trace every LLM and tool call, monitor failures, and continuously evaluate agent quality.\n- Infrastructure as code: Agent deployments, permissions, policies and monitoring should all be reproducible.\n\nToday on my Substack, I sent out a tutorial with code, covering the architecture, implementation decisions and deployment process for an open-source enterprise agent system using AWS Bedrock AgentCore, LangGraph, Python and Terraform.\n\nIt includes:\n- A shared runtime for multiple Python agents.\n- MCP servers and Lambda tools behind AgentCore Gateway.\n- Cedar policies for tool-level authorisation.\n- AgentCore Memory and Bedrock Guardrails.\n- Agent collaboration, including a data analyst agent that executes Python in a sandbox\n- A Streamlit chat UI with SSO.\n- Terraform for the entire infra\n\nI also walk through an example IT helpdesk agent that searches company policies, creates support tickets, delegates calculations to another agent, and remembers users across sessions.\n\nRead the full article here:\nhttps://lnkd.in/eYrjissD\n\nGitHub repo: https://lnkd.in/eW7iZCWn\n\nWould love to hear what you'd change or improve in the architecture.\n\n♻️ Share it with anyone who is building production AI agents :)\n\nI share tutorials on how to build + improve AI apps and agents, on my newsletter 𝑨𝑰 𝑨𝒈𝒆𝒏𝒕 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓𝒊𝒏𝒈: https://lnkd.in/gaJTcZBR\n\n#AI #AIAgents #GenAI",
+      "images": [
+        "assets/posts/7524975833938231296/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 321
     },
