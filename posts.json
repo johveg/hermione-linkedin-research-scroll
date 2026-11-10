@@ -1,5 +1,5 @@
 {
-  "count": 324,
+  "count": 325,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 325
+    },
+    {
+      "activity_id": "7525884142639587328",
+      "title": "Intake: OpenLIT - OpenTelemetry tracing for agents (Sumanth P)",
+      "headline": "Trace every LLM call, tool call, and agent step with OpenTelemetry!",
+      "author": "Sumanth P",
+      "author_url": "https://in.linkedin.com/in/sumanth077",
+      "canonical_url": "https://www.linkedin.com/posts/sumanth077_trace-every-llm-call-tool-call-and-agent-activity-7525884142639587328-mV7-",
+      "published_at": "2026-11-10T11:36:43.770Z",
+      "filed_at": "2026-11-10T12:34:43Z",
+      "post_text": "Trace every LLM call, tool call, and agent step with OpenTelemetry!\n\nOpenLIT is an open-source agent harness engineering platform.\n\nIt gives you OpenTelemetry-native tracing, evaluations, guardrails, prompt and context management, along with cost and GPU monitoring for the harness around your AI agents and coding agents.\n\nWhen an agent produces a bad result, the final response usually doesn’t tell you where things went wrong.\n\nThe failure could come from an LLM call, the wrong tool being selected, weak retrieved context, or something earlier in the execution.\n\nOpenLIT traces those individual steps so you can inspect how the agent actually behaved, then evaluate the same runs to understand what needs to change in the harness around the model.\n\nBecause it is built on OpenTelemetry, the telemetry can also flow into the rest of your observability stack.\n\nIt also supports coding agents like Claude Code, Codex, and Cursor, including visibility into model calls, tool usage, file changes, shell commands, token usage, and cost.\n\nKey features:\n\n• Trace LLM calls, tool calls, retrievals, and agent steps.\n• Run evaluations directly on agent traces.\n• Add guardrails around agent and model interactions.\n• Manage prompts and context across your applications.\n• Monitor model costs, token usage, and GPUs.\n\nAs agents become more complex, debugging the model alone isn’t enough. The prompts, tools, context, and execution around it matter just as much.\n\nI’ve shared the GitHub repo in the comments!",
+      "images": [
+        "assets/posts/7525884142639587328/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 324
     },
