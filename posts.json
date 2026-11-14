@@ -1,5 +1,5 @@
 {
-  "count": 328,
+  "count": 329,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 329
+    },
+    {
+      "activity_id": "7527154586122371072",
+      "title": "Intake summary: Google AX (agent orchestrator) - Sarthak Rastogi",
+      "headline": "Google's AX is like Kubernetes but for AI agents.",
+      "author": "Sarthak Rastogi",
+      "author_url": "https://nz.linkedin.com/in/sarthakrastogi",
+      "canonical_url": "https://www.linkedin.com/posts/sarthakrastogi_ai-llms-aiagents-activity-7527154586122371072-05Kl",
+      "published_at": "2026-11-13T23:45:01.100Z",
+      "filed_at": "2026-11-14T11:13:51Z",
+      "post_text": "Google's AX is like Kubernetes but for AI agents. It lets you deploy your AI agents in seconds, and then scale them as needed.\n\nIt's an open-source orchestrator to run agent workloads at scale, potentially billions of tasks across a cluster.\n\nAgents aren't just stateless services or batch jobs. They accumulate state, execute code, interact with tools, and can keep running in loops that consume resources.\n\nTo serve them, AX introduces three core primitives:\n\n- Tasks: Run agent workloads inside isolated sandboxes with resource limits.\n\n- Workspaces: Preconfigure Git repositories, MCP servers, and skill packages so agents have their environments ready.\n\n- Models: Configure the LLMs used by the platform, with credentials managed through Kubernetes secrets.\n\nIt also handles the agent lifecycle. You can watch a task's status, connect to its sandbox to inspect what it's doing, or suspend it and resume from its saved state later.\n\nThe developer experience is deliberately familiar if you've used Kubernetes. Define your task and workspace in YAML, then use commands like:\n- ax apply\n- ax watch\n- ax ssh\nto manage the workload.\n\nAs teams move towards fleets of coding agents and autonomous workers, sandboxing, environment management, lifecycle control, and resource governance become increasingly important.\n\n♻️ Share it with anyone building AI agents at scale :)\n\nI share tutorials on how to build + improve AI apps and agents, on my newsletter AI Agent Engineering: https://lnkd.in/gaJTcZBR\n\n#AI #LLMs #AIAgents",
+      "images": [
+        "assets/posts/7527154586122371072/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 328
     },
