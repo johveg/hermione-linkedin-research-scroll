@@ -1,5 +1,5 @@
 {
-  "count": 330,
+  "count": 331,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -13,6 +13,22 @@
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
       "summary_html": "",
+      "number": 331
+    },
+    {
+      "activity_id": "7527355722880282624",
+      "title": "Intake: NVIDIA Dory1.0-4B looped transformer (Avi Chawla)",
+      "headline": "NVIDIA released a new looped transformer:",
+      "author": "Avi Chawla",
+      "author_url": "https://in.linkedin.com/in/avi-chawla",
+      "canonical_url": "https://www.linkedin.com/posts/avi-chawla_nvidia-released-a-new-looped-transformer-activity-7527355722880282624-uZr1",
+      "published_at": "2026-11-14T13:04:15.840Z",
+      "filed_at": "2026-11-15T12:20:02Z",
+      "post_text": "NVIDIA released a new looped transformer:\n\nInstead of stacking more layers, it runs the same layers multiple times so a 4B model can think like a 9B one.\n\nHere's how it works:\n\nIn a standard transformer, every token passes through a stack of decoder blocks once, and each block has its own weights.\n\nSo if you want a deeper model, you add more blocks, and the parameter count grows with the depth.\n\nNVIDIA's Dory1.0-4B decouples the two by reusing a chunk of its layers.\n\nThe model is split into three parts:\n\n> An input block of 8 blocks runs once and turns the tokens into a hidden state x.\n\n> A recurrent block of 20 shared blocks runs k times, where k can be anywhere from 1 to 4.\n\n> An output block of 8 blocks runs once on the final state, followed by the LM head.\n\nBefore every pass through the recurrent block, x is added back to the current state and the sum is L2-normalized.\n\nThis keeps the original token representation in view on every pass, instead of each pass only seeing what the previous one produced.\n\nBoth models in the diagram below store 36 blocks of weights.\n\nThe standard transformer applies each block once, while Dory applies 36 blocks at k=1, 56 at k=2, and 96 at k=4, i.e., 72, 112, and 192 physical layers from the same checkpoint.\n\nThe extra depth is actually helpful on reasoning and agentic tasks:\n\n> SWE-bench Verified:\n\n- at 1 loop → 50.3\n- at 2 loops → 59.5\n- at 4 loops → 61.8\n\n> 12-benchmark average:\n\n- at 1 loop → 35.17\n- at 2 loops → 39.67\n- at 4 loops → 40.60\n- and with 2 or more loops, it beats Qwen3.5-9B, Gemma 4 12B, and Gemma 4 26B-A4B.\n\nMore loops implies more compute per token, but the 4-loop model also writes 1.3x to 2.5x fewer output tokens on agentic tasks.\n\nSo 2 loops end up costing only 1.03x to 1.25x the compute of 1 loop end to end, which is why NVIDIA recommends 2 as the default.\n\nBy default, Dory keeps a separate KV cache for every loop, so at 4 loops the recurrent layers store 4x the cache.\n\nTo avoid this, it can keep only the cache from the last loop, which uses the same KV memory as a normal model with only a small change in accuracy.\n\nOne thing to note here is that looping helps the model reason over what it already knows, but it does not add knowledge.\n\nFor instance, on tasks like AA-Omniscience, accuracy stays at 10.0 whether you run 1 loop or 4, and on knowledge-heavy tasks like GPQA, Dory still trails Qwen3.5-4B.\n____\nWant my AI/ML engineering PDF (380+ pages) for FREE?\n\nDownload here: https://lnkd.in/g6f4qYBR\n____\nShare this with your network if you found this insightful ♻️\nFind me → Avi Chawla. Every day, I share tutorials and insights on DS, ML, LLMs, and RAGs.",
+      "images": [
+        "assets/posts/7527355722880282624/image-1.jpg"
+      ],
+      "summary_html": "<h3>Limitations</h3>\n<p>Benchmark numbers are author-relayed from NVIDIA, not independently verified. Promotional PDF link (lnkd.in) not followed. Comments partial. Raw authenticated text/screenshot/metadata kept local.</p>",
       "number": 330
     },
     {
