@@ -1,5 +1,5 @@
 {
-  "count": 332,
+  "count": 333,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 333
+    },
+    {
+      "activity_id": "7527941211450683393",
+      "title": "Intake summary: Brij Pandey - Six AI-infrastructure processors (CPU/GPU/TPU/NPU/LPU/DPU)",
+      "headline": "Six processors come up in every AI infrastructure discussion, and each one is built around a different way of moving data.",
+      "author": "Brij Pandey",
+      "author_url": "https://www.linkedin.com/in/brijpandeyji",
+      "canonical_url": "https://www.linkedin.com/posts/brijpandeyji_six-processors-come-up-in-every-ai-infrastructure-activity-7527941211450683393-MTMx",
+      "published_at": "2026-11-16T03:50:47.193Z",
+      "filed_at": "2026-11-16T11:13:41Z",
+      "post_text": "Six processors come up in every AI infrastructure discussion, and each one is built around a different way of moving data. I drew out how each one works.\n\n𝗖𝗣𝗨: 𝗧𝗵𝗲 𝗚𝗲𝗻𝗲𝗿𝗮𝗹𝗶𝘀𝘁\nA few powerful cores handle varied, branch heavy tasks in sequence. It runs the OS, orchestration, data prep, and application logic. It slows down badly on large parallel matrix math.\n\n𝗚𝗣𝗨: 𝗠𝗮𝘀𝘀𝗶𝘃𝗲 𝗣𝗮𝗿𝗮𝗹𝗹𝗲𝗹𝗶𝘀𝗺\nThousands of small cores apply one instruction across many data points at the same time, fed by high bandwidth memory. This is the default for training and high throughput inference. You pay for it in power draw and cost.\n\n𝗧𝗣𝗨: 𝗦𝘆𝘀𝘁𝗼𝗹𝗶𝗰 𝗧𝗲𝗻𝘀𝗼𝗿 𝗘𝗻𝗴𝗶𝗻𝗲\nWeights are preloaded and data pulses through a grid of multiply and accumulate cells. Pods link many chips over a fast interconnect. Strong for large tensor workloads at Google scale, and mostly available through Google Cloud.\n\n𝗡𝗣𝗨: 𝗔𝗜 𝗶𝗻 𝗬𝗼𝘂𝗿 𝗣𝗼𝗰𝗸𝗲𝘁\nLow power inference on quantized INT8 and INT4 models, running on the phone or laptop itself. Face unlock, voice, and private AI features use it because the data stays on the device. It handles small models and is mostly limited to inference.\n\n𝗟𝗣𝗨: 𝗟𝗼𝘄 𝗟𝗮𝘁𝗲𝗻𝗰𝘆 𝗟𝗟𝗠 𝗜𝗻𝗳𝗲𝗿𝗲𝗻𝗰𝗲\nWeights sit in SRAM on the chip, right next to compute, and a compiler schedules every step ahead of time. The timing is the same on every run, which is how Groq gets its token speeds. It is inference only, and big models have to span many chips.\n\n𝗗𝗣𝗨: 𝗜𝗻𝗳𝗿𝗮𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲 𝗢𝗳𝗳𝗹𝗼𝗮𝗱\nA SmartNIC that takes over firewalling, encryption, routing, and storage I/O so CPU and GPU cycles stay free for AI work. The model itself runs elsewhere.\n\n𝗛𝗼𝘄 𝗜 𝘁𝗵𝗶𝗻𝗸 𝗮𝗯𝗼𝘂𝘁 𝗰𝗵𝗼𝗼𝘀𝗶𝗻𝗴\nStart with the workload and rank five things: latency, parallelism, power, cost, and scale.\nA real system usually runs several of these together. A CPU orchestrates, GPUs train and serve, DPUs keep the network out of the way, and an NPU takes whatever can run at the edge.\n\nIn regulated industries, where the data is allowed to travel often settles the hardware choice before performance enters the conversation.\n\nInference volume is growing faster than training.\n\nFive years from now, how much of that serving load do you think will still run on general purpose GPUs?",
+      "images": [
+        "assets/posts/7527941211450683393/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 332
     },
