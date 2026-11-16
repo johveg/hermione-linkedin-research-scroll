@@ -1,5 +1,5 @@
 {
-  "count": 331,
+  "count": 332,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 332
+    },
+    {
+      "activity_id": "7527877099982991360",
+      "title": "Intake LI-000292: \"Nine hours in the Chicago airport\" (John Capobianco)",
+      "headline": "Nine hours in the Chicago airport.",
+      "author": "John Capobianco",
+      "author_url": "https://ca.linkedin.com/in/john-capobianco-644a1515",
+      "canonical_url": "https://www.linkedin.com/posts/john-capobianco-644a1515_how-my-agent-could-have-prevented-all-of-activity-7527877099982991360-qYP1",
+      "published_at": "2026-11-15T23:36:01.828Z",
+      "filed_at": "2026-11-16T05:51:32Z",
+      "post_text": "Nine hours in the Chicago airport.\n\nTwo routers under investigation.\n\nAnd a very uncomfortable conversation about who we trust to run our networks.\n\nI spent those 9 hours thinking about the FAA outage, change management, and why my lobster should have been in that change meeting. 🦞\n\nWhat's public so far (investigation still open): a new router switched on in El Dorado, Arkansas. Equipment in Amarillo, Texas, replaced about three weeks earlier, also started flooding. 17 of 22 en route centers affected. The implicated functionality disabled on roughly 60 similar routers.\n\nAnd HPE's position is that the device did exactly what the installer configured it to do. That's the vendor's statement, not a final finding. But sit with it:\n\nA router can obey its configuration perfectly and still take part in a national outage.\n\n\"The config loaded\" is not a definition of success. It never was.\n\n\"We're only replacing one router\" describes the work order. It says almost nothing about the risk. Amarillo wasn't on Friday's ticket. Amarillo was in Friday's blast radius.\n\nHere's the spicy part: human involvement is not a reliability guarantee.\n\nWe grill agents with \"but what if it makes a mistake?\"\n\nGreat. Ask the process we already trust the same thing. Where's its evidence? Its tested containment? Its proof the backup survives the same failure?\n\nWhat I'd want NetClaw doing on a change like this:\n→ Reconcile the change record, the CMDB, last month's related changes, and the live network before anyone trusts the diagram\n→ Rehearse the sequence in a twin, not just the final config. Bring it up, flap it, reconnect it, watch the gear you migrated three weeks ago\n→ Peer over real BGP as an independent observer (yes, it can actually become a neighbor). Or OSPF. Or STP. Or any other protocol.\n→ Hit a pre-agreed stop condition, freeze the rollout, contain, page the humans, and recover over an out-of-band path proven before the cutover\n\nAnd if NetClaw made the change and broke it?\n\nSame contract. Bounded failure, explainable actions, hard enforcement that lives outside the model's persuasive abilities. I want that from the agent. I want it from the humans too.\n\nThe title says \"could.\" I can't prove the outcome of a deployment that never happened.\n\nBut a change request should be a set of executable promises. These services will work.\n\nThese boundaries will hold. This is how we stop. This is how we recover. Here's the evidence.\nMy lobster can spend nine hours in the lab. I'm done donating them to the airport.\n\nFull write-up 👇\n\nhttps://lnkd.in/gD2rMrxn",
+      "images": [
+        "assets/posts/7527877099982991360/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 331
     },
