@@ -1,5 +1,5 @@
 {
-  "count": 334,
+  "count": 335,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 335
+    },
+    {
+      "activity_id": "7528130816724586497",
+      "title": "Intake LI-000295: Spec-Driven Development (Pavan Belagatti)",
+      "headline": "Spec-Driven Development - Instead of writing code first & documenting later, you make a structured Specification your primary source of truth.",
+      "author": "Pavan Belagatti",
+      "author_url": "https://in.linkedin.com/in/pavan-belagatti",
+      "canonical_url": "https://www.linkedin.com/posts/pavan-belagatti_spec-driven-development-instead-of-writing-activity-7528130816724586497-BbLL",
+      "published_at": "2026-11-16T16:24:12.613Z",
+      "filed_at": "2026-11-17T02:54:18Z",
+      "post_text": "Spec-Driven Development - Instead of writing code first & documenting later, you make a structured Specification your primary source of truth.\n\nHistorically, writing code was the hardest part of software engineering, so code became our source of truth. But now, AI coding assistants can write high-quality code, making human clarity the new bottleneck. Think about it, if your instructions are vague, AI just builds the wrong thing faster.\n\nThe problem is that we often ask AI coding assistants to start coding even before we have clearly defined what needs to be built. We aren't sure of a structured plan ourselves & this is where Spec-Driven Development makes a difference.\n\nInstead of writing code first and documenting later, you make a structured Specification your primary source of truth.\n\nThis is how the Spec-Driven Development works in general:\nIt all starts with a human, not an AI agent initially. The developer defines the intent and goals of the project/feature he/she is building. Then, an AI agent researches the requirements and drafts a proper specification (spec.md) covering requirements, design, and tasks.\n\nBut the agent doesn't immediately start coding at this point yet.\n\nThere is a human gate, the developer reviews the specification, requests changes if necessary, and approves it only when everything looks right.\n\nSo once approved, the agent executes the tasks, generates code, and runs tests against the specification.\n\nFinally, the developer reviews the implementation and decides whether it's ready to ship.\nThis cycle repeats for the next feature and the same steps.\n\nI am creating a new hands-on video about spec-driven development and will be released soon.\n\nBTW, here is a complete free course on spec driven development: https://lnkd.in/g_f2-pWp",
+      "images": [
+        "assets/posts/7528130816724586497/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 334
     },
