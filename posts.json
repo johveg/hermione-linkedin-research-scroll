@@ -1,5 +1,5 @@
 {
-  "count": 336,
+  "count": 337,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 337
+    },
+    {
+      "activity_id": "7529003622987124736",
+      "title": "Intake LI-000297: Agent Substrate (Google -> CNCF)",
+      "headline": "Google just built a Kubernetes runtime that suspends idle AI agents to disk, so they stop holding pods while they wait on the model 😴",
+      "author": "Ava Barron 🍊",
+      "author_url": "https://www.linkedin.com/in/avabarron",
+      "canonical_url": "https://www.linkedin.com/posts/avabarron_google-just-built-a-kubernetes-runtime-that-activity-7529003622987124736-_Emu",
+      "published_at": "2026-11-19T02:12:25.842Z",
+      "filed_at": "2026-11-19T22:08:19Z",
+      "post_text": "Google just built a Kubernetes runtime that suspends idle AI agents to disk, so they stop holding pods while they wait on the model 😴\n\nIt's called Agent Substrate, and Google donated it to the CNCF.\n\nAgents spend most of their time waiting on a model, a tool, or a human. One Pod per agent means paying for all that waiting.\n\nHow Substrate splits the agent from the compute:\n• Each agent is an \"actor\" with its own filesystem, env vars, memory, and network rules. Pods in a warm pool are \"workers.\"\n• When a turn ends, Substrate saves the actor's RAM and disk state to storage and frees the worker.\n• The next request hits atenet-router, an Envoy proxy. If the actor is suspended, the router holds the request while the controller assigns a free worker. The agent resumes in under half a second, on any worker.\n• No new Pod object per agent, so etcd isn't buried in churn.\n\nSecurity:\n• Every actor runs in gVisor or a Cloud Hypervisor microVM. Plain containers aren't supported.\n• Each actor gets a short-lived SPIFFE cert. API keys never enter the sandbox: the egress gateway adds them on the way out, so a prompt-injected agent has nothing to steal.\n• Sandboxes never touch snapshot storage. The node supervisor moves each snapshot with credentials scoped to that one actor.\n• Default-deny networking, no agent-to-agent traffic.\n\n\nKubernetes was built for long-lived services. Agents are bursty, stateful, and idle most of the time. Substrate treats sleeping as the normal state.\n\nCredit to Brandon Royal, the PM behind Agent Substrate, and Tim Hockin, one of the original Kubernetes engineers and a maintainer on the project.\n\nLink to the repo in the comments.",
+      "images": [
+        "assets/posts/7529003622987124736/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 336
     },
