@@ -1,5 +1,5 @@
 {
-  "count": 338,
+  "count": 339,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 339
+    },
+    {
+      "activity_id": "7527045467914842113",
+      "title": "Intake: Harness Engineering & Graph Engineering (Pavan Belagatti)",
+      "headline": "Want to be a great developer today? | Pavan Belagatti",
+      "author": "LinkedIn author",
+      "author_url": "",
+      "canonical_url": "https://www.linkedin.com/posts/pavan-belagatti_want-to-be-a-great-developer-today-there-activity-7527045467914842113-fziw",
+      "published_at": "",
+      "filed_at": "2026-11-20T14:09:06Z",
+      "post_text": "Want to be a great developer today? There are two agentic engineering practices you should be aware of - Harness Engineering & Graph Engineering, to build reliable agentic systems.\n\nGraph Engineering is becoming one of the most useful ways to build reliable AI-native engineering systems. Instead of putting everything into one massive prompt and hoping an AI model handles every detail correctly, I design the work as a connected system of smaller, explicit tasks.\n\nEach task has a purpose, a defined input, an output, and a route to the next step. That is the core idea behind Graph Engineering. It gives AI agents structure, makes their decisions easier to inspect, and lets independent work happen in parallel.\n\nSimilarly, Harness Engineering is becoming essential because AI coding agents are getting very good at generating code, but code generation is only one small part of real software engineering. A useful agent must also understand the service it is working on, the team that owns it, its dependencies, the engineering rules it must follow, what it is allowed to change, and how to verify that its work is correct.\n\nThat complete environment is what makes an AI agent reliable. In this guide, I will explain Harness Engineering in a simple way, then walk through two practical implementations: a controlled payment bug fix and a scorecard-based deployment gate.\n\nWell, I would like to share the guides around these two engineering approaches.\n\nHere is my hands-on guide to harness engineering: https://lnkd.in/g6isiG4z\n\nHere is my hands-on guide to graph engineering: https://lnkd.in/dTkxpsDN | 19 comments on LinkedIn",
+      "images": [
+        "assets/posts/7527045467914842113/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 338
     },
