@@ -1,5 +1,5 @@
 {
-  "count": 341,
+  "count": 342,
   "posts": [
     {
       "activity_id": "7514914698069434368",
@@ -12,6 +12,22 @@
       "filed_at": "~3w before 2026-11-06",
       "post_text": "𝗚𝗲𝘁𝘁𝗶𝗻𝗴 𝗮𝗻 𝗟𝗟𝗠 𝗿𝘂𝗻𝗻𝗶𝗻𝗴 𝗼𝗻 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝘁𝗮𝗸𝗲𝘀 𝗮𝗻 𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻.\nRunning a fleet of them for real users is a different job.\n\nOnce more than one team is calling your models, you have to answer questions like these:\n\n↳ Who is allowed to call which model?\n↳ What stops one team from burning the whole budget?\n↳ Which replica has room in its KV cache for the next request?\n↳ What happens when every GPU is busy, or a node drops halfway through a rollout?\n\nI wrote up a reference architecture that gives each of those problems to the component that's actually good at it:\n\n→ 𝗟𝗶𝘁𝗲𝗟𝗟𝗠: keys, teams, budgets and rate limits\n→ 𝗘𝗻𝘃𝗼𝘆 𝗔𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: routes by model name and meters tokens\n→ 𝗹𝗹𝗺-𝗱: picks the replica using queue depth, KV cache and prefix-cache locality\n→ 𝗞𝗦𝗲𝗿𝘃𝗲: manages the model lifecycle\n→ 𝘃𝗟𝗟𝗠: generates the tokens\n→ 𝗣𝗿𝗼𝗺𝗲𝘁𝗵𝗲𝘂𝘀 + 𝗞𝗘𝗗𝗔: scale on inference pressure instead of CPU\n\n━━━━━━━━━━\n\n𝗔𝗹𝘀𝗼 𝗶𝗻𝘀𝗶𝗱𝗲:\n✓ Sizing model weights and KV cache together\n✓ Why pods shouldn't pull weights from Hugging Face on every restart\n✓ The metrics worth alerting on\n✓ The order I'd roll it out in (𝘰𝘯𝘦 𝘭𝘢𝘺𝘦𝘳 𝘢𝘵 𝘢 𝘵𝘪𝘮𝘦, 𝘯𝘰𝘵 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘢𝘵 𝘰𝘯𝘤𝘦)\n\nFair warning: it's a 26 minute read, with manifests.\n\n🔗 Link in the first comment 👇\n#Kubernetes #LLM #MLOps #vLLM #KServe #PlatformEngineering",
       "images": [],
+      "summary_html": "",
+      "number": 342
+    },
+    {
+      "activity_id": "7529946333584076800",
+      "title": "Intake summary: Beyond AI Coding - The Agentic Engineering Stack",
+      "headline": "I think developers need to think beyond AI coding.",
+      "author": "Pavan Belagatti",
+      "author_url": "https://in.linkedin.com/in/pavan-belagatti",
+      "canonical_url": "https://www.linkedin.com/posts/pavan-belagatti_i-think-developers-need-to-think-beyond-ai-activity-7529946333584076800-1to6",
+      "published_at": "2026-11-21T16:38:25.563Z",
+      "filed_at": "2026-11-21T19:43:09Z",
+      "post_text": "I think developers need to think beyond AI coding. Seriously!\n\nYes, don't get too comfortable with your AI coding assistants; we are moving beyond just coding. The shift is already happening in software engineering; coding with AI was just the beginning, and now enterprises are investing in an agentic engineering ecosystem.\n\nWe all know that code generation is just a small part of software engineering. What about testing, reviewing, deploying, monitoring, and maintaining that code? This is where agentic engineering comes into play.\n\nLook at the image below, you can see the Agentic Engineering Stack with five important layers.\n1. MODEL: We all know about the models, no need to explain. This forms the foundation of the ecosystem where AI models handle reasoning and code generation.\n2. HARNESS: Provides agents with the right engineering context, tools, permissions, and guardrails to work reliably & efficiently.\n3. LOOP: The loop engineering aspect where agents plan, execute, validate their work, and retry when something fails.\n4. GRAPH: This is where the nodes & paths come in & coordinate multiple tasks and agents, enabling parallel execution and introducing human approval gates at critical stages.\n5. AGENTIC SDLC: This layer brings everything together across planning, development, testing, deployment, and operations.\n\nConnecting all these layers requires proper engineering orchestration, and that's where platforms like Port can help connect agents, workflows, and engineering tools across the SDLC.\n\nI think 2027 will be all about software factories and let us all focus on building reliable engineering systems involving agents & humans.\n\nI recently created a hands-on guide to agentic engineering: https://lnkd.in/gyyyPh4m\n\nAlso, here's my practical agentic SDLC guide: https://lnkd.in/gFs_hXD2",
+      "images": [
+        "assets/posts/7529946333584076800/image-1.jpg"
+      ],
       "summary_html": "",
       "number": 341
     },
